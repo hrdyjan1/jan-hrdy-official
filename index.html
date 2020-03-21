@@ -15,6 +15,8 @@
       href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
     />
 
+    <link rel="stylesheet" href="css/toggle/dayNight.css" />
+    <link rel="stylesheet" href="css/toggle/czechEnglish.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -26,10 +28,28 @@
       </span>
       <ul class="menu_items">
         <li>
-          <a id="moar" href="#"><i class="icon fa fa-signal fa-2x"></i> Moar</a>
+          <div class="toggleWrapperDayNight">
+            <input type="checkbox" class="dn" id="dn" />
+            <label for="dn" class="toggleDayNight">
+              <span class="toggleDayNightHandler"></span>
+              <span class="star star--1"></span>
+              <span class="star star--2"></span>
+              <span class="star star--3"></span>
+              <span class="star star--4"></span>
+              <span class="star star--5"></span>
+              <span class="star star--6"></span>
+            </label>
+          </div>
         </li>
         <li>
-          <a href="#"><i class="icon fa fa-coffee fa-2x"></i> Coffee</a>
+          <div class="toggleWrapperCzechEnglish">
+            <input type="checkbox" class="ce" id="ce" />
+            <label for="ce" class="toggleCzechEnglish">
+              <div>
+                <span class="toggleCzechEnglishHandler"> </span>
+              </div>
+            </label>
+          </div>
         </li>
         <li>
           <a href="#"><i class="icon fa fa-heart fa-2x"></i> Please</a>
@@ -42,6 +62,7 @@
             Do <strong>not</strong> push that big, red button in the corner. People will die. You
             have been warned. Do&hellip; not do it.
           </p>
+          <div class="czech-republic"></div>
 
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolorem, ducimus
