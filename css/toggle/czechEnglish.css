@@ -26,6 +26,7 @@
   left: -50px;
   top: 15px;
   font-size: 18px;
+  font-weight: bold;
   color: #fff;
 }
 .toggleCzechEnglish:after {
@@ -34,7 +35,7 @@
   right: -48px;
   top: 15px;
   font-size: 18px;
-  color: #749ed7;
+  color: #25587c;
 }
 .toggleCzechEnglishHandler {
   display: inline-block;
@@ -57,10 +58,11 @@ input:checked + .toggleCzechEnglish {
   background-color: #749dd6;
 }
 input:checked + .toggleCzechEnglish:before {
-  color: #749ed7;
+  color: #25587C;
 }
 input:checked + .toggleCzechEnglish:after {
   color: #fff;
+  font-weight: bold;
 }
 input:checked + .toggleCzechEnglish .toggleCzechEnglishHandler {
   background: linear-gradient(
@@ -135,65 +137,6 @@ input:checked + .toggleCzechEnglish .toggleCzechEnglishHandler {
       transparent 53%,
       transparent 100%
     ),
-    
-    /* linear-gradient(
-        26.56505deg,
-        transparent,
-        transparent 91px,
-        #c8102e 91px,
-        #c8102e 98px,
-        transparent 98px,
-        transparent 100%
-      )
-      0 0/110px 100% no-repeat,
-    linear-gradient(
-        -26.56505deg,
-        transparent,
-        transparent 98px,
-        #c8102e 98px,
-        #c8102e 106px,
-        transparent 106px,
-        transparent 100%
-      )
-      110px 0/110px 100% no-repeat,
-    linear-gradient(
-        26.56505deg,
-        transparent,
-        transparent 98px,
-        #c8102e 98px,
-        #c8102e 106px,
-        transparent 106px,
-        transparent 100%
-      )
-      110px 55px/110px 100% no-repeat,
-    linear-gradient(
-        -26.56505deg,
-        transparent,
-        transparent 91px,
-        #c8102e 91px,
-        #c8102e 98px,
-        transparent 98px,
-        transparent 100%
-      )
-      0 55px/110px 100% no-repeat,
-    linear-gradient(
-      27deg,
-      transparent,
-      transparent 87px,
-      #fff 87px,
-      #fff 109px,
-      transparent 109px,
-      transparent 100%
-    ),
-    linear-gradient(
-      153deg,
-      transparent,
-      transparent 87px,
-      #fff 87px,
-      #fff 109px,
-      transparent 109px,
-      transparent 100%
-    ), */
-      #012169;
+    #012169;
   transform: translate3d(40px, 0, 0) rotate(0);
 }
