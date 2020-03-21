@@ -1,12 +1,11 @@
 // elements
-var $page = $('.page');
+const page = document.getElementsByClassName('page')[0]
+const menu_toggle = document.getElementsByClassName('menu_toggle')[0]
+const content = document.getElementsByClassName('content')[0]
 
-$('.menu_toggle').on('click', function(){
-  $page.toggleClass('shazam');
+menu_toggle.addEventListener('click', function(){
+    page.classList.toggle("shazam");
 });
-$('.content').on('click', function(){
-  $page.removeClass('shazam');
+content.addEventListener('click', function(){
+    page.classList.remove('shazam')
 });
-
-
-$('#moar').on('click', () => console.log('Moar'))
