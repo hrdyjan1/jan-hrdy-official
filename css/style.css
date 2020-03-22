@@ -60,11 +60,19 @@ body {
 }
 
 .background {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
   width: 100%;
   /* height: auto; */
+}
+
+.background-wrapper {
+  position: fixed;
+  height: 25%;
+  width: 100%;
+  z-index: 1;
+  min-height: 100vh;
 }
 
 .img img {
