@@ -17,13 +17,14 @@ body {
   z-index: -1;
 }
 
-.container {
+/* .container {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
 }
-/* .container {
+.inner-container {
+  position: absolute;
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -31,28 +32,40 @@ body {
   grid-gap: 7rem;
   padding: 0 2rem;
 } */
-
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7rem;
+    padding: 0 2rem;
+  }
+  
 .img {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
+  z-index: 1;
 }
 
 .login-content {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   text-align: center;
+  z-index: 1;
 }
 
 .background {
-    position: inherit;
-    bottom: 0;
-    width: 100%;
+  position: inherit;
+  bottom: 0;
+  width: 100%;
 }
 
 .img img {
-  width: 500px;
+  width: 600px;
 }
 
 form {
@@ -116,7 +129,7 @@ form {
   bottom: -2px;
   width: 0%;
   height: 2px;
-  background-color: #38d39f;
+  background-color: #3AA8C2;
   transition: 0.4s;
 }
 
@@ -139,7 +152,7 @@ form {
 }
 
 .input-div.focus > .i > i {
-  color: #38d39f;
+  color: #3AA8C2;
 }
 
 .input-div > div > input {
@@ -171,7 +184,7 @@ a {
 }
 
 a:hover {
-  color: #38d39f;
+  color: #3AA8C2;
 }
 
 .btn {
@@ -181,7 +194,7 @@ a:hover {
   border-radius: 25px;
   outline: none;
   border: none;
-  background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+  background-image: linear-gradient(to right, #3AA8C2, #25587C, #122F50);
   background-size: 200%;
   font-size: 1.2rem;
   color: #fff;
@@ -193,6 +206,15 @@ a:hover {
 }
 .btn:hover {
   background-position: right;
+}
+
+@media screen and (max-width: 1200px) {
+  .img img {
+    width: 500px;
+  }
+  form {
+    width: 330px;
+  }
 }
 
 @media screen and (max-width: 1050px) {
@@ -218,7 +240,8 @@ a:hover {
 
 @media screen and (max-width: 900px) {
   .container {
-    grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
+      justify-content: center;
   }
 
   .img {
@@ -230,6 +253,6 @@ a:hover {
   }
 
   .login-content {
-    justify-content: center;
+      justify-content: center;
   }
 }
