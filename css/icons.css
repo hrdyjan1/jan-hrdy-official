@@ -1,0 +1,65 @@
+.btns-social {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-social {
+  text-align: center;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 40%;
+  color: #3AA8C2 !important;
+  overflow: hidden;
+  position: relative;
+}
+.btn-social i {
+  line-height: 60px;
+  font-size: 20px;
+  transition: 0.2s linear;
+}
+.btn-social:hover i {
+  transform: scale(1.4);
+  color: white;
+}
+.btn-social::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #3AA8C2;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.social-instagram::before {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.social-facebook::before {
+    background: #4267B2;
+}
+.social-github::before {
+    background: #24292e;
+}
+.btn-social:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+@keyframes aaa {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}

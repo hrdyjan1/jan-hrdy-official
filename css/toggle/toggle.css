@@ -69,7 +69,6 @@ body {
 .menu_items {
   position: fixed;
   bottom: 0;
-  left: 50px;
   list-style-type: none;
   margin: 0;
   padding: 0;
