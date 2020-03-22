@@ -34,9 +34,9 @@ body {
   padding: 0 2rem;
 } */
 .container {
-    width: 100vw;
+    /* width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: absolute; */
     background-color: #f4f4f4;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
