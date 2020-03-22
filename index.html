@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="css/toggle/dayNight.css" />
     <link rel="stylesheet" href="css/toggle/czechEnglish.css" />
     <link rel="stylesheet" href="css/toggle/toggle.css" />
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/icons.css" />
     <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
@@ -83,6 +83,8 @@
           <div class="container">
             <div class="login-content">
               <form>
+                <img src="img/avatar.svg" />
+                <h2 class="title">Welcome</h2>
                 <input checked="" id="signin" name="action" type="radio" value="signin" />
                 <label for="signin">Sign in</label>
                 <input id="signup" name="action" type="radio" value="signup" />
@@ -95,7 +97,7 @@
                   <input id="pass" placeholder="Password" type="password" />
                   <input id="repass" placeholder="Repeat password" type="password" />
                 </div>
-                <button type="submit">
+                <button type="submit" class="primary">
                   <span class="valid">
                     Reset password
                     <br />
@@ -104,8 +106,8 @@
                     Sign up
                   </span>
                 </button>
-                <button type="button">
-                  <span >
+                <button type="button" class="secondary">
+                  <span>
                     Anonymous
                   </span>
                 </button>

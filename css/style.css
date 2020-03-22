@@ -72,10 +72,34 @@ a:hover {
   color: #3aa8c2;
 }
 
+.img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+}
+
+.img img {
+  width: 600px;
+}
+
+.login-content img {
+  height: 100px;
+  width: 100%;
+}
+
+.login-content h2 {
+  margin: 0px 0px 25px;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 2.9rem;
+  text-align: center;
+}
+
 @media screen and (max-width: 1200px) {
   .img img {
     width: 500px;
-  }
+  }  
 }
 
 @media screen and (max-width: 1050px) {
