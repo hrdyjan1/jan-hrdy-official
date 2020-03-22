@@ -7,6 +7,7 @@
 body {
   font-family: 'Crimson Pro', serif;
   overflow: hidden;
+  color: #122f50;
 }
 
 .container-wrapper {
@@ -90,7 +91,7 @@ a:hover {
 
 .login-content h2 {
   margin: 0px 0px 25px;
-  color: #333;
+  color: #122f50;
   text-transform: uppercase;
   font-size: 2.9rem;
   text-align: center;

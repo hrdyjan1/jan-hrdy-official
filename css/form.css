@@ -137,7 +137,7 @@ button.primary {
 }
 
 button.secondary {
-  background-image: linear-gradient(to right, #25587c, #596d84, #25587c);
+  background-image: linear-gradient(to right, #122f50, #596d84, #122f50);
 }
 
 button.primary:hover,
