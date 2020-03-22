@@ -11,6 +11,7 @@
   left: -99em;
 }
 .toggleDayNight {
+  opacity: 1;
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -35,7 +36,7 @@
   right: -48px;
   top: 15px;
   font-size: 18px;
-  color: #25587C;
+  color: #25587c;
 }
 .toggleDayNightHandler {
   display: inline-block;
@@ -54,7 +55,7 @@
 
 .toggleDayNightHandler .crater {
   position: absolute;
-  background-color: #CACACA;
+  background-color: #cacaca;
   opacity: 0;
   transition: opacity 200ms ease-in-out;
   border-radius: 100%;
@@ -139,14 +140,14 @@ input:checked + .toggleDayNight {
   background-color: #749dd6;
 }
 input:checked + .toggleDayNight:before {
-  color: #25587C;
+  color: #25587c;
 }
 input:checked + .toggleDayNight:after {
   color: #fff;
   font-weight: bold;
 }
 input:checked + .toggleDayNight .toggleDayNightHandler {
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   transform: translate3d(40px, 0, 0) rotate(0);
 }
 

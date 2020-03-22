@@ -8,16 +8,16 @@
   display: inline-block;
   width: 60px;
   height: 60px;
-  background: #f1f1f1;
+  background: #fff;
   margin: 10px;
   border-radius: 40%;
-  color: #3AA8C2 !important;
+  color: #122f50 !important;
   overflow: hidden;
   position: relative;
 }
 .btn-social i {
   line-height: 60px;
-  font-size: 20px;
+  font-size: 24px;
   transition: 0.2s linear;
 }
 .btn-social:hover i {

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/toggle/toggle.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/form.css" />
   </head>
 
   <body>
@@ -65,7 +66,7 @@
             </a>
 
             <a class="btn-social social-instagram" href="#">
-                <i class="fab fa-instagram"></i>
+              <i class="fab fa-instagram"></i>
             </a>
 
             <a class="btn-social social-github" href="#">
@@ -81,7 +82,36 @@
           </div>
           <div class="container">
             <div class="login-content">
-              <form action="index.html">
+              <form>
+                <input checked="" id="signin" name="action" type="radio" value="signin" />
+                <label for="signin">Sign in</label>
+                <input id="signup" name="action" type="radio" value="signup" />
+                <label for="signup">Sign up</label>
+                <input id="reset" name="action" type="radio" value="reset" />
+                <label for="reset">Reset</label>
+                <div id="wrapper">
+                  <div id="arrow"></div>
+                  <input id="email" placeholder="Email" type="text" />
+                  <input id="pass" placeholder="Password" type="password" />
+                  <input id="repass" placeholder="Repeat password" type="password" />
+                </div>
+                <button type="submit">
+                  <span class="valid">
+                    Reset password
+                    <br />
+                    Sign in
+                    <br />
+                    Sign up
+                  </span>
+                </button>
+                <button type="button">
+                  <span >
+                    Anonymous
+                  </span>
+                </button>
+              </form>
+
+              <!-- <form action="index.html">
                 <img src="img/avatar.svg" />
                 <h2 class="title">Welcome</h2>
                 <div class="input-div one">
@@ -105,7 +135,7 @@
                 <a href="#">Forgot Password?</a>
                 <input type="submit" class="btn" value="Login" />
                 <input type="submit" class="btn btn-secondary" value="Anonym" />
-              </form>
+              </form> -->
             </div>
             <div class="img">
               <img src="img/waiting.svg" />
