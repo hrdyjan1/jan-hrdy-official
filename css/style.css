@@ -34,16 +34,16 @@ body {
   padding: 0 2rem;
 } */
 .container {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    background-color: #f4f4f4;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 7rem;
-    /* padding: 0 2rem; */
-  }
-  
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: #f4f4f4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 7rem;
+  padding: 0 2rem;
+}
+
 .img {
   display: flex;
   justify-content: flex-start;
@@ -130,7 +130,7 @@ form {
   bottom: -2px;
   width: 0%;
   height: 2px;
-  background-color: #3AA8C2;
+  background-color: #3aa8c2;
   transition: 0.4s;
 }
 
@@ -153,7 +153,7 @@ form {
 }
 
 .input-div.focus > .i > i {
-  color: #3AA8C2;
+  color: #3aa8c2;
 }
 
 .input-div > div > input {
@@ -185,7 +185,7 @@ a {
 }
 
 a:hover {
-  color: #3AA8C2;
+  color: #3aa8c2;
 }
 
 .btn {
@@ -195,7 +195,7 @@ a:hover {
   border-radius: 25px;
   outline: none;
   border: none;
-  background-image: linear-gradient(to right, #3AA8C2, #25587C, #122F50);
+  background-image: linear-gradient(to right, #25587c, #3aa8c2, #25587c);
   background-size: 200%;
   font-size: 1.2rem;
   color: #fff;
@@ -205,6 +205,11 @@ a:hover {
   cursor: pointer;
   transition: 0.5s;
 }
+
+.btn-secondary {
+  background-image: linear-gradient(to right, #a1a1a1, #cacaca, #a1a1a1);
+}
+
 .btn:hover {
   background-position: right;
 }
@@ -241,8 +246,8 @@ a:hover {
 
 @media screen and (max-width: 900px) {
   .container {
-      grid-template-columns: 1fr;
-      justify-content: center;
+    grid-template-columns: 1fr;
+    justify-content: center;
   }
 
   .img {
@@ -254,6 +259,6 @@ a:hover {
   }
 
   .login-content {
-      justify-content: center;
+    justify-content: center;
   }
 }
