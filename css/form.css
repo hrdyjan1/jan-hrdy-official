@@ -206,3 +206,36 @@ button.secondary:hover {
     left: 240px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  input[type='text'],
+  input[type='password'] {
+      height: 50px;
+  }
+  button {
+      height: 50px;
+  }
+
+  button span {
+      line-height: 50px;
+  }
+  #signin:checked ~ button span.valid {
+    transform: translate3d(0, -50px, 0);
+  }
+  #signup:checked ~ button span.valid {
+    transform: translate3d(0, -100px, 0);
+  }
+
+  #reset:checked ~ #wrapper {
+    height: 72px;
+  }
+
+  #signin:checked ~ #wrapper {
+    height: 134px;
+  } 
+  #signup:checked ~ #wrapper {
+    height: 196px;
+  } 
+  
+  
+}
