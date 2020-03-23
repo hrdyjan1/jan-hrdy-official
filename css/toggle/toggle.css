@@ -159,3 +159,9 @@ body {
 .shazam .menu_items li:nth-child(3) {
   transition-delay: 0.48s;
 }
+
+@media screen and (max-width: 425px) {
+    .menu_items{
+        width: 250px;
+    }
+  }

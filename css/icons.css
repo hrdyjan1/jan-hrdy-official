@@ -63,3 +63,15 @@
     left: -10%;
   }
 }
+
+
+@media screen and (max-width: 425px) {
+    .btn-social {
+        width: 45px;
+        height: 45px;
+        margin: 5px;
+    }
+    .btn-social i {
+        line-height: 45px;
+    }
+  }
