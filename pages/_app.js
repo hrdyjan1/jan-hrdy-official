@@ -4,7 +4,7 @@ import Loadable from 'react-loadable';
 const LoadableComponent = Loadable({
   loader: () => import('../components/Main.js'),
   loading() {
-    return <p>First init loading...</p>;
+    return <p>First loading...</p>;
   }
 });
 

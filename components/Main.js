@@ -1,13 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
-import usePageChange, { pageChangeStatus } from '../hooks/usePageChange';
+import { usePageChange, pageChangeStatus } from '../hooks';
 import { Header } from './Header';
 
 function Main({ Component, pageProps }) {
-  const { status, error, isLoadingVisible, isDoneOrIsLoadingHidden } = usePageChange();
+  const { status, error, isDoneOrIsLoadingHidden } = usePageChange();
 
-  if (isLoadingVisible) {
-    return <p>Loading</p>;
+  if (status === pageChangeStatus.PENDING_VISIBLE) {
+    return <p>Loading...</p>;
   }
   if (isDoneOrIsLoadingHidden) {
     return (

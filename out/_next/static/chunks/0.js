@@ -97,14 +97,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _hooks_usePageChange__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/usePageChange */ "./hooks/usePageChange.js");
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
+/* harmony import */ var _hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks */ "./hooks/index.js");
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
 
 var _jsxFileName = "C:\\Users\\badeu\\hrdyjan1\\projects\\jan-hrdy-official\\components\\Main.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
 
 
 
@@ -113,61 +110,60 @@ function Main(_ref) {
   var Component = _ref.Component,
       pageProps = _ref.pageProps;
 
-  var _usePageChange = Object(_hooks_usePageChange__WEBPACK_IMPORTED_MODULE_3__["default"])(),
+  var _usePageChange = Object(_hooks__WEBPACK_IMPORTED_MODULE_2__["usePageChange"])(),
       status = _usePageChange.status,
       error = _usePageChange.error,
-      isLoadingVisible = _usePageChange.isLoadingVisible,
       isDoneOrIsLoadingHidden = _usePageChange.isDoneOrIsLoadingHidden;
 
-  if (isLoadingVisible) {
+  if (status === _hooks__WEBPACK_IMPORTED_MODULE_2__["pageChangeStatus"].PENDING_VISIBLE) {
     return __jsx("p", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10,
+        lineNumber: 9,
         columnNumber: 12
       }
     }, "Loading");
   }
 
   if (isDoneOrIsLoadingHidden) {
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_Header__WEBPACK_IMPORTED_MODULE_4__["Header"], {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_Header__WEBPACK_IMPORTED_MODULE_3__["Header"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14,
+        columnNumber: 9
+      }
+    }), __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 15,
         columnNumber: 9
       }
-    }), __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 16,
-        columnNumber: 9
-      }
     })));
   }
 
-  if (status === _hooks_usePageChange__WEBPACK_IMPORTED_MODULE_3__["pageChangeStatus"].REJECTED) {
+  if (status === _hooks__WEBPACK_IMPORTED_MODULE_2__["pageChangeStatus"].REJECTED) {
     return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("p", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 9
+      }
+    }, error), __jsx(_Header__WEBPACK_IMPORTED_MODULE_3__["Header"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 23,
         columnNumber: 9
       }
-    }, error), __jsx(_Header__WEBPACK_IMPORTED_MODULE_4__["Header"], {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24,
-        columnNumber: 9
-      }
     }), __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25,
+        lineNumber: 24,
         columnNumber: 9
       }
     })));
@@ -180,30 +176,47 @@ function Main(_ref) {
 
 /***/ }),
 
-/***/ "./hooks/usePageChange.js":
+/***/ "./hooks/helpers/index.js":
 /*!********************************!*\
-  !*** ./hooks/usePageChange.js ***!
+  !*** ./hooks/helpers/index.js ***!
   \********************************/
-/*! exports provided: pageChangeStatus, default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageChangeStatus", function() { return pageChangeStatus; });
-/* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _pageChangeHelper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pageChangeHelper */ "./hooks/helpers/pageChangeHelper.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pageChangeType", function() { return _pageChangeHelper__WEBPACK_IMPORTED_MODULE_0__["pageChangeType"]; });
 
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pageChangeStatus", function() { return _pageChangeHelper__WEBPACK_IMPORTED_MODULE_0__["pageChangeStatus"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pageChangeInitialState", function() { return _pageChangeHelper__WEBPACK_IMPORTED_MODULE_0__["pageChangeInitialState"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pageChangeReducer", function() { return _pageChangeHelper__WEBPACK_IMPORTED_MODULE_0__["pageChangeReducer"]; });
+
+
+
+/***/ }),
+
+/***/ "./hooks/helpers/pageChangeHelper.js":
+/*!*******************************************!*\
+  !*** ./hooks/helpers/pageChangeHelper.js ***!
+  \*******************************************/
+/*! exports provided: pageChangeType, pageChangeStatus, pageChangeInitialState, pageChangeReducer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageChangeType", function() { return pageChangeType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageChangeStatus", function() { return pageChangeStatus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageChangeInitialState", function() { return pageChangeInitialState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageChangeReducer", function() { return pageChangeReducer; });
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 var pageChangeType = {
   STARTED: 'STARTED',
@@ -215,7 +228,7 @@ var pageChangeStatus = {
   REJECTED: 'REJECTED',
   RESOLVED: 'RESOLVED',
   PENDING: 'PENDING',
-  PENDING_VISIBLE: 'STARTED_VISIBLE',
+  PENDING_VISIBLE: 'PENDING_VISIBLE',
   IDLE: 'IDLE'
 };
 var pageChangeInitialState = {
@@ -263,11 +276,61 @@ var pageChangeReducer = function pageChangeReducer(state, action) {
   }
 };
 
+
+
+/***/ }),
+
+/***/ "./hooks/index.js":
+/*!************************!*\
+  !*** ./hooks/index.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers */ "./hooks/helpers/index.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _helpers__WEBPACK_IMPORTED_MODULE_0__) if(["usePageChange","default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _helpers__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _usePageChange__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./usePageChange */ "./hooks/usePageChange.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "usePageChange", function() { return _usePageChange__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./hooks/usePageChange.js":
+/*!********************************!*\
+  !*** ./hooks/usePageChange.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./helpers */ "./hooks/helpers/index.js");
+
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
+
+
+
 var usePageChange = function usePageChange() {
   var router = Object(next_router__WEBPACK_IMPORTED_MODULE_3__["useRouter"])();
 
-  var _React$useReducer = react__WEBPACK_IMPORTED_MODULE_2___default.a.useReducer(pageChangeReducer, pageChangeInitialState),
-      _React$useReducer2 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$useReducer, 2),
+  var _React$useReducer = react__WEBPACK_IMPORTED_MODULE_2___default.a.useReducer(_helpers__WEBPACK_IMPORTED_MODULE_4__["pageChangeReducer"], _helpers__WEBPACK_IMPORTED_MODULE_4__["pageChangeInitialState"]),
+      _React$useReducer2 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useReducer, 2),
       state = _React$useReducer2[0],
       dispatch = _React$useReducer2[1];
 
@@ -275,19 +338,19 @@ var usePageChange = function usePageChange() {
 
   var dispatchStart = function dispatchStart() {
     return dispatch({
-      type: pageChangeType.STARTED
+      type: _helpers__WEBPACK_IMPORTED_MODULE_4__["pageChangeType"].STARTED
     });
   };
 
   var dispatchSuccess = function dispatchSuccess() {
     return dispatch({
-      type: pageChangeType.SUCCESS
+      type: _helpers__WEBPACK_IMPORTED_MODULE_4__["pageChangeType"].SUCCESS
     });
   };
 
   var dispatchStartVisible = function dispatchStartVisible() {
     return dispatch({
-      type: pageChangeType.STARTED_VISIBLE
+      type: _helpers__WEBPACK_IMPORTED_MODULE_4__["pageChangeType"].STARTED_VISIBLE
     });
   };
 
@@ -297,7 +360,7 @@ var usePageChange = function usePageChange() {
 
   var handleError = function handleError(err, url) {
     return dispatch({
-      type: pageChangeType.ERROR,
+      type: _helpers__WEBPACK_IMPORTED_MODULE_4__["pageChangeType"].ERROR,
       error: err.cancelled ? 'Canceled navigation.' : "Bad url ".concat(url)
     });
   };
@@ -320,8 +383,8 @@ var usePageChange = function usePageChange() {
     };
   }, [router]);
   return _objectSpread({
-    isLoadingVisible: status === pageChangeStatus.PENDING_VISIBLE,
-    isDoneOrIsLoadingHidden: status === pageChangeStatus.RESOLVED || status === pageChangeStatus.IDLE || status === pageChangeStatus.PENDING
+    isLoadingVisible: status === _helpers__WEBPACK_IMPORTED_MODULE_4__["pageChangeStatus"].PENDING_VISIBLE,
+    isDoneOrIsLoadingHidden: status === _helpers__WEBPACK_IMPORTED_MODULE_4__["pageChangeStatus"].RESOLVED || status === _helpers__WEBPACK_IMPORTED_MODULE_4__["pageChangeStatus"].IDLE || status === _helpers__WEBPACK_IMPORTED_MODULE_4__["pageChangeStatus"].PENDING
   }, state);
 };
 
