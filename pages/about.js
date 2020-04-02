@@ -1,6 +1,13 @@
-const AboutPage = () => {
-//   for (let index = 0; index < 1000000000; index++) {}
-  return <p>This is about Next.js!</p>;
-};
+import React from 'react';
+import LongRender from '../components/LongRender';
 
-export default AboutPage;
+function About() {
+  return (
+    <div>
+      <LongRender />
+      <p>About PAGE is here!</p>
+    </div>
+  );
+}
+
+export default About;
