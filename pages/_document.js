@@ -10,8 +10,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel='stylesheet' type='text/css' href='/loading.css' />
-          <link rel='stylesheet' type='text/css' href='/nprogress.css' />
+          <link rel='stylesheet' type='text/css' href='/css/index.css' />
+          <link rel='stylesheet' type='text/css' href='/css/loading.css' />
+          <link rel='stylesheet' type='text/css' href='/css/nprogress.css' />
+          <link rel='stylesheet' type='text/css' href='/css/root/navigation.css' />
+          <link rel='stylesheet' href='/fonts/CroissantOne-Regular.ttf' />
         </Head>
         <body>
           <Main />
