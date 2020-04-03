@@ -1,4 +1,4 @@
-/* #loaderWrapper {
+#loaderWrapper {
   height: 100vh;
   width: 100vw;
   z-index: 9999;
@@ -95,4 +95,4 @@
   opacity: 0.5;
   font-family: 'Croissant One';
   color: #fff;
-} */
+}

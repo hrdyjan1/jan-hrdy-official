@@ -80,7 +80,22 @@ var Header = function Header() {
       lineNumber: 15,
       columnNumber: 11
     }
-  }, "About"))));
+  }, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/root",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  }, __jsx("a", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 11
+    }
+  }, "Root"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
