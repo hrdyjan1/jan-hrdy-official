@@ -3,6 +3,7 @@ import { CustomPreloader } from 'react-preloaders';
 import { Router } from 'next/router';
 import nProgress from 'nprogress';
 import Loader from '../components/Loader';
+import { ModalProvider } from '../contexts/modalContext';
 
 const DynamicComponentWithCustomLoading = dynamic(() => import('../components/Main'));
 
@@ -14,10 +15,12 @@ function _app(props) {
   if (typeof window !== 'undefined') {
     return (
       <>
-        <CustomPreloader background="linear-gradient(180deg, #f95759 0%, #a62022 100%)">
+        <CustomPreloader background='linear-gradient(180deg, #f95759 0%, #a62022 100%)'>
           <Loader />
         </CustomPreloader>
-        <DynamicComponentWithCustomLoading {...props} />
+        <ModalProvider>
+          <DynamicComponentWithCustomLoading {...props} />
+        </ModalProvider>
       </>
     );
   }
