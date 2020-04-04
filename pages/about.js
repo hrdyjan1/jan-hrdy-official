@@ -4,7 +4,7 @@ import LongRender from '../components/LongRender';
 function About() {
   return (
     <div>
-      <LongRender />
+      {/* <LongRender /> */}
       <p>About PAGE is here!</p>
     </div>
   );
