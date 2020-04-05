@@ -4,6 +4,7 @@ import { Router } from 'next/router';
 import nProgress from 'nprogress';
 import Loader from '../components/Loader';
 import { ModalProvider } from '../contexts/modalContext';
+import { ThemeProvider } from '../contexts/toggleContext';
 
 const DynamicComponentWithCustomLoading = dynamic(() => import('../components/Main'));
 
@@ -19,7 +20,9 @@ function _app(props) {
           <Loader />
         </CustomPreloader>
         <ModalProvider>
-          <DynamicComponentWithCustomLoading {...props} />
+          <ThemeProvider>
+            <DynamicComponentWithCustomLoading {...props} />
+          </ThemeProvider>
         </ModalProvider>
       </>
     );

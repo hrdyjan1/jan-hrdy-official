@@ -3,9 +3,12 @@ import ToggleWrapper from './ToggleWrapper';
 
 const ToggleLanguage = () => {
   return (
-    <ToggleWrapper toggleName='Language'>
-      <span class='toggleLanguageHandler'> </span>
-    </ToggleWrapper>
+    <>
+      <h4>Language</h4>
+      <ToggleWrapper toggleName='Language'>
+        <span className='toggleLanguageHandler'> </span>
+      </ToggleWrapper>
+    </>
   );
 };
 
