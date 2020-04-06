@@ -8,7 +8,6 @@ const ToggleTheme = () => {
 
   return (
     <>
-      <h4>Theme</h4>
       <ToggleWrapper toggleName='Theme' onChange={toggleTheme} checked={isDarkTheme}>
         <span className='toggleThemeHandler'>
           <span className='crater crater--1'></span>
