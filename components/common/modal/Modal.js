@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../button/Button';
 
 const Modal = ({ render, heading, isVisible, close }) => {
   const modalContainerRef = React.useRef(null);
@@ -29,9 +30,7 @@ const Modal = ({ render, heading, isVisible, close }) => {
         <div className='modal'>
           <h2>{heading}</h2>
           {render()}
-          <button type='button' onClick={close}>
-            Close
-          </button>
+          <Button label="Close" onClick={close} className="primary" />
         </div>
       </div>
     </div>

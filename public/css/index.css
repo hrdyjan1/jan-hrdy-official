@@ -1,6 +1,6 @@
 :root {
   font-size: 16px;
-  font-family: 'Croissant One', cursive;
+  font-family: 'Crimson Pro', serif;
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
   --bg-primary: #23232e;
@@ -13,6 +13,7 @@ body {
   background-color: white;
   margin: 0;
   padding: 0;
+  font-family: 'Crimson Pro', serif;
 }
 
 body::-webkit-scrollbar {

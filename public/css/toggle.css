@@ -1,6 +1,7 @@
 .menu_items {
   list-style-type: none;
   padding-inline-start: 0;
+  margin: 2rem;
 }
 
 .menu_items li {
