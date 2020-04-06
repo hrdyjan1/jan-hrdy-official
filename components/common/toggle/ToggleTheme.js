@@ -1,13 +1,12 @@
 import React from 'react';
 import ToggleWrapper from './ToggleWrapper';
-import { useThemeState, useThemeMethod } from '../../../contexts/toggleContext';
+import { useThemeMethod, useThemeState } from '../../../contexts/themeContext';
 
 const ToggleTheme = () => {
   const { isDarkTheme } = useThemeState();
-  const { toggle: toggleTheme } = useThemeMethod();
+  const {toggleComplex: toggleTheme } = useThemeMethod();
 
   return (
-    <>
       <ToggleWrapper toggleName='Theme' onChange={toggleTheme} checked={isDarkTheme}>
         <span className='toggleThemeHandler'>
           <span className='crater crater--1'></span>
@@ -21,7 +20,6 @@ const ToggleTheme = () => {
         <span className='star star--5'></span>
         <span className='star star--6'></span>
       </ToggleWrapper>
-    </>
   );
 };
 
