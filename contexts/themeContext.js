@@ -40,6 +40,24 @@ function ThemeProvider({ children, theme }) {
 
   const isLightTheme = state.status === themeStatus.LIGHT;
   const isDarkTheme = state.status === themeStatus.DARK;
+  const nextStatus = isLightTheme ? themeStatus.DARK : themeStatus.LIGHT;
+
+  // Handle CSS body property of THEME, but lower
+  React.useEffect(() => {
+    const bodyClassList = document.body.classList;
+    const nextStatusLower = nextStatus.toLowerCase();
+    const statusLower = state.status.toLowerCase();
+
+    if (bodyClassList.contains(nextStatusLower)) {
+      bodyClassList.replace(nextStatusLower, statusLower);
+    } else if (!bodyClassList.contains(statusLower)) {
+      bodyClassList.add(statusLower);
+    }
+  }, [state.status]);
+
+  React.useEffect(() => {
+    enhanceLocalStorage(localStorageType.THEME, state.status);
+  }, [state.status]);
 
   return (
     <ThemeStateContext.Provider
@@ -47,7 +65,7 @@ function ThemeProvider({ children, theme }) {
         ...state,
         isLightTheme,
         isDarkTheme,
-        nextStatus: isLightTheme ? themeStatus.DARK : themeStatus.LIGHT,
+        nextStatus,
       }}
     >
       <ThemeDispatchContext.Provider value={dispatch}>{children}</ThemeDispatchContext.Provider>
@@ -73,18 +91,13 @@ function useThemeDispatch() {
 
 function useThemeMethod() {
   const dispatch = React.useContext(ThemeDispatchContext);
-  const state = React.useContext(ThemeStateContext);
 
   const toggle = React.useCallback(() => dispatch({ type: themeType.TOGGLE }), [dispatch]);
-  const toggleComplex = React.useCallback(() => {
-    enhanceLocalStorage(localStorageType.THEME, state.nextStatus);
-    toggle();
-  }, [toggle, state.status]);
 
   if (dispatch === undefined) {
     throw new Error('useThemeDispatch must be used within a ThemeProvider');
   }
-  return { toggleComplex, toggle };
+  return { toggle };
 }
 
 export { ThemeProvider, useThemeState, useThemeDispatch, useThemeMethod };

@@ -4,7 +4,7 @@ import { useThemeMethod, useThemeState } from '../../../contexts/themeContext';
 
 const ToggleTheme = () => {
   const { isDarkTheme } = useThemeState();
-  const {toggleComplex: toggleTheme } = useThemeMethod();
+  const {toggle: toggleTheme } = useThemeMethod();
 
   return (
       <ToggleWrapper toggleName='Theme' onChange={toggleTheme} checked={isDarkTheme}>

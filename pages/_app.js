@@ -18,13 +18,14 @@ Router.events.on('routeChangeError', () => nProgress.done());
 function _app(props) {
   const [itemsFromLocalStorage, setItemsFromLocalStorage] = React.useState(null);
 
-  React.useEffect(
-    () =>
-      setItemsFromLocalStorage(
-        getItems([localStorageType.THEME, localStorageType.SOUND, localStorageType.LANGUAGE])
-      ),
-    []
-  );
+  React.useEffect(() => {
+    const items = getItems([
+      localStorageType.THEME,
+      localStorageType.SOUND,
+      localStorageType.LANGUAGE,
+    ]);
+    setItemsFromLocalStorage(items);
+  }, []);
 
   if (typeof window !== 'undefined' && itemsFromLocalStorage) {
     return (
