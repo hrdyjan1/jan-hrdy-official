@@ -2,10 +2,13 @@
   font-size: 16px;
   font-family: 'Crimson Pro', serif;
   --text-primary: #1f1f1f;
-  --text-secondary: #000000;
+  --text-secondary: #ffff;
+  --text-ternary: #f4f4f4;
+  --text-quaternary: #25587c;
   --bg-primary: #ffffff;
-  --bg-secondary: #e4e4e4;
-  --bg-ternary: #cccccc;
+  --bg-secondary: #25587c;
+  --bg-ternary: #122f50;
+  --bg-modal: #fff;
   --transition-speed: 600ms;
   transition: background 500ms ease-in-out, color 700ms ease-in-out;
 }
@@ -79,13 +82,13 @@ main {
 .nav-link:hover {
   filter: grayscale(0%) opacity(0.85);
   background: var(--bg-ternary);
-  color: var(--text-ternary);
+  color: white;
 }
 
 .nav-link.active {
   filter: grayscale(0%) opacity(1);
   background: var(--bg-ternary);
-  color: var(--text-ternary);
+  color: white;
 }
 
 .link-text {
@@ -197,19 +200,23 @@ main {
 }
 
 .dark {
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
+  --text-primary: #ececec;
+  --text-secondary: #b6b6b6;
   --text-ternary: #fff;
+  --text-quaternary: #25587c; /* Modal active { CZ } */
   --bg-primary: #23232e;
   --bg-secondary: #122f50;
   --bg-ternary: #25587c;
+  --bg-modal: #122f50;
 }
 
 .light {
   --text-primary: #1f1f1f;
   --text-secondary: #ffff;
-  --text-ternary: #F4F4F4;
+  --text-ternary: #25587c;
+  --text-quaternary: #f4f4f4;
   --bg-primary: #ffffff;
   --bg-secondary: #25587c;
-  --bg-ternary: #122F50;
+  --bg-ternary: #122f50;
+  --bg-modal: #fff;
 }

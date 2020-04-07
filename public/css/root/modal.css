@@ -35,7 +35,7 @@
     vertical-align: middle;
 }
 #modal-container .modal-background .modal {
-    background: white;
+    background: var(--bg-modal);
     padding: 50px;
     z-index: 10;
     display: inline-block;

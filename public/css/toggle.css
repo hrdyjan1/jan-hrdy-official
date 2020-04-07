@@ -5,7 +5,7 @@
 }
 
 .menu_items li {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .toggleLanguageWrapper {
@@ -35,7 +35,7 @@
   top: 15px;
   font-size: 18px;
   font-weight: bold;
-  color: #25587c;
+  color: var(--text-ternary);
 }
 .toggleLanguageLabel:after {
   content: 'EN';
@@ -44,7 +44,7 @@
   top: 15px;
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
+  color: var(--text-quaternary);
 }
 .toggleLanguageHandler {
   display: inline-block;
@@ -67,10 +67,10 @@ input:checked + .toggleLanguageLabel {
   background-color: #749dd6;
 }
 input:checked + .toggleLanguageLabel:before {
-  color: #fff;
+  color: var(--text-quaternary);
 }
 input:checked + .toggleLanguageLabel:after {
-  color: #25587c;
+  color: var(--text-ternary);
 }
 input:checked + .toggleLanguageLabel .toggleLanguageHandler {
   background: linear-gradient(
@@ -176,7 +176,7 @@ input:checked + .toggleLanguageLabel .toggleLanguageHandler {
   top: 15px;
   font-size: 18px;
   font-weight: bold;
-  color: #25587c;
+  color: var(--text-ternary);
 }
 .toggleThemeLabel:after {
   content: 'PM';
@@ -185,7 +185,7 @@ input:checked + .toggleLanguageLabel .toggleLanguageHandler {
   top: 15px;
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
+  color: var(--text-quaternary);
 }
 .toggleThemeHandler {
   display: inline-block;
@@ -289,10 +289,10 @@ input:checked + .toggleThemeLabel {
   background-color: #749dd6;
 }
 input:checked + .toggleThemeLabel:before {
-  color: #fff;
+  color: var(--text-quaternary);
 }
 input:checked + .toggleThemeLabel:after {
-  color: #25587c;
+  color: var(--text-ternary);
 }
 input:checked + .toggleThemeLabel .toggleThemeHandler {
   background-color: #f4f4f4;
@@ -359,7 +359,7 @@ input:checked + .toggleDayNight .star--6 {
   top: 15px;
   font-size: 18px;
   font-weight: bold;
-  color: #25587c;
+  color: var(--text-ternary);
 }
 .toggleSoundLabel:after {
   content: 'OFF';
@@ -368,7 +368,7 @@ input:checked + .toggleDayNight .star--6 {
   top: 15px;
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
+  color: var(--text-quaternary);
 }
 
 .toggleSoundHandler {
@@ -532,10 +532,10 @@ input:checked + .toggleSoundLabel {
   background-color: #749dd6;
 }
 input:checked + .toggleSoundLabel:before {
-  color: #fff;
+  color: var(--text-quaternary);
 }
 input:checked + .toggleSoundLabel:after {
-  color: #25587c;
+  color: var(--text-ternary);
 }
 input:checked + .toggleSoundLabel .toggleSoundHandler {
   background-color: #922b2f;

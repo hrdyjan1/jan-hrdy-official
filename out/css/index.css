@@ -8,6 +8,10 @@
   --transition-speed: 600ms;
 }
 
+button {
+  font-family: 'Crimson Pro', serif;
+}
+
 body {
   color: black;
   background-color: white;
