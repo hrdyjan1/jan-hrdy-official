@@ -30,7 +30,7 @@ function _app(props) {
   if (typeof window !== 'undefined' && itemsFromLocalStorage) {
     return (
       <>
-        <CustomPreloader background='linear-gradient(180deg, #f95759 0%, #a62022 100%)'>
+        <CustomPreloader>
           <Loader />
         </CustomPreloader>
         <ModalProvider>
