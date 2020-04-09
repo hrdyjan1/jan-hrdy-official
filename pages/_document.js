@@ -15,12 +15,8 @@ class MyDocument extends Document {
             rel='stylesheet'
             href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'
           />
-          {/* <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.1/css/all.css' />  */}
-          {/* Jou tohle je na ikony socialni */}
 
-          {/* <link rel='stylesheet' type='text/css' href='/css/welcome/font-awesome.min.css' /> */}
           <link rel='stylesheet' type='text/css' href='/css/welcome/toggle.css' />
-          <link rel='stylesheet' type='text/css' href='/css/welcome/icon.css' />
           <link rel='stylesheet' type='text/css' href='/css/welcome/form.css' />
           <link rel='stylesheet' type='text/css' href='/css/welcome/index.css' />
 

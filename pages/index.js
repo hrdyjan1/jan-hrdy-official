@@ -108,7 +108,7 @@ const IndexPage = () => {
             </label>
           </div>
         </li> */}
-        <li>
+        {/* <li>
           <div className='btns-social'>
             <a className='btn-social social-facebook' href='#'>
               <i className='fab fa-facebook-f' />
@@ -120,7 +120,7 @@ const IndexPage = () => {
               <i className='fab fa-github' />
             </a>
           </div>
-        </li>
+        </li> */}
       </ul>
       <main className='content'>
         <div className='container-wrapper'>
