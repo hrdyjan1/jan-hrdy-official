@@ -37,6 +37,7 @@
   font-weight: bold;
   color: var(--text-ternary);
 }
+
 .toggleLanguageLabel:after {
   content: 'EN';
   position: absolute;
@@ -46,6 +47,14 @@
   font-weight: bold;
   color: var(--text-quaternary);
 }
+
+.page * .toggleLanguageLabel:before {
+  color: #fff;
+}
+.page * .toggleLanguageLabel:after {
+  color: var(--text-penitentiary);
+}
+
 .toggleLanguageHandler {
   display: inline-block;
   position: relative;
@@ -72,6 +81,15 @@ input:checked + .toggleLanguageLabel:before {
 input:checked + .toggleLanguageLabel:after {
   color: var(--text-ternary);
 }
+
+.page * input:checked + .toggleLanguageLabel::before {
+  color: var(--text-penitentiary);
+}
+
+.page * input:checked + .toggleLanguageLabel:after {
+  color: #fff;
+}
+
 input:checked + .toggleLanguageLabel .toggleLanguageHandler {
   background: linear-gradient(
       180deg,
@@ -187,6 +205,14 @@ input:checked + .toggleLanguageLabel .toggleLanguageHandler {
   font-weight: bold;
   color: var(--text-quaternary);
 }
+
+.page * .toggleThemeLabel:before {
+  color: #fff;
+}
+.page * .toggleThemeLabel:after {
+  color: var(--text-penitentiary);
+}
+
 .toggleThemeHandler {
   display: inline-block;
   position: relative;
@@ -294,6 +320,15 @@ input:checked + .toggleThemeLabel:before {
 input:checked + .toggleThemeLabel:after {
   color: var(--text-ternary);
 }
+
+.page * input:checked + .toggleThemeLabel::before {
+  color: var(--text-penitentiary);
+}
+
+.page * input:checked + .toggleThemeLabel:after {
+  color: #fff;
+}
+
 input:checked + .toggleThemeLabel .toggleThemeHandler {
   background-color: #f4f4f4;
   transform: translate3d(40px, 0, 0) rotate(0);

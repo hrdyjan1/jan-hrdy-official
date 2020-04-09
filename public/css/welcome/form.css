@@ -1,258 +1,256 @@
 :focus {
-    outline: none;
-  }
-  ::-webkit-input-placeholder {
-    color: #dedfdf;
-  }
-  ::-moz-placeholder {
-    color: #dedfdf;
-  }
-  :-moz-placeholder {
-    color: #dedfdf;
-  }
-  ::-ms-input-placeholder {
-    color: #dedfdf;
-  }
-  
-  #wrapper,
-  label,
-  #arrow,
-  button span {
-    transition: all 0.5s cubic-bezier(0.6, 0, 0.4, 1);
-  }
-  
-  #wrapper {
-    overflow: hidden;
-  }
-  
-  /* Arrow SignIn */
-  #signin:checked ~ #wrapper {
-    height: 178px;
-  } /* Height of form*/
-  #signin:checked ~ #wrapper #arrow {
-    left: 32px;
-  }
-  #signin:checked ~ button span.valid {
-    transform: translate3d(0, -72px, 0);
-  }
-  
-  /* Arrow SignUp */
-  #signup:checked ~ #wrapper {
-    height: 262px;
-  }
-  #signup:checked ~ #wrapper #arrow {
-    left: 125px;
-  }
-  #signup:checked ~ button span.valid {
-    transform: translate3d(0, -144px, 0);
-  }
-  
-  /* Arrow Reset */
-  #reset:checked ~ #wrapper {
-    height: 94px;
+  outline: none;
+}
+::-webkit-input-placeholder {
+  color: #1f1f1f;
+  opacity: 0.7;
+}
+::-moz-placeholder {
+  color: #1f1f1f;
+  opacity: 0.7;
+}
+::-ms-input-placeholder {
+  color: #1f1f1f;
+  opacity: 0.7;
+}
+
+#wrapper,
+label,
+#arrow,
+button span {
+  transition: all 0.5s cubic-bezier(0.6, 0, 0.4, 1);
+}
+
+#wrapper {
+  overflow: hidden;
+}
+
+/* Arrow SignIn */
+#signin:checked ~ #wrapper {
+  height: 178px;
+} /* Height of form*/
+#signin:checked ~ #wrapper #arrow {
+  left: 32px;
+}
+#signin:checked ~ button span.valid {
+  transform: translate3d(0, -72px, 0);
+}
+
+/* Arrow SignUp */
+#signup:checked ~ #wrapper {
+  height: 262px;
+}
+#signup:checked ~ #wrapper #arrow {
+  left: 125px;
+}
+#signup:checked ~ button span.valid {
+  transform: translate3d(0, -144px, 0);
+}
+
+/* Arrow Reset */
+#reset:checked ~ #wrapper {
+  height: 94px;
+}
+#reset:checked ~ #wrapper #arrow {
+  left: 404px;
+}
+#reset:checked ~ button span.valid {
+  transform: translate3d(0, 0, 0);
+}
+
+form {
+  width: 450px;
+}
+
+input {
+  box-sizing: content-box !important;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 800;
+  opacity: 0.5;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+label:hover {
+  transition: all 0.3s cubic-bezier(0.6, 0, 0.4, 1);
+  opacity: 1;
+}
+label[for='signin'] {
+  margin-right: 20px;
+}
+label[for='reset'] {
+  float: right;
+}
+input[type='radio']:checked + label {
+  opacity: 1;
+}
+
+input[type='text'],
+input[type='password'] {
+  background: #f4f4f4;
+  border: none;
+  border-radius: 8px;
+  font-size: 27px;
+  font-family: 'Crimson Pro', serif;
+  height: 72px;
+  width: 99.5%;
+  margin-bottom: 10px;
+  opacity: 1;
+  text-indent: 20px;
+  transition: all 0.2s ease-in-out;
+}
+button {
+  background: #3aa8c2;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Crimson Pro', serif;
+  font-size: 27px;
+  height: 72px;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.6, 0, 0.4, 1);
+  background-size: 200%;
+  text-transform: uppercase;
+}
+
+button span {
+  display: block;
+  line-height: 72px;
+  position: relative;
+  top: -2px;
+  transform: translate3d(0, 0, 0);
+}
+
+button.primary {
+  background-image: linear-gradient(to right, #3aa8c2, #75c2d4, #3aa8c2);
+}
+
+button.secondary {
+  background-image: linear-gradient(to right, #122f50, #596d84, #122f50);
+}
+
+button.primary:hover,
+button.secondary:hover {
+  background-position: right;
+}
+
+#arrow {
+  height: 0;
+  width: 0;
+  border-bottom: 10px solid #fff;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: relative;
+  left: 32px;
+}
+
+#hint {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  form {
+    width: 380px;
   }
   #reset:checked ~ #wrapper #arrow {
-    left: 404px;
+    left: 330px;
   }
-  #reset:checked ~ button span.valid {
-    transform: translate3d(0, 0, 0);
-  }
-  
+}
+
+@media screen and (max-width: 1000px) {
   form {
-    width: 450px;
+    width: 330px;
   }
-  
-  input {
-    box-sizing: content-box !important;
+  #reset:checked ~ #wrapper #arrow {
+    left: 280px;
   }
-  
-  input[type='radio'] {
-    display: none;
+}
+
+@media screen and (max-width: 900px) {
+  form {
+    width: 350px;
   }
-  
-  label {
-    cursor: pointer;
-    display: inline-block;
-    font-size: 22px;
-    font-weight: 800;
-    opacity: 0.5;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+  #reset:checked ~ #wrapper #arrow {
+    left: 300px;
   }
-  label:hover {
-    transition: all 0.3s cubic-bezier(0.6, 0, 0.4, 1);
-    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 320px;
   }
-  label[for='signin'] {
-    margin-right: 20px;
+  #reset:checked ~ #wrapper #arrow {
+    left: 270px;
   }
-  label[for='reset'] {
-    float: right;
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    width: 290px;
   }
-  input[type='radio']:checked + label {
-    opacity: 1;
+  #reset:checked ~ #wrapper #arrow {
+    left: 240px;
   }
-  
+}
+
+@media screen and (max-width: 425px) {
   input[type='text'],
   input[type='password'] {
-    background: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 27px;
-    font-family: 'Crimson Pro', serif;
-    height: 72px;
-    width: 99.5%;
-    margin-bottom: 10px;
-    opacity: 1;
-    text-indent: 20px;
-    transition: all 0.2s ease-in-out;
+    height: 40px;
+    font-size: 22px;
+  }
+  form {
+    margin-bottom: 50px;
   }
   button {
-    background: #3aa8c2;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    cursor: pointer;
-    font-family: 'Crimson Pro', serif;
-    font-size: 27px;
-    height: 72px;
-    width: 100%;
-    margin-bottom: 10px;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.6, 0, 0.4, 1);
-    background-size: 200%;
-    text-transform: uppercase;
+    font-size: 20px;
+    height: 40px;
   }
-  
+  label {
+    font-size: 18px;
+  }
   button span {
-    display: block;
-    line-height: 72px;
-    position: relative;
-    top: -2px;
-    transform: translate3d(0, 0, 0);
+    line-height: 40px;
   }
-  
-  button.primary {
-    background-image: linear-gradient(to right, #3aa8c2, #75c2d4, #3aa8c2);
+
+  #signin:checked ~ button span.valid {
+    transform: translate3d(0, -40px, 0);
   }
-  
-  button.secondary {
-    background-image: linear-gradient(to right, #122f50, #596d84, #122f50);
+  #signup:checked ~ button span.valid {
+    transform: translate3d(0, -80px, 0);
   }
-  
-  button.primary:hover,
-  button.secondary:hover {
-    background-position: right;
+
+  #signin:checked ~ #wrapper #arrow {
+    left: 20px;
   }
-  
-  #arrow {
-    height: 0;
-    width: 0;
-    border-bottom: 10px solid #fff;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    position: relative;
-    left: 32px;
+  #signup:checked ~ #wrapper #arrow {
+    left: 100px;
   }
-  
-  #hint {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: 20px;
+  #reset:checked ~ #wrapper #arrow {
+    left: 250px;
   }
-  
-  @media screen and (max-width: 1200px) {
-    form {
-      width: 380px;
-    }
-    #reset:checked ~ #wrapper #arrow {
-      left: 330px;
-    }
+
+  #reset:checked ~ #wrapper {
+    height: 62px;
   }
-  
-  @media screen and (max-width: 1000px) {
-    form {
-      width: 330px;
-    }
-    #reset:checked ~ #wrapper #arrow {
-      left: 280px;
-    }
+  #signin:checked ~ #wrapper {
+    height: 114px;
   }
-  
-  @media screen and (max-width: 900px) {
-    form {
-      width: 350px;
-    }
-    #reset:checked ~ #wrapper #arrow {
-      left: 300px;
-    }
+  #signup:checked ~ #wrapper {
+    height: 166px;
   }
-  
-  @media screen and (max-width: 768px) {
-    form {
-      width: 320px;
-    }
-    #reset:checked ~ #wrapper #arrow {
-      left: 270px;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    form {
-      width: 290px;
-    }
-    #reset:checked ~ #wrapper #arrow {
-      left: 240px;
-    }
-  }
-  
-  @media screen and (max-width: 425px) {
-    input[type='text'],
-    input[type='password'] {
-      height: 40px;
-      font-size: 22px;
-    }
-    form {
-        margin-bottom: 50px;
-    }
-    button {
-      font-size: 20px;
-      height: 40px;
-    }
-    label {
-      font-size: 18px;
-    }
-    button span {
-      line-height: 40px;
-    }
-  
-    #signin:checked ~ button span.valid {
-      transform: translate3d(0, -40px, 0);
-    }
-    #signup:checked ~ button span.valid {
-      transform: translate3d(0, -80px, 0);
-    }
-  
-    #signin:checked ~ #wrapper #arrow {
-      left: 20px;
-    }
-    #signup:checked ~ #wrapper #arrow {
-      left: 100px;
-    }
-    #reset:checked ~ #wrapper #arrow {
-      left: 250px;
-    }
-    
-  
-    #reset:checked ~ #wrapper {
-      height: 62px;
-    }
-    #signin:checked ~ #wrapper {
-      height: 114px;
-    }
-    #signup:checked ~ #wrapper {
-      height: 166px;
-    }
-  }
-  
+}

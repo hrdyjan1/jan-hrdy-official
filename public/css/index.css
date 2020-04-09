@@ -204,6 +204,7 @@ main {
   --text-secondary: #b6b6b6;
   --text-ternary: #fff;
   --text-quaternary: #25587c; /* Modal active { CZ } */
+  --text-penitentiary: #25587c; /* Toggle passive { CZ } */
   --bg-primary: #23232e;
   --bg-secondary: #122f50;
   --bg-ternary: #25587c;
@@ -215,6 +216,7 @@ main {
   --text-secondary: #ffff;
   --text-ternary: #25587c;
   --text-quaternary: #f4f4f4;
+  --text-penitentiary: #507996; /* Toggle passive { CZ } */
   --bg-primary: #ffffff;
   --bg-secondary: #25587c;
   --bg-ternary: #122f50;
