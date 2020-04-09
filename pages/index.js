@@ -9,11 +9,11 @@ const IndexPage = () => {
   // elements
   useEffect(() => {
     const page = document.getElementsByClassName('page')[0];
-    const menu_toggle = document.getElementsByClassName('menu_toggle')[0];
+    const welcomeMenuToggle = document.getElementsByClassName('welcome-menu-toggle')[0];
     const content = document.getElementsByClassName('content')[0];
     const inputs = document.querySelectorAll('.input');
 
-    menu_toggle.addEventListener('click', function () {
+    welcomeMenuToggle.addEventListener('click', function () {
       page.classList.toggle('shazam');
     });
 
@@ -41,7 +41,7 @@ const IndexPage = () => {
 
   return (
     <div className='page'>
-      <span className='menu_toggle'>
+      <span className='welcome-menu-toggle'>
         <svg
           aria-hidden='true'
           focusable='false'
@@ -73,7 +73,7 @@ const IndexPage = () => {
           />
         </svg>
       </span>
-      <ul className='menu_items'>
+      <ul className='welcome-menu-items'>
         <li>
           <ToggleLanguage />
         </li>

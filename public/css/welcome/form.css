@@ -14,7 +14,7 @@
   opacity: 0.7;
 }
 
-#wrapper,
+.login-content * #wrapper,
 label,
 #arrow,
 button span {
@@ -58,19 +58,19 @@ button span {
   transform: translate3d(0, 0, 0);
 }
 
-form {
+.login-content form {
   width: 450px;
 }
 
-input {
+.login-content * input {
   box-sizing: content-box !important;
 }
 
-input[type='radio'] {
+.login-content * input[type='radio'] {
   display: none;
 }
 
-label {
+.login-content form label {
   cursor: pointer;
   display: inline-block;
   font-size: 22px;
@@ -79,21 +79,21 @@ label {
   margin-bottom: 10px;
   text-transform: uppercase;
 }
-label:hover {
+.login-content form label:hover {
   transition: all 0.3s cubic-bezier(0.6, 0, 0.4, 1);
   opacity: 1;
 }
-label[for='signin'] {
+.login-content form label[for='signin'] {
   margin-right: 20px;
 }
-label[for='reset'] {
+.login-content form label[for='reset'] {
   float: right;
 }
-input[type='radio']:checked + label {
+.login-content * input[type='radio']:checked + label {
   opacity: 1;
 }
 
-input[type='text'],
+.login-content * input[type='text'],
 input[type='password'] {
   background: #f4f4f4;
   border: none;
@@ -107,7 +107,7 @@ input[type='password'] {
   text-indent: 20px;
   transition: all 0.2s ease-in-out;
 }
-button {
+.login-content form button {
   background: #3aa8c2;
   border: none;
   border-radius: 8px;
@@ -124,7 +124,7 @@ button {
   text-transform: uppercase;
 }
 
-button span {
+.login-content form button span {
   display: block;
   line-height: 72px;
   position: relative;
@@ -132,16 +132,16 @@ button span {
   transform: translate3d(0, 0, 0);
 }
 
-button.primary {
+.login-content form button.primary {
   background-image: linear-gradient(to right, #3aa8c2, #75c2d4, #3aa8c2);
 }
 
-button.secondary {
+.login-content form button.secondary {
   background-image: linear-gradient(to right, #122f50, #596d84, #122f50);
 }
 
-button.primary:hover,
-button.secondary:hover {
+.login-content form button.primary:hover,
+.login-content form button.secondary:hover {
   background-position: right;
 }
 
@@ -163,7 +163,7 @@ button.secondary:hover {
 }
 
 @media screen and (max-width: 1200px) {
-  form {
+  .login-content form {
     width: 380px;
   }
   #reset:checked ~ #wrapper #arrow {
@@ -172,7 +172,7 @@ button.secondary:hover {
 }
 
 @media screen and (max-width: 1000px) {
-  form {
+  .login-content form {
     width: 330px;
   }
   #reset:checked ~ #wrapper #arrow {
@@ -181,7 +181,7 @@ button.secondary:hover {
 }
 
 @media screen and (max-width: 900px) {
-  form {
+  .login-content form {
     width: 350px;
   }
   #reset:checked ~ #wrapper #arrow {
@@ -190,7 +190,7 @@ button.secondary:hover {
 }
 
 @media screen and (max-width: 768px) {
-  form {
+  .login-content form {
     width: 320px;
   }
   #reset:checked ~ #wrapper #arrow {
@@ -199,7 +199,7 @@ button.secondary:hover {
 }
 
 @media screen and (max-width: 600px) {
-  form {
+  .login-content form {
     width: 290px;
   }
   #reset:checked ~ #wrapper #arrow {
@@ -208,22 +208,22 @@ button.secondary:hover {
 }
 
 @media screen and (max-width: 425px) {
-  input[type='text'],
+  .login-content * input[type='text'],
   input[type='password'] {
     height: 40px;
     font-size: 22px;
   }
-  form {
+  .login-content form {
     margin-bottom: 50px;
   }
-  button {
+  .login-content form button {
     font-size: 20px;
     height: 40px;
   }
-  label {
+  .login-content * label {
     font-size: 18px;
   }
-  button span {
+  .login-content form button span {
     line-height: 40px;
   }
 

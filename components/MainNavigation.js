@@ -42,8 +42,8 @@ const MainNavigation = () => {
         </li>
 
         <li className='nav-item'>
-          <Link href='/'>
-            <a className={`nav-link${pathname === '/' ? ' active' : ''}`}>
+          <Link href='/home'>
+            <a className={`nav-link${pathname === '/home' ? ' active' : ''}`}>
               <svg
                 aria-hidden='true'
                 focusable='false'

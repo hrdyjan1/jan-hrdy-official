@@ -1,8 +1,8 @@
-.button:hover {
+.close-button:hover {
   opacity: 1;
 }
 
-.button {
+.close-button {
   background: #3aa8c2;
   opacity: 0.8;
   border: none;
