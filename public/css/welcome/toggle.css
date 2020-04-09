@@ -16,6 +16,8 @@ body {
 }
 
 .content {
+  margin: 0;
+  padding: 0;
   height: 200%;
   -webkit-transform-origin: top left;
   transform-origin: top left;
@@ -39,10 +41,11 @@ body {
   background-color: #3aa8c2;
   border-bottom-right-radius: 100%;
 }
-.menu_toggle:active i {
+.menu_toggle:active svg {
   opacity: 0.8;
 }
-.menu_toggle i {
+.menu_toggle svg {
+  width: 1rem;
   color: #f0f0f0;
 }
 .menu_toggle .menu_open,
