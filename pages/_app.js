@@ -29,20 +29,18 @@ function _app(props) {
 
   if (typeof window !== 'undefined' && itemsFromLocalStorage) {
     return (
-      <>
+      <LanguageProvider language={itemsFromLocalStorage.LANGUAGE}>
         <CustomPreloader>
           <Loader />
         </CustomPreloader>
         <ModalProvider>
           <ThemeProvider theme={itemsFromLocalStorage.THEME}>
-            <LanguageProvider language={itemsFromLocalStorage.LANGUAGE}>
-              <SoundProvider sound={itemsFromLocalStorage.SOUND}>
-                <DynamicComponentWithCustomLoading {...props} />
-              </SoundProvider>
-            </LanguageProvider>
+            <SoundProvider sound={itemsFromLocalStorage.SOUND}>
+              <DynamicComponentWithCustomLoading {...props} />
+            </SoundProvider>
           </ThemeProvider>
         </ModalProvider>
-      </>
+      </LanguageProvider>
     );
   }
   return null;

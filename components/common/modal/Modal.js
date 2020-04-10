@@ -1,8 +1,10 @@
 import React from 'react';
 import Button from '../button/Button';
+import { useComplexLanguageMethod } from '../../../contexts/languageContext';
 
 const Modal = ({ render, heading, isVisible, close }) => {
   const modalContainerRef = React.useRef(null);
+  const { t } = useComplexLanguageMethod();
 
   React.useEffect(() => {
     if (isVisible) {
@@ -30,7 +32,7 @@ const Modal = ({ render, heading, isVisible, close }) => {
         <div className='modal'>
           <h2>{heading}</h2>
           {render()}
-          <Button label="Close" onClick={close} className="primary" />
+          <Button label={t('close')} onClick={close} className='primary' />
         </div>
       </div>
     </div>

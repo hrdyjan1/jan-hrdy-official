@@ -4,7 +4,7 @@ import { useLanguageState, useLanguageMethod } from '../../../contexts/languageC
 
 const ToggleLanguage = () => {
   const { isEnglishLanguage } = useLanguageState();
-  const { toggleComplex: toggleLanguage } = useLanguageMethod();
+  const { toggle: toggleLanguage } = useLanguageMethod();
 
   return (
     <ToggleWrapper toggleName='Language' onChange={toggleLanguage} checked={isEnglishLanguage}>

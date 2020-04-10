@@ -5,8 +5,10 @@ import waitingSvg from '../public/images/waiting.svg';
 import ToggleTheme from '../components/common/toggle/ToggleTheme';
 import ToggleLanguage from '../components/common/toggle/ToggleLanguage';
 import Link from 'next/link';
+import { useComplexLanguageMethod } from '../contexts/languageContext';
 
 const IndexPage = () => {
+  const { t } = useComplexLanguageMethod();
   // elements
   React.useEffect(() => {
     const page = document.getElementsByClassName('page')[0];
@@ -78,20 +80,23 @@ const IndexPage = () => {
             <div className='login-content'>
               <form>
                 <img src={avatarSvg} />
-                <h2 className='title'>Welcome</h2>
+                <h2 className='title'>{t('welcome')}</h2>
                 <p className='intro'>
-                  This app is a personal website of myself, <nobr>Jan Hrdý</nobr>. Feel free to move
-                  here as you like. If you are interested in projects, that I am part of, than click 
-                  <Link href='/projects' >
-                    <a className='site-link' href='/projects'>here</a>
+                  {t('textIntroPart1')}
+                  <nobr>Jan Hrdý.</nobr>
+                  {t('textIntroPart2')}
+                  <Link href='/projects'>
+                    <a className='site-link' href='/projects'>
+                      {t('here')}
+                    </a>
                   </Link>
                   .
                 </p>
                 <Link href='/home'>
                   <a role='button' className='anchor-button'>
-                    Feel free
+                    {t('feelFree')}
                     <br />
-                    to Enter
+                    {t('toEnter')}
                   </a>
                 </Link>
               </form>

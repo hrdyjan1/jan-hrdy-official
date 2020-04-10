@@ -2,12 +2,18 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useModalDispatch, modalType, modalStatus } from '../contexts/modalContext';
+import { useComplexLanguageMethod } from '../contexts/languageContext';
 
 const MainNavigation = () => {
   const { pathname } = useRouter();
   const modalDispatch = useModalDispatch();
+  const { t } = useComplexLanguageMethod();
+
   const showSettings = () =>
-    modalDispatch({ type: modalType.SHOW, payload: { status: modalStatus.SETTINGS, heading: 'Setting' } });
+    modalDispatch({
+      type: modalType.SHOW,
+      payload: { status: modalStatus.SETTINGS, heading: 'settings' },
+    });
 
   return (
     <nav className='navbar'>
@@ -67,7 +73,7 @@ const MainNavigation = () => {
                   ></path>
                 </g>
               </svg>
-              <span className='link-text'>Home</span>
+              <span className='link-text'>{t('home')}</span>
             </a>
           </Link>
         </li>
@@ -98,7 +104,7 @@ const MainNavigation = () => {
                   ></path>
                 </g>
               </svg>
-              <span className='link-text'>About</span>
+              <span className='link-text'>{t('about')}</span>
             </a>
           </Link>
         </li>
@@ -129,7 +135,7 @@ const MainNavigation = () => {
                   ></path>
                 </g>
               </svg>
-              <span className='link-text'>Projects</span>
+              <span className='link-text'>{t('projects')}</span>
             </a>
           </Link>
         </li>
@@ -159,7 +165,7 @@ const MainNavigation = () => {
                 ></path>
               </g>
             </svg>
-            <span className='link-text'>Settings</span>
+            <span className='link-text'>{t('settings')}</span>
           </button>
         </li>
       </ul>

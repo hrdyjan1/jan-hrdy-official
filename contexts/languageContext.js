@@ -1,35 +1,26 @@
-// src/count-context.js
 import React from 'react';
 import { enhanceLocalStorage, localStorageType } from '../utils/localStorage';
+import {
+  languageStrings,
+  languageStatus,
+  initializeLanguage,
+  languageReducerType,
+  defaultLanguage,
+} from '../config/translation';
 
 const LanguageStateContext = React.createContext();
 const LanguageDispatchContext = React.createContext();
 
-const languageType = {
-  CZECH: 'CZECH',
-  ENGLISH: 'ENGLISH',
-  TOGGLE: 'TOGGLE',
-};
-
-const languageStatus = {
-  CZECH: 'CZECH',
-  ENGLISH: 'ENGLISH',
-};
-
-const initialLanguage = (status) => ({
-  status: languageStatus[status] || languageStatus.CZECH,
-});
-
 function languageReducer(state, action) {
   switch (action.type) {
-    case languageType.TOGGLE:
+    case languageReducerType.TOGGLE:
       return {
         status:
           state.status === languageStatus.CZECH ? languageStatus.ENGLISH : languageStatus.CZECH,
       };
-    case languageType.CZECH:
+    case languageReducerType.CZECH:
       return { status: languageStatus.CZECH };
-    case languageType.ENGLISH:
+    case languageReducerType.ENGLISH:
       return { status: languageStatus.ENGLISH };
     default: {
       throw new Error(`Unhandled action type in LanguageReducer: ${action.type}`);
@@ -38,10 +29,14 @@ function languageReducer(state, action) {
 }
 
 function LanguageProvider({ children, language }) {
-  const [state, dispatch] = React.useReducer(languageReducer, initialLanguage(language));
+  const [state, dispatch] = React.useReducer(languageReducer, initializeLanguage(language));
 
   const isCzechLanguage = state.status === languageStatus.CZECH;
   const isEnglishLanguage = state.status === languageStatus.ENGLISH;
+
+  React.useEffect(() => {
+    enhanceLocalStorage(localStorageType.LANGUAGE, state.status);
+  }, [state.status]);
 
   return (
     <LanguageStateContext.Provider
@@ -77,18 +72,39 @@ function useLanguageDispatch() {
 
 function useLanguageMethod() {
   const dispatch = React.useContext(LanguageDispatchContext);
-  const state = React.useContext(LanguageStateContext);
-
-  const toggle = React.useCallback(() => dispatch({ type: languageType.TOGGLE }), [dispatch]);
-  const toggleComplex = React.useCallback(() => {
-    enhanceLocalStorage(localStorageType.LANGUAGE, state.nextStatus);
-    toggle();
-  }, [toggle, state.status]);
 
   if (dispatch === undefined) {
     throw new Error('useLanguageDispatch must be used within a LLanguageProvider');
   }
-  return { toggleComplex, toggle };
+
+  const toggle = React.useCallback(() => dispatch({ type: languageReducerType.TOGGLE }), [
+    dispatch,
+  ]);
+
+  return { toggle };
 }
 
-export { LanguageProvider, useLanguageState, useLanguageDispatch, useLanguageMethod };
+function useComplexLanguageMethod() {
+  const { status } = React.useContext(LanguageStateContext);
+
+  const t = React.useCallback(
+    (key) => {
+      const currentLanguage = status;
+      const translatedString = languageStrings[currentLanguage][key];
+      if (!translatedString) {
+        console.warn(`Translation '${key}' for currentLanguage '${currentLanguage}' not found.`);
+      }
+      return translatedString || languageStrings[defaultLanguage][key] || key || '';
+    },
+    [status]
+  );
+  return { t };
+}
+
+export {
+  LanguageProvider,
+  useLanguageState,
+  useLanguageDispatch,
+  useLanguageMethod,
+  useComplexLanguageMethod,
+};

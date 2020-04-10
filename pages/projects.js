@@ -1,14 +1,14 @@
 import React from 'react';
 import { useComplexLanguageMethod } from '../contexts/languageContext';
 
-function About() {
+function Projects() {
   const { t } = useComplexLanguageMethod();
-
   return (
     <div>
-      <p>{t('homePageText')}</p>
+      {/* <LongRender /> */}
+      <p>{t('projectsPageText')}</p>
     </div>
   );
 }
 
-export default About;
+export default Projects;

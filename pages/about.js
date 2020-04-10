@@ -1,11 +1,12 @@
 import React from 'react';
-import LongRender from '../components/LongRender';
+import { useComplexLanguageMethod } from '../contexts/languageContext';
 
 function About() {
+  const { t } = useComplexLanguageMethod();
   return (
     <div>
       {/* <LongRender /> */}
-      <p>About PAGE is here!</p>
+      <p>{t('aboutPageText')}</p>
     </div>
   );
 }
