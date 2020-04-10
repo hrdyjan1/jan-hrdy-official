@@ -2,6 +2,7 @@
   height: 100vh;
   width: 100vw;
   z-index: 9999;
+  background-color: var(--bg-secondary);
 }
 
 #loader {
@@ -70,7 +71,6 @@
   position: absolute;
   left: -20px;
   top: 70px;
-  font-family: 'Croissant One';
   color: #fff;
 }
 
@@ -81,7 +81,6 @@
   position: absolute;
   left: -50px;
   top: 100px;
-  font-family: 'Croissant One';
   color: #fff;
   width: 150px;
 }
@@ -93,6 +92,5 @@
   margin: 0;
   font-weight: 200;
   opacity: 0.5;
-  font-family: 'Croissant One';
   color: #fff;
 }
