@@ -16,14 +16,14 @@ class MyDocument extends Document {
             href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'
           />
 
-          <link rel='stylesheet' type='text/css' href='/css/welcome/toggle.css' />
+          <link rel='stylesheet' type='text/css' href='/css/welcome/toggle.css' /> {/* Independent*/}
           <link rel='stylesheet' type='text/css' href='/css/welcome/form.css' /> {/* Almost independent*/}
-          <link rel='stylesheet' type='text/css' href='/css/welcome/index.css' />
+          <link rel='stylesheet' type='text/css' href='/css/welcome/index.css' /> 
 
           <link rel='stylesheet' type='text/css' href='/css/loading.css' /> {/* Independent*/}
           <link rel='stylesheet' type='text/css' href='/css/nprogress.css' /> {/* Independent*/}
-          <link rel='stylesheet' type='text/css' href='/css/toggle.css' /> 
-          <link rel='stylesheet' type='text/css' href='/css/button.css' /> 
+          <link rel='stylesheet' type='text/css' href='/css/toggle.css' /> {/* Independent*/}
+          <link rel='stylesheet' type='text/css' href='/css/button.css' /> {/* Independent*/}
           <link rel='stylesheet' type='text/css' href='/css/root/modal.css' />  {/* Independent*/}
           <link
             href='https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300;400;500;600;700;800;900&display=swap'

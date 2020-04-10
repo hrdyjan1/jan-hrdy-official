@@ -19,3 +19,103 @@
   background-size: 200%;
   text-transform: uppercase;
 }
+
+.anchor-button {
+  -moz-transition: all 0.15s cubic-bezier(0.46, 0.01, 0.14, 1.35);
+  -o-transition: all 0.15s cubic-bezier(0.46, 0.01, 0.14, 1.35);
+  -webkit-transition: all 0.15s cubic-bezier(0.46, 0.01, 0.14, 1.35);
+  transition: all 0.15s cubic-bezier(0.46, 0.01, 0.14, 1.35);
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #3aa8c2;
+  -moz-transform: translate(0%, 0%);
+  -ms-transform: translate(0%, 0%);
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  display: table;
+  text-align: center;
+  margin: auto;
+}
+.anchor-button:after {
+  content: 'wwww.janhrdy.net/home';
+  -moz-transition: all 0s linear;
+  -o-transition: all 0s linear;
+  -webkit-transition: all 0s linear;
+  transition: all 0s linear;
+  overflow: hidden;
+  background-color: #3aa8c2;
+  text-transform: lowercase;
+  position: absolute;
+  font-size: 10px;
+  letter-spacing: 0;
+  font-weight: 500;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  display: inline-block;
+  -moz-transform: translate(-15px, 100%);
+  -ms-transform: translate(-15px, 100%);
+  -webkit-transform: translate(-15px, 100%);
+  transform: translate(-15px, 100%);
+  padding: 0 15px;
+  max-height: 0;
+  z-index: -1;
+}
+.anchor-button:before {
+  content: '';
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-transition: all 0.15s cubic-bezier(0.46, 0.01, 0.14, 1.35);
+  -o-transition: all 0.15s cubic-bezier(0.46, 0.01, 0.14, 1.35);
+  -webkit-transition: all 0.15s cubic-bezier(0.46, 0.01, 0.14, 1.35);
+  transition: all 0.15s cubic-bezier(0.46, 0.01, 0.14, 1.35);
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #3aa8c2;
+  bottom: -5px;
+  z-index: -2;
+  left: 0;
+}
+.anchor-button:hover {
+  color: white;
+  display: block;
+}
+.anchor-button:hover:before {
+  padding: 10px 15px;
+  margin-left: -15px;
+  bottom: -10px;
+  height: 100%;
+}
+.anchor-button:hover:after {
+  -moz-transition: all 0.25s cubic-bezier(0.46, 0.01, 0.14, 1.35) 0.3s;
+  -o-transition: all 0.25s cubic-bezier(0.46, 0.01, 0.14, 1.35) 0.3s;
+  -webkit-transition: all 0.25s cubic-bezier(0.46, 0.01, 0.14, 1.35);
+  -webkit-transition-delay: 0.3s;
+  transition: all 0.25s cubic-bezier(0.46, 0.01, 0.14, 1.35) 0.3s;
+  -moz-transform: translate(-15px, 50%);
+  -ms-transform: translate(-15px, 50%);
+  -webkit-transform: translate(-15px, 50%);
+  transform: translate(-15px, 50%);
+  padding: 10px 15px;
+  max-height: 30px;
+  opacity: 1;
+}
+
+.intro {
+    font-weight: normal;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 1rem 1.5rem;
+}
+
+.site-link {
+    font-size: inherit;
+    display: inline;
+    margin-left: .3rem;
+}
