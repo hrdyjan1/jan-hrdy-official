@@ -10,14 +10,19 @@
   },
   "dependencies": {
     "gsap": "^3.2.6",
+    "lodash": "^4.17.15",
     "next": "latest",
     "next-images": "^1.4.0",
     "next-page-transitions": "^1.0.0-beta.2",
+    "next-redux-wrapper": "^5.0.0",
+    "normalizr": "^3.6.0",
     "nprogress": "^0.2.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-loadable": "^5.5.0",
-    "react-preloaders": "^3.0.3"
+    "react-preloaders": "^3.0.3",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
   },
   "license": "ISC"
 }
