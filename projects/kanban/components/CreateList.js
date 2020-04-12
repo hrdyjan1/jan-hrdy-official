@@ -20,10 +20,12 @@ class CreateList extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    const { onCreateList } = this.props;
+    const { createList } = this.props;
+    console.log('this.props', this.props)
 
-    if (onCreateList) {
-      onCreateList(this.state);
+    if (createList) {
+      console.log('Handle submit create');
+      createList(this.state);
     }
 
     this.setState({ title: '' });
@@ -33,20 +35,16 @@ class CreateList extends Component {
     const { title } = this.state;
 
     return (
-      <form className="CreateList" onSubmit={this.handleSubmit}>
+      <form className='CreateList' onSubmit={this.handleSubmit}>
         <input
-          className="CreateList-title"
-          id="CreateList-title"
-          name="title"
+          className='CreateList-title'
+          id='CreateList-title'
+          name='title'
           onChange={this.handleChange}
-          placeholder="New List Title"
+          placeholder='New List Title'
           value={title}
         />
-        <input
-          className="CreateList-submit"
-          type="submit"
-          disabled={this.isInvalid}
-        />
+        <input className='CreateList-submit' type='submit' disabled={this.isInvalid} />
       </form>
     );
   }

@@ -3,8 +3,8 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import rootReducer, { enhancers } from '../../projects/kanban/reducers';
-import CreateList from '../../projects/kanban/components/CreateList';
 import ListsContainer from '../../projects/kanban/containers/ListsContainer';
+import CreateListContainer from '../../projects/kanban/containers/CreateListContainer';
 
 const store = createStore(rootReducer, {}, enhancers);
 
@@ -15,7 +15,7 @@ const kanban = () => {
         <div className='Application'>
           <div>{/* Users will go here! */}</div>
           <section>
-            <CreateList />
+            <CreateListContainer />
             <ListsContainer />
           </section>
         </div>

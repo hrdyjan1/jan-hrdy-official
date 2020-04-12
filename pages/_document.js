@@ -26,6 +26,7 @@ class MyDocument extends Document {
           <link rel='stylesheet' type='text/css' href='/css/button.css' /> {/* Independent*/}
           <link rel='stylesheet' type='text/css' href='/css/root/modal.css' />  {/* Independent*/}
 
+          <link rel='stylesheet' type='text/css' href='/css/projects/index.css' />  {/* Independent*/}
           <link rel='stylesheet' type='text/css' href='/css/projects/kanban/index.css' />  {/* Independent*/}
           <link
             href='https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300;400;500;600;700;800;900&display=swap'

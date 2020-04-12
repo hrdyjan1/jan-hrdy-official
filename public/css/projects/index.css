@@ -1,0 +1,116 @@
+.awesome-container{
+  min-height: 50px;
+  margin-top: 53px;
+  position: relative;
+  opacity: 1;
+  top: 0;
+}
+
+.awesome-container input{
+  position: absolute;
+  width: 100%;
+  padding: 0 0 0 20px;
+  border: transparent !important;
+}
+
+.awesome-container .input-field {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  top: 4px !important;
+  margin-top: 0;
+}
+
+.awesome-container label {
+  padding-left: 10px;
+}
+
+.awesome-container .input-field label.active {
+  font-size: 0.7rem;
+  -webkit-transform: translateY(-140%);
+  transform: translateY(-70%);
+  color: #00aeef !important;
+  
+}
+
+.awesome-container input[type=text]:focus:not([readonly]){
+  border-bottom: 1px solid transparent !important;
+  box-shadow: 0 1px 0 0 transparent !important;
+}
+
+.awesome-menu{
+}
+
+.awesome-menu ul.right{
+  margin: 10px;
+}
+
+.awesome-menu i{
+  border-radius: 50px;
+  margin:0;
+}
+
+.awesome-menu i:hover {
+  color: #333;
+  
+}
+
+.awesome-results{
+  position: relative;
+  top: -7px;
+  z-index: 0;
+  display: block;
+}
+
+.awesome-results li:hover{
+  background: #eee;
+  cursor: pointer;
+}
+
+.awesome-status{
+  margin-left: 35px;
+  position: relative;
+  top: 8px;
+  padding: 5px 10px;
+  background: #eee;
+}
+
+.awesome-status .badge{
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 11px !important;
+  color: #fff !important;
+  border-radius: 15px;
+  position: relative; 
+}
+
+.awesome-workflows{
+  
+}
+
+.dropdown-content{
+  display: none;
+  right: 0 ;
+  top: 20px;
+  z-index: -1;
+  transition-delay: .1s;
+}
+
+.dropdown-content li a{
+  color: #333 ;
+  font-size: .8em !important;
+}
+
+.block{
+  display: block;
+}
+.show-dropdown{
+  opacity: 1;
+  top: 50px;
+}
+
+.toggle-search{
+  top: -50px;
+  opacity: 0;
+}

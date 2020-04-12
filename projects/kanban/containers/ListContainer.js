@@ -1,8 +1,13 @@
-import { connect } from "react-redux"
-import List from "../components/List"
+import { connect } from 'react-redux';
+import List from '../components/List';
+import { removeList } from '../actions/list-actions';
 
 const mapStateToProps = (state, props) => {
-    return { list: state.lists.entities[props.listId]}
-}
+  return { list: state.lists.entities[props.listId] };
+};
 
-export default connect(mapStateToProps)(List)
+const mapDispatchToProps = {
+  removeList,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(List);
