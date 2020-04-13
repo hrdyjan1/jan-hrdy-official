@@ -1,81 +1,111 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BehaviorSubject } from 'rxjs';
-import { map, filter, debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { map, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { useComplexLanguageMethod } from '../contexts/languageContext';
-import { from } from 'rxjs';
-import { Suggestions } from '../projects/Default';
+import Default from '../projects/Default';
 
-const subject$ = new BehaviorSubject('');
+export const subject$ = new BehaviorSubject('');
+const projects = [
+  '404 Error',
+  'Address Bar',
+  'Ajax',
+  'Apache',
+  'Autoresponder',
+  'BitTorrent',
+  'Blog',
+  'Bookmark',
+  'Bot',
+  'Broadband',
+  'Captcha',
+  'Certificate',
+  'Client',
+  'Cloud',
+  'Cloud Computing',
+  'CMS',
+  'Cookie',
+  'CSS',
+  'Cyberspace',
+  'Denial of Service',
+  'DHCP',
+  'Dial-up',
+  'DNS Record',
+  'Domain Name',
+  'Download',
+  'E-mail',
+  'Facebook',
+  'FiOS',
+  'Firewall',
+  'FTP',
+  'Gateway',
+  'Google',
+  'Google Drive',
+  'Gopher',
+  'Hashtag',
+  'Hit',
+  'Home Page',
+  'HTML',
+  'HTTP',
+  'HTTPS',
+  'Hyperlink',
+  'Hypertext',
+  'ICANN',
+  'Inbox',
+  'Internet',
+  'InterNIC',
+  'IP',
+  'IP Address',
+  'IPv4',
+  'IPv6',
+  'IRC',
+  'iSCSI',
+  'ISDN',
+  'ISP',
+  'JavaScript',
+  'jQuery',
+  'Meta Search Engine',
+  'Meta Tag',
+  'Minisite',
+  'Mirror',
+  'Name Server',
+  'Packet',
+  'Page View',
+  'Payload',
+  'Phishing',
+  'POP3',
+  'Protocol',
+  'Scraping',
+  'Search Engine',
+  'Social Networking',
+  'Socket',
+  'Spam',
+  'Spider',
+  'Spoofing',
+  'SSH',
+  'SSL',
+  'Static Website',
+  'Twitter',
+  'XHTML',
+];
 
 export const getSuggestionsFromArray = (projects) => (subject) => {
   return subject.pipe(
-    debounceTime(500), // wait until user stops typing
+    debounceTime(200), // wait until user stops typing
     distinctUntilChanged(),
     map((value) =>
       !value || value === ''
         ? projects
-        : projects.filter((p) => p.toLocaleLowerCase().startsWith(value))
+        : projects.filter((p) => p.toLocaleLowerCase().includes(value))
     )
-  );
-};
-
-// const List = React.memo(({ suggestions = [] }) => {
-//   return (
-//     <div>
-//       {suggestions.map((suggestion) => (
-//         <p>{suggestion}</p>
-//       ))}
-//     </div>
-//   );
-// });
-
-const ProjectsContainer = ({ getSuggestions }) => {
-  const [searchValue, setSearchValue] = React.useState('');
-  const [suggestions, setSuggestions] = React.useState([]);
-
-  const changeSearchValue = React.useCallback(
-    ({ target: { value } }) => {
-      setSearchValue(value);
-      subject$.next(value);
-    },
-    [setSearchValue]
-  );
-
-  React.useEffect(() => {
-    const subscription = getSuggestions(subject$).subscribe(
-      (newSuggestions) => {
-        setSuggestions(newSuggestions);
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-
-    return () => subscription.unsubscribe();
-  }, []);
-
-  return (
-    <>
-      <label htmlFor='search-project'></label>
-      <input
-        id='search-project'
-        type='text'
-        placeholder='Search'
-        value={searchValue}
-        onChange={changeSearchValue}
-      />
-      <Suggestions suggestions={suggestions} />
-    </>
   );
 };
 
 function Projects() {
   const { t } = useComplexLanguageMethod();
-  const getSuggestions = getSuggestionsFromArray(['aaa', 'bbb', 'ccc']);
+  const getSuggestions = getSuggestionsFromArray(projects);
   return (
-    <div>
+    <div id='page-project-id'>
       <p>{t('projectsPageText')}</p>
-      <ProjectsContainer getSuggestions={getSuggestions} />
+      <Default getSuggestions={getSuggestions} />
     </div>
   );
 }

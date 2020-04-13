@@ -1,64 +1,126 @@
 import React from 'react';
+import { subject$ } from '../pages/projects';
 
-export const Suggestions = React.memo(({ suggestions = [] }) => {
-  if (!Array.isArray(suggestions)) {
-    <p>Not an array of suggestions</p>;
-  } else if (suggestions.length > 0) {
-    return (
-      <div className='awesome-results'>
-        <ul className='collection'>
-          {suggestions.map((suggestion) => (
-            <li className='collection-item'>{suggestion}</li>
-          ))}
-        </ul>
-      </div>
+const Default = ({ getSuggestions }) => {
+  const [searchValue, setSearchValue] = React.useState('');
+  const [suggestions, setSuggestions] = React.useState([]);
+  const [isFocused, setFocused] = React.useState(false);
+  const ulRef = React.useRef(null);
+  const inputRef = React.useRef(null);
+
+  const changeSearchValue = (value) => {
+    setSearchValue(value);
+    subject$.next(value);
+  };
+
+  const changeInputValue = React.useCallback(({ target: { value } }) => changeSearchValue(value), [
+    changeSearchValue,
+    setSearchValue,
+  ]);
+
+  // Clear visible suggesting results
+  const clearResults = () => {
+    ulRef.current.className = 'term-list hidden';
+    ulRef.current.innerHTML = '';
+  };
+
+  // Focused on input
+  const setFocusOn = () => {
+    if (!isFocused) {
+      setFocused(true);
+    }
+  };
+
+  // Focused off input
+  const setFocusOff = () => {
+    if (isFocused) {
+      setFocused(false);
+    }
+  };
+
+  const handleShowingSuggestions = () => {
+    clearResults();
+    if (suggestions.length === 0) {
+      ulRef.current.innerHTML = `<li>Whoah! <strong>${searchValue}</strong> is not in the index</li>`;
+    } else if (suggestions.length > 0) {
+      for (let i = 0; i < suggestions.length && i < 5; i++) {
+        const li = document.createElement('li');
+        const result = suggestions[i]
+          .toLowerCase()
+          .replace(searchValue, `<strong>${searchValue}</strong>`);
+
+        li.onclick = () => changeSearchValue(suggestions[i]);
+        li.innerHTML = result;
+        ulRef.current.appendChild(li);
+      }
+    }
+
+    if (ulRef.current.className !== 'term-list') {
+      ulRef.current.className = 'term-list';
+    }
+  };
+
+  const handleClearingSuggestions = (event) => {
+    const isClickedOnSuggestionBar =
+      event.target.tagName === 'UL' ||
+      event.target.tagName === 'LI' ||
+      event.target.tagName === 'INPUT';
+    if (!isClickedOnSuggestionBar) {
+      setFocusOff();
+    }
+  };
+
+  // Handled suggestions
+  React.useEffect(() => {
+    if (isFocused) {
+      handleShowingSuggestions();
+    } else {
+      clearResults();
+    }
+  }, [isFocused, suggestions]);
+
+  // Handled focus on input
+  React.useEffect(() => {
+    const body = document.getElementsByTagName('body')[0];
+
+    body.addEventListener('click', handleClearingSuggestions);
+    inputRef.current.addEventListener('focusin', setFocusOn);
+    inputRef.current.addEventListener('keyup', setFocusOn);
+    return () => {
+      body.removeEventListener('click', handleClearingSuggestions);
+      inputRef.current.removeEventListener('focusin', setFocusOn);
+      inputRef.current.removeEventListener('keyup', setFocusOn);
+    };
+  }, [handleClearingSuggestions, setFocusOn]);
+
+  // Handled new suggestions from "API"
+  React.useEffect(() => {
+    const subscription = getSuggestions(subject$).subscribe(
+      (newSuggestions) => {
+        setSuggestions(newSuggestions);
+      },
+      (error) => {
+        console.error(error);
+      }
     );
-  } else {
-    return <p>Empty array</p>;
-  }
-});
 
-const Default = () => {
-  const suggestions = [];
+    return () => subscription.unsubscribe();
+  }, [getSuggestions]);
+
   return (
-    <div className='container'>
-      <h1 className='center grey-text'>Omnibar</h1>
-      <p className='center grey-text'>A multi-functional, cross domain search concept. </p>
-      <div className='awesome-container white z-depth-1'>
-        <div className='input-field'>
-          <input id='awesome-input' type='text' className='' />
-          <label for='awesome-input'>Workflow search</label>
-        </div>
-        <div className='awesome-menu'>
-          <ul className='right'>
-            <li>
-              <a href='#!' className='grey-text'>
-                <i className='material-icons small waves-effect search-icon'>search</i>
-                <i className='material-icons small waves-effect dropdown'>more_vert</i>
-              </a>
-            </li>
-          </ul>
-          <ul id='menu' className='dropdown-content grey-text'>
-            <li>
-              <a href='#!' className='workspace trigger-close'>
-                Workspace search
-              </a>
-            </li>
-            <li>
-              <a href='#!' className='accounts trigger-close'>
-                Accounts search
-              </a>
-            </li>
-            <li className='divider'></li>
-            <li>
-              <a href='#!' className='status trigger-close'>
-                Show state & status
-              </a>
-            </li>
-          </ul>
-        </div>
-        <Suggestions suggestions={suggestions} />
-      </div>
+    <div id='project-container'>
+      <input
+        // autoFocus
+        type='text'
+        id='searchBox'
+        ref={inputRef}
+        autoComplete='off'
+        className='search-field'
+        value={searchValue}
+        onChange={changeInputValue}
+        placeholder='Search in projects...'
+      />
+      <ul ref={ulRef} id='searchResults' className='term-list hidden'></ul>
     </div>
   );
 };
