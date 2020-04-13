@@ -1,6 +1,20 @@
 import React from 'react';
 import { subject$ } from '../pages/projects';
 
+const Projects = React.memo(({ projects }) => {
+  console.log('new projects');
+  return (
+    <section className='basic-grid'>
+      {projects.map((project) => (
+        <div key={project} className='card'>
+          <div className='space'></div>
+          <p>{project}</p>
+        </div>
+      ))}
+    </section>
+  );
+});
+
 const Default = ({ getSuggestions }) => {
   const [searchValue, setSearchValue] = React.useState('');
   const [suggestions, setSuggestions] = React.useState([]);
@@ -49,6 +63,13 @@ const Default = ({ getSuggestions }) => {
           .toLowerCase()
           .replace(searchValue, `<strong>${searchValue}</strong>`);
 
+        li.style.transition = 'opacity .5s linear';
+
+        // reflow
+        li.getBoundingClientRect();
+
+        // it transitions!
+        li.style.opacity = 1;
         li.onclick = () => changeSearchValue(suggestions[i]);
         li.innerHTML = result;
         ulRef.current.appendChild(li);
@@ -121,6 +142,7 @@ const Default = ({ getSuggestions }) => {
         placeholder='Search in projects...'
       />
       <ul ref={ulRef} id='searchResults' className='term-list hidden'></ul>
+      <Projects projects={suggestions} />
     </div>
   );
 };

@@ -18,7 +18,7 @@ body {
   background-color: var(--bg-primary);
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: auto;
 }
 
 body::-webkit-scrollbar {
@@ -35,15 +35,7 @@ body::-webkit-scrollbar-thumb {
 
 main {
   margin-left: 5rem;
-  padding: 1rem;
-  /* Firefox */
-  height: -moz-calc(100vh - 5rem);
-  /* WebKit */
-  height: -webkit-calc(100vh - 5rem);
-  /* Opera */
-  height: -o-calc(100vh - 5rem);
-  /* Standard */
-  height: calc(100vh - 5rem);
+  padding: 3rem 5rem 6rem;
 }
 
 .navbar {
