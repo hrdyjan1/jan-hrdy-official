@@ -1,13 +1,21 @@
 .search-field {
   display: block;
-  width: 30%;
   margin: 1em auto 0;
   padding: 0.5em 10px;
-  border: 1px solid #999;
-  font-size: 130%;
-  font-family: 'Arvo', 'Helvetica Neue', Helvetica, arial, sans-serif;
   font-weight: 400;
   color: #3e8ce0;
+
+  background: #f4f4f4;
+  border: none;
+  font-size: 2rem;
+  font-family: 'Crimson Pro', serif;
+  height: 72px;
+  width: 99.5%;
+  margin-bottom: 10px;
+  opacity: 1;
+  text-indent: 20px;
+  transition: all 0.2s ease-in-out;
+  max-width: 35rem;
 }
 
 .search-field,
@@ -15,24 +23,28 @@
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-}
-
-.hidden {
-  visibility: hidden;
-  opacity: 0;
 }
 
 .term-list {
   list-style: none inside;
-  width: 30%;
+  width: 99.5%;
   margin: 0 auto 2em;
   padding: 0;
   text-align: left;
   color: #777;
-  background: #fff;
-  border: 1px solid #ddd;
-  font-family: 'Arvo', 'Helvetica Neue', Helvetica, arial, sans-serif;
+  background: var(--bg-modal);
+  border: 3px solid #ddd;
+  max-width: 35rem;
   font-weight: 400;
+  max-height: 1000px;
+  transition: max-height 0.333s ease-in;
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+  max-height: 0px;
+  transition: max-height 0.15s ease-out;
 }
 
 .search-field,
@@ -42,22 +54,38 @@
   border-radius: 3px;
 }
 
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1 !important;
+  }
+}
+
 .term-list li {
+  opacity: 0;
   padding: 0.5em 1em;
   border-bottom: 1px solid #eee;
   display: list-item;
   text-align: -webkit-match-parent;
+  animation: FadeIn 0.666s;
+  color: var(--text-primary);
+  font-size: 1.2rem;
 }
 
 .term-list li:hover {
-  background-color: #999;
+  background-color: var(--bg-ternary);
+  color: #fff;
   cursor: pointer;
 }
 
 .basic-grid {
   display: grid;
-  gap: 4rem;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 5rem;
+  margin-left: 2.71rem;
+  margin-right: 2.71rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
 
 .card {
@@ -85,5 +113,22 @@
   transform: translateY(-3px) scale(0.9);
 }
 
-.space {
+@media only screen and (max-width: 1200px) {
+  .basic-grid {
+    gap: 3rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}
+
+#project-container h1 {
+  margin: 3rem 0 0;
+  font-size: 5rem;
+  text-align: center;
+}
+
+#project-container h2 {
+  margin: 1rem 0 0;
+  font-size: 1rem;
+  text-align: center;
 }

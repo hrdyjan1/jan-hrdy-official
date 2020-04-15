@@ -1,8 +1,8 @@
 import React from 'react';
-import { subject$ } from '../pages/projects';
+import { subject$ } from '../../../pages/projects';
+import Intro from './Intro';
 
 const Projects = React.memo(({ projects }) => {
-  console.log('new projects');
   return (
     <section className='basic-grid'>
       {projects.map((project) => (
@@ -33,9 +33,11 @@ const Default = ({ getSuggestions }) => {
   ]);
 
   // Clear visible suggesting results
-  const clearResults = () => {
-    ulRef.current.className = 'term-list hidden';
-    ulRef.current.innerHTML = '';
+  const hideResults = (shouldClear) => {
+    ulRef.current.classList.add('hidden');
+    if (shouldClear) {
+      ulRef.current.innerHTML = '';
+    }
   };
 
   // Focused on input
@@ -53,9 +55,15 @@ const Default = ({ getSuggestions }) => {
   };
 
   const handleShowingSuggestions = () => {
-    clearResults();
+    hideResults(true);
     if (suggestions.length === 0) {
-      ulRef.current.innerHTML = `<li>Whoah! <strong>${searchValue}</strong> is not in the index</li>`;
+      const li = document.createElement('li');
+      li.style.transition = 'opacity .5s linear';
+      li.getBoundingClientRect();
+      // it transitions!
+      li.style.opacity = 1;
+      li.innerHTML = `Whoah! <strong>${searchValue}</strong> is not in the index`;
+      ulRef.current.appendChild(li);
     } else if (suggestions.length > 0) {
       for (let i = 0; i < suggestions.length && i < 5; i++) {
         const li = document.createElement('li');
@@ -70,7 +78,7 @@ const Default = ({ getSuggestions }) => {
 
         // it transitions!
         li.style.opacity = 1;
-        li.onclick = () => changeSearchValue(suggestions[i]);
+        li.onclick = () => changeSearchValue(suggestions[i].toLowerCase());
         li.innerHTML = result;
         ulRef.current.appendChild(li);
       }
@@ -96,7 +104,7 @@ const Default = ({ getSuggestions }) => {
     if (isFocused) {
       handleShowingSuggestions();
     } else {
-      clearResults();
+      hideResults();
     }
   }, [isFocused, suggestions]);
 
@@ -130,6 +138,7 @@ const Default = ({ getSuggestions }) => {
 
   return (
     <div id='project-container'>
+      <Intro />
       <input
         // autoFocus
         type='text'

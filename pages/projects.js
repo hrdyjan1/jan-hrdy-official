@@ -2,7 +2,7 @@ import React from 'react';
 import { BehaviorSubject } from 'rxjs';
 import { map, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { useComplexLanguageMethod } from '../contexts/languageContext';
-import Default from '../projects/Default';
+import Default from '../components/pages/projects/Default';
 
 export const subject$ = new BehaviorSubject('');
 const projects = [
