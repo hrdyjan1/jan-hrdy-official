@@ -23,9 +23,13 @@ const languageStrings = {
     toEnter: 'to enter', // Welcome page - button
     homePageText: 'This is home page.', // Home page - button
     aboutPageText: 'This is about page.', // Home page - button
-    projectsPageText: 'This page contains list of projects.', 
-},
-[CZECH]: {
+    projects: 'Projects', // Projects page = h1
+    projectsDescription: 'Here is a list of projects I have participated in.', // Projects page = h2
+    name: 'Name', // Projects page = search type value
+    type: 'Type', // Projects page = search type value
+    search: 'Search', // Projects page = default search input value
+  },
+  [CZECH]: {
     home: 'Domů',
     about: 'O mě',
     projects: 'Projekty',
@@ -36,13 +40,17 @@ const languageStrings = {
     welcome: 'Vítejte',
     textIntroPart1: 'Tato aplikace reprezentuje mé osobní stránky. Zdraví Vás ',
     textIntroPart2:
-    ' Je mi ctí, že jste zavítali přímo sem. Pokud Vás zajímá nějáký projekt, na kterém jsem se podílel, tak prosím kliknětě',
+      ' Je mi ctí, že jste zavítali přímo sem. Pokud Vás zajímá nějáký projekt, na kterém jsem se podílel, tak prosím kliknětě',
     here: 'zde',
     feelFree: 'Neváhejte',
     toEnter: 'vstoupit',
-    homePageText: 'Toto je domovská stránka.', 
-    aboutPageText: 'Tato stránka je o mně.', 
-    projectsPageText: 'Tato stránka obsahuje seznam projektů.', 
+    homePageText: 'Toto je domovská stránka.',
+    aboutPageText: 'Tato stránka je o mně.',
+    projects: 'Projekty',
+    projectsDescription: 'Zde je uveden seznam projektů, na kterých jsem se podílel.',
+    name: 'Název',
+    type: 'Typ',
+    search: 'Vyhledat',
   },
 };
 

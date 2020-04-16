@@ -1,26 +1,18 @@
 import React from 'react';
 import { subject$ } from '../../../pages/projects';
 import Intro from './Intro';
-
-const Projects = React.memo(({ projects }) => {
-  return (
-    <section className='basic-grid'>
-      {projects.map((project) => (
-        <div key={project} className='card'>
-          <div className='space'></div>
-          <p>{project}</p>
-        </div>
-      ))}
-    </section>
-  );
-});
+import List from './List';
+import SearchType from './SearchType';
+import { useComplexLanguageMethod } from '../../../contexts/languageContext';
 
 const Default = ({ getSuggestions }) => {
   const [searchValue, setSearchValue] = React.useState('');
   const [suggestions, setSuggestions] = React.useState([]);
+  const [searchTypeValue, setSearchTypeValue] = React.useState(1);
   const [isFocused, setFocused] = React.useState(false);
   const ulRef = React.useRef(null);
   const inputRef = React.useRef(null);
+  const { t } = useComplexLanguageMethod();
 
   const changeSearchValue = (value) => {
     setSearchValue(value);
@@ -139,19 +131,22 @@ const Default = ({ getSuggestions }) => {
   return (
     <div id='project-container'>
       <Intro />
-      <input
-        // autoFocus
-        type='text'
-        id='searchBox'
-        ref={inputRef}
-        autoComplete='off'
-        className='search-field'
-        value={searchValue}
-        onChange={changeInputValue}
-        placeholder='Search in projects...'
-      />
+      <div className='wrapper-search'>
+        <SearchType searchTypeValue={searchTypeValue} changeSearchTypeValue={setSearchTypeValue} />
+        <input
+          // autoFocus
+          type='text'
+          id='searchBox'
+          ref={inputRef}
+          autoComplete='off'
+          className='search-field'
+          value={searchValue}
+          onChange={changeInputValue}
+          placeholder={`${t('search')}...`}
+        />
+      </div>
       <ul ref={ulRef} id='searchResults' className='term-list hidden'></ul>
-      <Projects projects={suggestions} />
+      <List projects={suggestions} />
     </div>
   );
 };

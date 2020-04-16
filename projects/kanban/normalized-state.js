@@ -20,6 +20,7 @@ const cards = {
   results: Object.keys(normalizedLists.entities.cards),
 };
 
+console.log('cards', cards)
 const lists = {
   entities: normalizedLists.entities.lists,
   results: normalizedLists.result,
