@@ -1,23 +1,21 @@
 import React from 'react';
 import { useComplexLanguageMethod } from '../../../contexts/languageContext';
+import { searchTypes } from '../../../pages/projects';
 
-const SearchType = ({ searchTypeValue = 1, changeSearchTypeValue }) => {
+const SearchType = ({ searchTypeValue = searchTypes.title, changeSearchTypeValue }) => {
   const { t } = useComplexLanguageMethod();
-  if (!(searchTypeValue === 1 || searchTypeValue === 2)) {
+  if (!(searchTypeValue === searchTypes.title || searchTypeValue === searchTypes.type)) {
     return null;
   }
 
-  const chooseFirst = () => {
-    if (searchTypeValue !== 1) {
-      changeSearchTypeValue(1);
+  const chooseValue = (value) => {
+    if (searchTypeValue !== value) {
+      changeSearchTypeValue(value);
     }
   };
 
-  const chooseSecond = () => {
-    if (searchTypeValue !== 2) {
-      changeSearchTypeValue(2);
-    }
-  };
+  const chooseFirst = () => chooseValue(searchTypes.title);
+  const chooseSecond = () => chooseValue(searchTypes.type);
 
   return (
     <>
@@ -26,7 +24,7 @@ const SearchType = ({ searchTypeValue = 1, changeSearchTypeValue }) => {
         name='action'
         type='radio'
         value='name'
-        checked={searchTypeValue === 1}
+        checked={searchTypeValue === searchTypes.title}
         onChange={chooseFirst}
       />
       <label htmlFor='name-id' onClick={chooseFirst}>
@@ -37,10 +35,10 @@ const SearchType = ({ searchTypeValue = 1, changeSearchTypeValue }) => {
         name='action'
         type='radio'
         value='type'
-        checked={searchTypeValue === 2}
+        checked={searchTypeValue === searchTypes.type}
         onChange={chooseSecond}
       />
-      <label for='type-id' onClick={chooseSecond}>
+      <label htmlFor='type-id' onClick={chooseSecond}>
         {t('type')}
       </label>
       <div id='arrow'></div>

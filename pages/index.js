@@ -85,14 +85,14 @@ const IndexPage = () => {
                   {t('textIntroPart1')}
                   <nobr>Jan Hrdý.</nobr>
                   {t('textIntroPart2')}
-                  <Link href='/projects'>
+                  <Link href='/projects' prefetch>
                     <a className='site-link' href='/projects'>
                       {t('here')}
                     </a>
                   </Link>
                   .
                 </p>
-                <Link href='/home'>
+                <Link href='/home' prefetch>
                   <a role='button' className='anchor-button'>
                     {t('feelFree')}
                     <br />

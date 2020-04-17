@@ -1,14 +1,33 @@
 import React from 'react';
-import { subject$ } from '../../../pages/projects';
+import { subject$, searchTypes } from '../../../pages/projects';
 import Intro from './Intro';
 import List from './List';
 import SearchType from './SearchType';
 import { useComplexLanguageMethod } from '../../../contexts/languageContext';
+import { entities } from '../../../config/projects';
+
+const MAX_INPUT_SUGGESTIONS = 5;
+
+const getUniquePropertyValuesFromHashMap = ({ property, hashMap, ids }) => {
+  return ids
+    .map((id) => hashMap[id][property])
+    .filter((value, index, self) => self.indexOf(value) === index);
+};
+
+const createSuggestionElements = ({ innerHTML, onclick = () => {} }) => {
+  const li = document.createElement('li');
+  li.style.transition = 'opacity .5s linear';
+  li.getBoundingClientRect();
+  li.style.opacity = 1;
+  li.innerHTML = innerHTML;
+  li.onclick = onclick;
+  return li;
+};
 
 const Default = ({ getSuggestions }) => {
   const [searchValue, setSearchValue] = React.useState('');
   const [suggestions, setSuggestions] = React.useState([]);
-  const [searchTypeValue, setSearchTypeValue] = React.useState(1);
+  const [searchTypeValue, setSearchTypeValue] = React.useState(searchTypes.title);
   const [isFocused, setFocused] = React.useState(false);
   const ulRef = React.useRef(null);
   const inputRef = React.useRef(null);
@@ -48,31 +67,23 @@ const Default = ({ getSuggestions }) => {
 
   const handleShowingSuggestions = () => {
     hideResults(true);
+    const searchValueLower = searchValue.toLowerCase();
+
     if (suggestions.length === 0) {
-      const li = document.createElement('li');
-      li.style.transition = 'opacity .5s linear';
-      li.getBoundingClientRect();
-      // it transitions!
-      li.style.opacity = 1;
-      li.innerHTML = `Whoah! <strong>${searchValue}</strong> is not in the index`;
-      ulRef.current.appendChild(li);
+      const innerHTML = `Whoah! <strong>${searchValueLower}</strong> is not in the index`;
+      ulRef.current.appendChild(createSuggestionElements({ innerHTML }));
     } else if (suggestions.length > 0) {
-      for (let i = 0; i < suggestions.length && i < 5; i++) {
-        const li = document.createElement('li');
-        const result = suggestions[i]
-          .toLowerCase()
-          .replace(searchValue, `<strong>${searchValue}</strong>`);
+      const obj = { property: searchTypeValue, hashMap: entities, ids: suggestions };
+      const uniqueSuggestionNames = getUniquePropertyValuesFromHashMap(obj);
 
-        li.style.transition = 'opacity .5s linear';
+      for (let i = 0; i < uniqueSuggestionNames.length && i < MAX_INPUT_SUGGESTIONS; i++) {
+        const nameOfSuggestion = uniqueSuggestionNames[i];
+        const nameOfSuggestionLowerCase = nameOfSuggestion.toLowerCase();
+        const replacedValue = `<strong>${searchValueLower}</strong>`;
+        const innerHTML = nameOfSuggestionLowerCase.replace(searchValueLower, replacedValue);
+        const onclick = () => changeSearchValue(nameOfSuggestionLowerCase);
 
-        // reflow
-        li.getBoundingClientRect();
-
-        // it transitions!
-        li.style.opacity = 1;
-        li.onclick = () => changeSearchValue(suggestions[i].toLowerCase());
-        li.innerHTML = result;
-        ulRef.current.appendChild(li);
+        ulRef.current.appendChild(createSuggestionElements({ onclick, innerHTML }));
       }
     }
 
@@ -116,7 +127,7 @@ const Default = ({ getSuggestions }) => {
 
   // Handled new suggestions from "API"
   React.useEffect(() => {
-    const subscription = getSuggestions(subject$).subscribe(
+    const subscription = getSuggestions(subject$, searchTypeValue).subscribe(
       (newSuggestions) => {
         setSuggestions(newSuggestions);
       },
@@ -126,7 +137,7 @@ const Default = ({ getSuggestions }) => {
     );
 
     return () => subscription.unsubscribe();
-  }, [getSuggestions]);
+  }, [searchTypeValue, getSuggestions]);
 
   return (
     <div id='project-container'>
