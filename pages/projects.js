@@ -5,8 +5,6 @@ import Default from '../components/pages/projects/Default';
 import { projectList } from '../config/projects';
 import memoize from 'lodash/memoize';
 
-const subject$ = new BehaviorSubject('');
-
 const searchTypes = {
   title: 'title',
   type: 'type',
@@ -58,12 +56,14 @@ const getSuggestionsFromArray = (list) => (subject, property = searchTypes.title
 
 function Projects() {
   const getSuggestions = getSuggestionsFromArray(projectList);
+  const subject$ = new BehaviorSubject('');
+
   return (
     <div id='page-project-id'>
-      <Default getSuggestions={getSuggestions} />
+      <Default getSuggestions={getSuggestions} subject$={subject$} />
     </div>
   );
 }
 
 export default Projects;
-export { subject$, searchTypes, getSuggestionsFromArray };
+export { searchTypes, getSuggestionsFromArray };

@@ -28,6 +28,8 @@ const languageStrings = {
     name: 'Name', // Projects page = search type value
     type: 'Type', // Projects page = search type value
     search: 'Search', // Projects page = default search input value
+    about: 'About Me', // About page = h1
+    aboutDescription: 'Description', // About page = h2
   },
   [CZECH]: {
     home: 'Domů',
@@ -51,6 +53,8 @@ const languageStrings = {
     name: 'Název',
     type: 'Typ',
     search: 'Vyhledat',
+    about: 'O mě', // About page = h1
+    aboutDescription: 'Popis', // About page = h2
   },
 };
 

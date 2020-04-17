@@ -104,7 +104,9 @@ const MainNavigation = () => {
                   ></path>
                 </g>
               </svg>
-              <span className='link-text'>{t('about')}</span>
+              <span className='link-text'>
+                <nobr>{t('about')}</nobr>
+              </span>
             </a>
           </Link>
         </li>

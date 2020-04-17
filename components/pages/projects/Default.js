@@ -1,5 +1,5 @@
 import React from 'react';
-import { subject$, searchTypes } from '../../../pages/projects';
+import { searchTypes } from '../../../pages/projects';
 import Intro from './Intro';
 import List from './List';
 import SearchType from './SearchType';
@@ -24,7 +24,7 @@ const createSuggestionElements = ({ innerHTML, onclick = () => {} }) => {
   return li;
 };
 
-const Default = ({ getSuggestions }) => {
+const Default = ({ getSuggestions, subject$ }) => {
   const [searchValue, setSearchValue] = React.useState('');
   const [suggestions, setSuggestions] = React.useState([]);
   const [searchTypeValue, setSearchTypeValue] = React.useState(searchTypes.title);
@@ -127,6 +127,7 @@ const Default = ({ getSuggestions }) => {
 
   // Handled new suggestions from "API"
   React.useEffect(() => {
+    console.log('rerender');
     const subscription = getSuggestions(subject$, searchTypeValue).subscribe(
       (newSuggestions) => {
         setSuggestions(newSuggestions);
@@ -137,11 +138,11 @@ const Default = ({ getSuggestions }) => {
     );
 
     return () => subscription.unsubscribe();
-  }, [searchTypeValue, getSuggestions]);
+  }, [searchTypeValue, getSuggestions, subject$]);
 
   return (
     <div id='project-container'>
-      <Intro />
+      <Intro header='projects' subHeader='projectsDescription' />
       <div className='wrapper-search'>
         <SearchType searchTypeValue={searchTypeValue} changeSearchTypeValue={setSearchTypeValue} />
         <input

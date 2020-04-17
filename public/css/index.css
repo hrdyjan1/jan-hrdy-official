@@ -43,6 +43,7 @@ main {
   position: fixed;
   background-color: var(--bg-secondary);
   transition: width 600ms ease;
+  z-index: 999;
 }
 
 .navbar-nav {
