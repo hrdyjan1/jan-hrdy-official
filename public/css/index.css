@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb {
 
 main {
   margin-left: 5rem;
-  padding: 3rem 5rem 6rem;
+  padding: 3rem 0rem 6rem;
 }
 
 .navbar {

@@ -27,6 +27,7 @@ class MyDocument extends Document {
           <link rel='stylesheet' type='text/css' href='/css/root/modal.css' />  {/* Independent*/}
 
           <link rel='stylesheet' type='text/css' href='/css/pages/about.css' />  {/* Independent*/}
+          <link rel='stylesheet' type='text/css' href='/css/pages/home.css' /> 
           <link rel='stylesheet' type='text/css' href='/css/pages/projects.css' />  {/* Independent*/}
 
           <link rel='stylesheet' type='text/css' href='/css/projects/kanban/index.css' />  {/* Independent*/}
