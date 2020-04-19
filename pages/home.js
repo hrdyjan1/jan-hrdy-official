@@ -10,7 +10,7 @@ function Home() {
         <div className='c-section__title'>
           <span>
             <h1>
-              <nobr>Our Services</nobr>
+              <nobr>Home</nobr>
             </h1>
             <h2>
               The box-shadow property enables you to cast a drop shadow from the frame of almost any
