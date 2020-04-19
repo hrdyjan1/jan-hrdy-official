@@ -1,5 +1,5 @@
 :root {
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'Crimson Pro', serif;
   --text-primary: #1f1f1f;
   --text-secondary: #ffff;
@@ -18,7 +18,7 @@ body {
   background-color: var(--bg-primary);
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: auto;
 }
 
 body::-webkit-scrollbar {
@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb {
 
 main {
   margin-left: 5rem;
-  padding: 1rem;
+  padding: 0;
 }
 
 .navbar {
@@ -43,6 +43,7 @@ main {
   position: fixed;
   background-color: var(--bg-secondary);
   transition: width 600ms ease;
+  z-index: 999;
 }
 
 .navbar-nav {
@@ -172,6 +173,7 @@ main {
 
   main {
     margin: 0;
+    padding: 1rem 1rem 6rem;
   }
 }
 
@@ -209,6 +211,7 @@ main {
   --bg-primary: #23232e;
   --bg-secondary: #122f50;
   --bg-ternary: #25587c;
+  --bg-light: #f4f4f4;
   --bg-modal: #122f50;
 }
 
@@ -221,5 +224,6 @@ main {
   --bg-primary: #ffffff;
   --bg-secondary: #25587c;
   --bg-ternary: #122f50;
+  --bg-light: #fff;
   --bg-modal: #fff;
 }
