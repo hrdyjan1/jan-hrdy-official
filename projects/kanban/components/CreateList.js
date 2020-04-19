@@ -21,10 +21,8 @@ class CreateList extends Component {
     event.preventDefault();
 
     const { createList } = this.props;
-    console.log('this.props', this.props)
 
     if (createList) {
-      console.log('Handle submit create');
       createList(this.state);
     }
 

@@ -127,7 +127,6 @@ const Default = ({ getSuggestions, subject$ }) => {
 
   // Handled new suggestions from "API"
   React.useEffect(() => {
-    console.log('rerender');
     const subscription = getSuggestions(subject$, searchTypeValue).subscribe(
       (newSuggestions) => {
         setSuggestions(newSuggestions);

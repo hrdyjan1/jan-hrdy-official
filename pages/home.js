@@ -1,5 +1,6 @@
 import React from 'react';
 import { useComplexLanguageMethod } from '../contexts/languageContext';
+import proudSVG from '../public/images/proud.svg';
 
 function Home() {
   const { t } = useComplexLanguageMethod();
@@ -17,6 +18,7 @@ function Home() {
               element. If a border-radius is specified on the element with a box shadow.
             </h2>
           </span>
+          <img src={proudSVG} className='main-home-image'/>
         </div>
         <ul className='c-services'>
           <li className='c-services__item'>
