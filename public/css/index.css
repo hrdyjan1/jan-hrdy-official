@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb {
 
 main {
   margin-left: 5rem;
-  padding: 3rem 0rem 6rem;
+  padding: 0;
 }
 
 .navbar {
@@ -211,6 +211,7 @@ main {
   --bg-primary: #23232e;
   --bg-secondary: #122f50;
   --bg-ternary: #25587c;
+  --bg-light: #f4f4f4;
   --bg-modal: #122f50;
 }
 
@@ -223,5 +224,6 @@ main {
   --bg-primary: #ffffff;
   --bg-secondary: #25587c;
   --bg-ternary: #122f50;
+  --bg-light: #fff;
   --bg-modal: #fff;
 }

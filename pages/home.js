@@ -1,18 +1,21 @@
 import React from 'react';
 import { useComplexLanguageMethod } from '../contexts/languageContext';
 
-function About() {
+function Home() {
   const { t } = useComplexLanguageMethod();
 
   return (
-    <div>
+    <div id='page-home-id'>
       <section className='c-section'>
         <div className='c-section__title'>
           <span>
-            <h3>
+            <h1>
               <nobr>Our Services</nobr>
-            </h3>
-            <h4>The box-shadow property enables you to cast a drop shadow from the frame of almost any element. If a border-radius is specified on the element with a box shadow.</h4>
+            </h1>
+            <h2>
+              The box-shadow property enables you to cast a drop shadow from the frame of almost any
+              element. If a border-radius is specified on the element with a box shadow.
+            </h2>
           </span>
         </div>
         <ul className='c-services'>
@@ -89,8 +92,9 @@ function About() {
           </li>
         </ul>
       </section>
+      <div className='spaceDown'></div>
     </div>
   );
 }
 
-export default About;
+export default Home;
