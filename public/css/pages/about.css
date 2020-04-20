@@ -1,5 +1,5 @@
 #page-about-id {
-    margin: 3rem 1rem 5rem;
+  margin: 3rem 1rem 5rem;
 }
 
 #about-container h1 {
@@ -12,9 +12,11 @@
 #about-container h2 {
   color: var(--text-primary);
   opacity: 0.9;
-  margin: 1rem 0 0;
-  font-size: 1rem;
+  margin: 2rem auto;
+  font-size: 1.2rem;
   text-align: center;
+  width: 100%;
+  padding: 0;
 }
 
 #about-container h3 {
@@ -213,6 +215,11 @@
     margin-top: 20px;
   }
 
+  #about-container h2 {
+    width: 500px;
+    margin: 2rem auto;
+  }
+
   .timeline li {
     padding: 2.5rem 0;
   }
@@ -308,6 +315,11 @@
     margin-top: 20px;
   }
 
+  #about-container h2 {
+    width: 600px;
+    margin: 2rem auto;
+  }
+
   .direction-l {
     position: relative;
     width: 380px;
@@ -370,7 +382,7 @@
 }
 
 .social-menu ul li:nth-child(1) a:hover {
-  background-color: #D44638;
+  background-color: #d44638;
 }
 
 .social-menu ul li:nth-child(2) a:hover {
@@ -382,7 +394,7 @@
 }
 
 .social-menu ul li:nth-child(4) a:hover {
-  background-color: #25D366;
+  background-color: #25d366;
 }
 
 @media (max-width: 425px) {

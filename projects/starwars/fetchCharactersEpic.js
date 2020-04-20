@@ -1,6 +1,6 @@
 import { ajax } from 'rxjs/ajax';
 import { ofType } from 'redux-observable';
-import { map, filter, tap, mergeMap, takeUntil } from 'rxjs/operators';
+import { map, tap, mergeMap, takeUntil } from 'rxjs/operators';
 import { FETCH_CHARACTERS, fetchCharactersFulfilled } from './actions';
 import { from } from 'rxjs';
 

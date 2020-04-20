@@ -2,8 +2,9 @@ import React from 'react';
 import { BehaviorSubject } from 'rxjs';
 import { map, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import Default from '../components/pages/projects/Default';
-import { projectList } from '../config/projects';
+import { englishProjectList, czechProjectList } from '../config/projects';
 import memoize from 'lodash/memoize';
+import { useLanguageState } from '../contexts/languageContext';
 
 const searchTypes = {
   title: 'title',
@@ -43,6 +44,7 @@ const getSuggestionsFromArray = (list) => (subject, property = searchTypes.title
     debounceTime(200), // wait until user stops typing
     distinctUntilChanged(),
     map((searchValue) => {
+      console.log('searchValue', searchValue);
       if (!searchValue || searchValue === '') {
         // All ids
         return ids;
@@ -55,7 +57,9 @@ const getSuggestionsFromArray = (list) => (subject, property = searchTypes.title
 };
 
 function Projects() {
-  const getSuggestions = getSuggestionsFromArray(projectList);
+  const { isCzechLanguage } = useLanguageState();
+  const currentLanguageList = isCzechLanguage ? czechProjectList : englishProjectList;
+  const getSuggestions = getSuggestionsFromArray(currentLanguageList);
   const subject$ = new BehaviorSubject('');
 
   return (

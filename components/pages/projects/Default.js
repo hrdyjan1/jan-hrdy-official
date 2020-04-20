@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { searchTypes } from '../../../pages/projects';
 import Intro from './Intro';
 import List from './List';
 import SearchType from './SearchType';
-import { useComplexLanguageMethod } from '../../../contexts/languageContext';
-import { entities } from '../../../config/projects';
+import { useComplexLanguageMethod, useLanguageState } from '../../../contexts/languageContext';
+import { englishEntities, czechEntities } from '../../../config/projects';
 
 const MAX_INPUT_SUGGESTIONS = 5;
 
@@ -32,6 +32,8 @@ const Default = ({ getSuggestions, subject$ }) => {
   const ulRef = React.useRef(null);
   const inputRef = React.useRef(null);
   const { t } = useComplexLanguageMethod();
+  const { isCzechLanguage } = useLanguageState();
+  const currentLanguageEntities = isCzechLanguage ? czechEntities : englishEntities;
 
   const changeSearchValue = (value) => {
     setSearchValue(value);
@@ -73,7 +75,7 @@ const Default = ({ getSuggestions, subject$ }) => {
       const innerHTML = `Whoah! <strong>${searchValueLower}</strong> is not in the index`;
       ulRef.current.appendChild(createSuggestionElements({ innerHTML }));
     } else if (suggestions.length > 0) {
-      const obj = { property: searchTypeValue, hashMap: entities, ids: suggestions };
+      const obj = { property: searchTypeValue, hashMap: currentLanguageEntities, ids: suggestions };
       const uniqueSuggestionNames = getUniquePropertyValuesFromHashMap(obj);
 
       for (let i = 0; i < uniqueSuggestionNames.length && i < MAX_INPUT_SUGGESTIONS; i++) {
@@ -127,6 +129,7 @@ const Default = ({ getSuggestions, subject$ }) => {
 
   // Handled new suggestions from "API"
   React.useEffect(() => {
+    console.log('searchTypeValue', searchTypeValue);
     const subscription = getSuggestions(subject$, searchTypeValue).subscribe(
       (newSuggestions) => {
         setSuggestions(newSuggestions);
@@ -138,6 +141,10 @@ const Default = ({ getSuggestions, subject$ }) => {
 
     return () => subscription.unsubscribe();
   }, [searchTypeValue, getSuggestions, subject$]);
+
+  React.useEffect(() => {
+    setSearchValue('');
+  }, [isCzechLanguage]);
 
   return (
     <div id='project-container'>

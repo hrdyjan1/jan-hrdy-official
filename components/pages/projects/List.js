@@ -1,12 +1,17 @@
 import React from 'react';
-import { projectList } from '../../../config/projects';
+import { czechEntities, englishEntities } from '../../../config/projects';
 import Link from 'next/link';
+import { useComplexLanguageMethod, useLanguageState } from '../../../contexts/languageContext';
 
 const List = React.memo(({ projects }) => {
+  const { t } = useComplexLanguageMethod();
+  const { isCzechLanguage } = useLanguageState();
+  const currentLanguageEntities = isCzechLanguage ? czechEntities : englishEntities;
+
   return (
     <section className='basic-grid'>
       {projects.map((projectId) => {
-        const project = projectList.entities[projectId];
+        const project = currentLanguageEntities[projectId];
         const shouldMoveExternal = project.href.toLowerCase().includes('http');
         const anchorProps = shouldMoveExternal ? { target: '_blank' } : {};
         const linkProps = shouldMoveExternal ? { prefetch: false } : {};
@@ -20,7 +25,7 @@ const List = React.memo(({ projects }) => {
                     <div className='date'>
                       <p className='day'>{project.year}</p>
                     </div>
-                    <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg' />
+                    <img src={project.src} />
                   </div>
                   <div className='post-content'>
                     <div className='category'>{project.type}</div>
@@ -28,7 +33,11 @@ const List = React.memo(({ projects }) => {
                     <h4 className='sub_title'>{project.subTitle}</h4>
                     <p className='description'>{project.description}</p>
                     <div className='post-meta'>
-                      <span className='timestamp'>{project.technologies[0]}</span>
+                      {project.technologies.map((technology) => (
+                        <span key={technology} className='timestamp'>
+                          {technology}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
