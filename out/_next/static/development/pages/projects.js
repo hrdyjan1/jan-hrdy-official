@@ -87,6 +87,11 @@ var Default = function Default(_ref3) {
   var _useComplexLanguageMe = Object(_contexts_languageContext__WEBPACK_IMPORTED_MODULE_6__["useComplexLanguageMethod"])(),
       t = _useComplexLanguageMe.t;
 
+  var _useLanguageState = Object(_contexts_languageContext__WEBPACK_IMPORTED_MODULE_6__["useLanguageState"])(),
+      isCzechLanguage = _useLanguageState.isCzechLanguage;
+
+  var currentLanguageEntities = isCzechLanguage ? _config_projects__WEBPACK_IMPORTED_MODULE_7__["czechEntities"] : _config_projects__WEBPACK_IMPORTED_MODULE_7__["englishEntities"];
+
   var changeSearchValue = function changeSearchValue(value) {
     setSearchValue(value);
     subject$.next(value);
@@ -131,7 +136,7 @@ var Default = function Default(_ref3) {
     } else if (suggestions.length > 0) {
       var obj = {
         property: searchTypeValue,
-        hashMap: _config_projects__WEBPACK_IMPORTED_MODULE_7__["entities"],
+        hashMap: currentLanguageEntities,
         ids: suggestions
       };
       var uniqueSuggestionNames = getUniquePropertyValuesFromHashMap(obj);
@@ -192,6 +197,7 @@ var Default = function Default(_ref3) {
   }, [handleClearingSuggestions, setFocusOn]); // Handled new suggestions from "API"
 
   react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
+    console.log('searchTypeValue', searchTypeValue);
     var subscription = getSuggestions(subject$, searchTypeValue).subscribe(function (newSuggestions) {
       setSuggestions(newSuggestions);
     }, function (error) {
@@ -201,12 +207,15 @@ var Default = function Default(_ref3) {
       return subscription.unsubscribe();
     };
   }, [searchTypeValue, getSuggestions, subject$]);
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
+    setSearchValue('');
+  }, [isCzechLanguage]);
   return __jsx("div", {
     id: "project-container",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143,
+      lineNumber: 150,
       columnNumber: 5
     }
   }, __jsx(_Intro__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -215,7 +224,7 @@ var Default = function Default(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144,
+      lineNumber: 151,
       columnNumber: 7
     }
   }), __jsx("div", {
@@ -223,7 +232,7 @@ var Default = function Default(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145,
+      lineNumber: 152,
       columnNumber: 7
     }
   }, __jsx(_SearchType__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -232,7 +241,7 @@ var Default = function Default(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146,
+      lineNumber: 153,
       columnNumber: 9
     }
   }), __jsx("input", {
@@ -248,7 +257,7 @@ var Default = function Default(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147,
+      lineNumber: 154,
       columnNumber: 9
     }
   })), __jsx("ul", {
@@ -258,7 +267,7 @@ var Default = function Default(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159,
+      lineNumber: 166,
       columnNumber: 7
     }
   }), __jsx(_List__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -266,7 +275,7 @@ var Default = function Default(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160,
+      lineNumber: 167,
       columnNumber: 7
     }
   }));
@@ -297,26 +306,36 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var Intro = function Intro(_ref) {
   var header = _ref.header,
-      subHeader = _ref.subHeader;
+      subHeader = _ref.subHeader,
+      render = _ref.render;
 
   var _useComplexLanguageMe = Object(_contexts_languageContext__WEBPACK_IMPORTED_MODULE_1__["useComplexLanguageMethod"])(),
       t = _useComplexLanguageMe.t;
 
+  var renderElement = typeof render === 'function' ? render : function () {};
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("h1", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 7
-    }
-  }, t(header)), __jsx("h2", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9,
       columnNumber: 7
     }
-  }, t(subHeader)));
+  }, t(header)), __jsx("div", {
+    className: "intro-section",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 7
+    }
+  }, __jsx("h2", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 9
+    }
+  }, t(subHeader)), renderElement()));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Intro);
@@ -338,6 +357,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _config_projects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../config/projects */ "./config/projects.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _contexts_languageContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../contexts/languageContext */ "./contexts/languageContext.js");
 
 
 var _this = undefined,
@@ -347,18 +367,27 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+
 var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
   var projects = _ref.projects;
+
+  var _useComplexLanguageMe = Object(_contexts_languageContext__WEBPACK_IMPORTED_MODULE_4__["useComplexLanguageMethod"])(),
+      t = _useComplexLanguageMe.t;
+
+  var _useLanguageState = Object(_contexts_languageContext__WEBPACK_IMPORTED_MODULE_4__["useLanguageState"])(),
+      isCzechLanguage = _useLanguageState.isCzechLanguage;
+
+  var currentLanguageEntities = isCzechLanguage ? _config_projects__WEBPACK_IMPORTED_MODULE_2__["czechEntities"] : _config_projects__WEBPACK_IMPORTED_MODULE_2__["englishEntities"];
   return __jsx("section", {
     className: "basic-grid",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 12,
       columnNumber: 5
     }
   }, projects.map(function (projectId) {
-    var project = _config_projects__WEBPACK_IMPORTED_MODULE_2__["projectList"].entities[projectId];
+    var project = currentLanguageEntities[projectId];
     var shouldMoveExternal = project.href.toLowerCase().includes('http');
     var anchorProps = shouldMoveExternal ? {
       target: '_blank'
@@ -373,7 +402,7 @@ var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15,
+        lineNumber: 20,
         columnNumber: 11
       }
     }), __jsx("a", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -382,7 +411,7 @@ var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16,
+        lineNumber: 21,
         columnNumber: 13
       }
     }), __jsx("div", {
@@ -390,7 +419,7 @@ var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17,
+        lineNumber: 22,
         columnNumber: 15
       }
     }, __jsx("div", {
@@ -398,7 +427,7 @@ var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18,
+        lineNumber: 23,
         columnNumber: 17
       }
     }, __jsx("div", {
@@ -406,7 +435,7 @@ var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19,
+        lineNumber: 24,
         columnNumber: 19
       }
     }, __jsx("div", {
@@ -414,7 +443,7 @@ var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20,
+        lineNumber: 25,
         columnNumber: 21
       }
     }, __jsx("p", {
@@ -422,15 +451,15 @@ var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21,
+        lineNumber: 26,
         columnNumber: 23
       }
     }, project.year)), __jsx("img", {
-      src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
+      src: project.src,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23,
+        lineNumber: 28,
         columnNumber: 21
       }
     })), __jsx("div", {
@@ -438,7 +467,7 @@ var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25,
+        lineNumber: 30,
         columnNumber: 19
       }
     }, __jsx("div", {
@@ -446,7 +475,7 @@ var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26,
+        lineNumber: 31,
         columnNumber: 21
       }
     }, project.type), __jsx("h3", {
@@ -454,7 +483,7 @@ var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27,
+        lineNumber: 32,
         columnNumber: 21
       }
     }, project.title), __jsx("h4", {
@@ -462,7 +491,7 @@ var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28,
+        lineNumber: 33,
         columnNumber: 21
       }
     }, project.subTitle), __jsx("p", {
@@ -470,7 +499,7 @@ var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29,
+        lineNumber: 34,
         columnNumber: 21
       }
     }, project.description), __jsx("div", {
@@ -478,18 +507,21 @@ var List = react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(function (_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30,
+        lineNumber: 35,
         columnNumber: 21
       }
-    }, __jsx("span", {
-      className: "timestamp",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 31,
-        columnNumber: 23
-      }
-    }, project.technologies[0])))))));
+    }, project.technologies.map(function (technology) {
+      return __jsx("span", {
+        key: technology,
+        className: "timestamp",
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37,
+          columnNumber: 25
+        }
+      }, technology);
+    })))))));
   }));
 });
 /* harmony default export */ __webpack_exports__["default"] = (List);
@@ -606,49 +638,102 @@ var SearchType = function SearchType(_ref) {
 /*!****************************!*\
   !*** ./config/projects.js ***!
   \****************************/
-/*! exports provided: projectList, entities, results */
+/*! exports provided: englishProjectList, englishEntities, englishResults, czechProjectList, czechEntities, czechResults */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "projectList", function() { return projectList; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "entities", function() { return entities; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "results", function() { return results; });
-var normalizedProjectList = {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "englishProjectList", function() { return englishProjectList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "englishEntities", function() { return englishEntities; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "englishResults", function() { return englishResults; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "czechProjectList", function() { return czechProjectList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "czechEntities", function() { return czechEntities; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "czechResults", function() { return czechResults; });
+/* harmony import */ var _public_images_kanban_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../public/images/kanban.png */ "./public/images/kanban.png");
+/* harmony import */ var _public_images_kanban_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_public_images_kanban_png__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/images/starwars.jpg */ "./public/images/starwars.jpg");
+/* harmony import */ var _public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/images/gigworker.jpg */ "./public/images/gigworker.jpg");
+/* harmony import */ var _public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var normalizedProjectListEnglish = {
   '1587045210872': {
     type: 'Web App',
-    title: 'Facebook',
-    subTitle: 'Social network',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin arcu varius, sagittis metus ut, placerat ligula. Aliquam id felis sagittis, consectetur nibh eu, consectetur dui. In hac habitasse platea dictumst.',
+    title: 'Kanban',
+    subTitle: 'Helper for agile development',
+    description: 'This project is for training purposes only, using the technologies used with React. Specifically, it is Redux',
     year: '2020',
-    technologies: ['TAG 1'],
-    href: 'https://www.robinwieruch.de/react-render-props'
+    technologies: ['React, Redux, Normalizer, Lodash, Reselect'],
+    href: '/projects/kanban',
+    src: _public_images_kanban_png__WEBPACK_IMPORTED_MODULE_0___default.a
   },
   '1587045213421': {
     type: 'Web App',
-    title: 'Twitter',
-    subTitle: 'Social network',
-    description: 'Curabitur sed magna hendrerit, sagittis libero eu, commodo turpis. Duis et mi commodo, ultrices leo a, lacinia magna.',
+    title: 'Starwars List',
+    subTitle: 'Star Wars character finder',
+    description: 'A simple application only to test the combination of two technologies: Redux and Redux Observable',
     year: '2020',
-    technologies: ['TAG 2'],
-    href: '/projects/starwars'
+    technologies: ['React, Redux, Redux Observable, RxJS'],
+    href: '/projects/starwars',
+    src: _public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_1___default.a
   },
-  '1587045214025': {
-    type: 'Video',
-    title: 'Fight of Night',
-    subTitle: 'International match in mix martial art.',
-    description: 'Nulla et tempor sem. Nulla consectetur lacinia placerat. Morbi consectetur lobortis lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.',
-    year: '2019',
-    technologies: ['UFC'],
-    href: '/projects/starwars'
+  '1587414508969': {
+    type: 'Web App',
+    title: 'Gigworker',
+    subTitle: 'Find you Gig.',
+    description: 'All your favorite companies, all in one place. Online gig opportunity in US.',
+    year: '2020',
+    technologies: ['React, Redux, Redux Observable, RxJS'],
+    href: '/projects/starwars',
+    src: _public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_2___default.a
   }
 };
-var projectList = {
-  entities: normalizedProjectList,
-  results: Object.keys(normalizedProjectList)
+var normalizedProjectListCzech = {
+  '1587045210872': {
+    type: 'Webová aplikace',
+    title: 'Kanban',
+    subTitle: 'Pomůcka na agilní vývoj',
+    description: 'Tento projekt slouží pouze pro účely zaučení k použití technologií používaných společně s Reactem. Konkrétně se jedná o Redux.',
+    year: '2020',
+    technologies: ['React, Redux, Normalizer, Lodash, Reselect'],
+    href: '/projects/kanban',
+    src: _public_images_kanban_png__WEBPACK_IMPORTED_MODULE_0___default.a
+  },
+  '1587045213421': {
+    type: 'Webová aplikace',
+    title: 'Star Wars seznam',
+    subTitle: 'Vyhledávač jmen postav ze starwars',
+    description: 'Jednoduchá aplikace pouze pro zkoušku spojenení dvou technologií: Redux a Redux Observable',
+    year: '2020',
+    technologies: ['React, Redux, Redux Observable, RxJS'],
+    href: '/projects/starwars',
+    src: _public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_1___default.a
+  },
+  '1587414508969': {
+    type: 'Webová aplikace',
+    title: 'Gigworker',
+    subTitle: 'Najdi si vlastní melouch.',
+    description: 'Posláním Gigworkeru je sdílet cenné informace o chvilkových volnočasových pracích nabízených na internetu. Melouchy jsem pro všechny, od začátečníků, kteří chtějí začít s drobným přivýdělkem, až po veterány z gigantických firem, kteří se snaží rozšířit svou říši.',
+    year: '2020',
+    technologies: ['React, Redux, Redux Observable, RxJS'],
+    href: '/projects/starwars',
+    src: _public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_2___default.a
+  }
 };
-var entities = projectList.entities;
-var results = projectList.results;
+var englishProjectList = {
+  entities: normalizedProjectListEnglish,
+  results: Object.keys(normalizedProjectListEnglish)
+};
+var czechProjectList = {
+  entities: normalizedProjectListCzech,
+  results: Object.keys(normalizedProjectListCzech)
+};
+var englishEntities = englishProjectList.entities;
+var englishResults = englishProjectList.results;
+var czechEntities = czechProjectList.entities;
+var czechResults = czechProjectList.results;
 
 
 /***/ }),
@@ -670,7 +755,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 
 
-var _ENGLISH, _CZECH, _languageStrings, _languageReducerType;
+var _aboutPageTranslation, _mainPageTranslation, _objectSpread2, _objectSpread3, _languageStrings, _languageReducerType;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 var languageStatus = {
   CZECH: 'CZECH',
@@ -678,7 +767,57 @@ var languageStatus = {
 };
 var ENGLISH = languageStatus.ENGLISH,
     CZECH = languageStatus.CZECH;
-var languageStrings = (_languageStrings = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageStrings, ENGLISH, (_ENGLISH = {
+var aboutPageTranslation = (_aboutPageTranslation = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_aboutPageTranslation, ENGLISH, {
+  aboutDescription: "Here we are, self-description. Brilliant. I'll be brief. I feel like a regular human being, living a normal life. There only a few deviations from others. People find me to be an upbeat, self-motivated team player with excellent creative skills. For the past several years I have worked in tech. I consider myself as a frontend engineer. My primary goal is creating web or mobile apps. Most of the time I work with ReactJS, which means JavaScript obviously. My experience includes successfully creating app logic, connecting APIs, cooperate with Frontend libraries, be responsible for testing. I have an updated bunch of GitHub open-source issues.",
+  lifeWithTech: 'Life in Tech',
+  lifeWithoutTech: 'Normal bio life'
+}), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_aboutPageTranslation, CZECH, {
+  aboutDescription: 'Je to tady, popsat sám sebe. Budu se snažit být stručný. Vnímám sám sebe jako úplné normální lidskou bytost, která žije normální život. Existuje však pár odlišností od průměrného člověka. Lidé mě často považují za pozitivního týmového hráče s vynikajícími tvůrčími schopnostmi. Posledních několik let jsem pracoval v oblasti IT. Považuji se za "fronendistu". Mým hlavním cílem je tvorba webových nebo mobilních aplikací. Většinu času jsem pracuji s ReactJS, což samozřejmě znamená JavaScript. Moje zkušenost zahrnují návrh i úspěšnou tvorbu logiky aplikací, propojení API, napojení optimálních knihoven či odpovědnost za testování. Jsem zapojený do open-source komunity vývojář na GitHubu. Mimo jiné občas přispívám na fórum pro programátory (StackOverflow), takže bacha, od koho kopírujete.',
+  lifeWithTech: 'Život spojený s IT',
+  lifeWithoutTech: 'Normální běžný život'
+}), _aboutPageTranslation);
+var mainPageTranslation = (_mainPageTranslation = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_mainPageTranslation, ENGLISH, {
+  homePageDescription: 'Once again, welcome to my personal website. You are now on the home page. Here are a few different categories that characterize the main part of my life.',
+  homePageSection1Heading: 'What can you find on this website?',
+  homePageSection1Description: 'Occasionally, there may be someone in the vast community of people browsing the Internet who has just found themselves on this web page. Well, this is a personal website about myself. You can find out some information about projects I am part of, my contact and a few other things.',
+  homePageSection2Heading: 'My Current job',
+  homePageSection2Description: 'From summer 2019 I am employed at a company aimed at creating web apps for other businesses. We are called Netvor. If you are curious about more stuffs you can visit our website.',
+  homePageSection3Heading: 'Me and Programming',
+  homePageSection3Description: 'I made my way to computer technology at university. I started my studies at CTU, where I learned the basics over time. At the beginning, I created web applications. Later I devoted more server parts. I started using several basic programming tools or libraries. I got to mobile development for a while. The moment I came across React Native, I was amazed at how graceful and easy it was to create mobile apps. Since then I have lived mostly in a world dominated by JavaScript and ReactJS-related technologies. The greatest joy makes me create the logic of the application, I usually move styling to the last place.',
+  homePageSection4Heading: 'Projects I am part of',
+  homePageSection4Description: 'Well, there are a few projects I have been involved in, mainly because people often find me to be an upbeat, self-motivated team player with excellent creative skills. Most of them are connected with IT stuffs. My experience also includes video production and sports event organizer. If you want to know more, just visit "Projects Page".',
+  homePageSection5Heading: 'Who am I?',
+  homePageSection5Description: 'I feel like a regular human being, living a normal life. I consider myself a frontend engineer based in the capital of The Czech Republic. I enjoy turning complex problems into simple, beautiful and intuitive web and mobile apps. When I\'m not programming, committing code or reading about new library features, you\'ll find me eating, playing the guitar or do some sports pieces of stuff. If you want to know more, just visit "About Page"',
+  homePageSection6Heading: 'App settings',
+  homePageSection6Description: 'There are a small number of different varieties of this website. Feel free to switch the language, change the current theme. Wau there is a dark and light mode, of course. If you prefer no silence, just toggle music off. If you want to know more, just visit "Settings."',
+  homePageSection7Heading: 'Current project',
+  homePageSection7Description: 'The current project we are working on is called Notify. It is a mobile application designed to make it easier for us to be together, without worrying about strange notifications or regular reminders. Notify also works on the principle of connecting more people.',
+  homePageSection8Heading: 'Join our group of friends',
+  homePageSection8Description: "What a life without friends and a lot of fun. I appreciate the moments spent with my loved ones. The friendly atmosphere makes me feel good. We have been meeting with friends over the card Bang game almost every Friday. I also often play basketball or supporting my favorite team in the NBA. Boston Celtics! I'm also very grateful for a great girlfriend and a fantastic little pug.",
+  homePageSection9Heading: 'Contact',
+  homePageSection9Description: 'Probably the last part you have been searching for is a way to contact me. Only two steps. Switch to page: "About", then scroll down. Easy, right? I would recommend you use email clients.'
+}), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_mainPageTranslation, CZECH, {
+  homePageDescription: 'Ještě jednou, vítejte na mém osobním webu. Nyní jste se ocitli na domovské stránce. Zde je několik různých kategorií, které se snaží charakterizovat hlavní části celého webu.',
+  homePageSection1Heading: 'Co vás na těchto stránkách čeká a nemine?',
+  homePageSection1Description: 'Občas se stane, že na tyto stránky zavítá někdo, kdo by se rád rychle dozvěděl, co lze najít na těchto stránkách, tak přátelé, tento web reprezentuje mé vlastní osobní portfolio. Můžete se zde dozvědět několik informací o projektech, kterých jsem součástí, zjistit, jak mě kontaktovat a mnohé další.',
+  homePageSection2Heading: 'Moje aktuální práce',
+  homePageSection2Description: 'Je mi velkou ctí sdělit Vám, že aktuálně jsem zaměstnaný v úžasné firmě, která řeší tvorbu webových a mobilních aplikací. Funguji zde jako Frontendový specialista. Mojí hlavní náplní je čistě JavaScript. Konkrétně React JS. Sídlíme v Praze a říkáme si Netvor',
+  homePageSection3Heading: 'Programování',
+  homePageSection3Description: 'Na cestu počítačových technologií jsem se dostal až na vysoké škole. Začal jsem studium na ČVUT, kde jsem si postupem času osvojil základy. na počátku jsem tvořil webové aplikace. Později jsem se věnoval více serverové části. Začal jsem využívat několik základních programátorských nástrojů či knihoven. Dostal jsem se na čas i k mobilnímu vývoji. Ve chvíli, kdy jsem narazil na React Native jsem byl ohromen, s jakou ladností a lehkostí lze tvořit mobilní aplikace. Od té doby žiji převážně ve světě, kde dominuje jazyk JavaScript a technologie spojené s ReactJS. Největší radost mi dělá tvořit logiku aplikace, stylování posouvám většinou na poslední místo.',
+  homePageSection4Heading: 'Projekty',
+  homePageSection4Description: 'Pracoval jsem v životě už na několika různorodých projektech. Do většiny projektů jsem se zapojil, hlavně proto, že mě lidé často považují za pozitivního, týmového hráče s vynikajícími tvůrčími schopnostmi. Většina z mých konexí je spojena se světem IT. Mezi mé zkušenosti patří také video produkce nebo organizace sportovních akcí. Pokud se chcete dozvědět více, navštivte stránku "Projekty"',
+  homePageSection5Heading: 'Co jsem zač?',
+  homePageSection5Description: 'Cítím se jako normální člověk, žijící normální život. Také se mimo jiné považuji za frontendistu žijícím v hlavním městě České republiky. Baví mě proměnit složité problémy v jednoduché, tvořit krásné a intuitivní webové nebo mobilní aplikace. Pokud zrovna nepřidávám na server pár řádků kódu nebo netvořím logiku aplikace, tak mě nejspíš najdete někde, kde buď jím, hraji na kytaru nebo dělám něco sportovního. Pokud se chcete dozvědět o mě více, stačí navštívit stránku "O mě"',
+  homePageSection6Heading: 'Úpravy podle vás',
+  homePageSection6Description: 'Tato webová stránka obsahuje několik různých variant. Neváhejte a využijte toho. Lze například přepnout jazyk, změňte aktuální vzhled. Wau můžete zvolit buď tmavý či světlý režim. Pokud dáváte přednost procházení stránek bez možných zvuků, tak lze na webu vypnout hudbu. Pokud se chcete dozvědět více, stačí navštívit sekci "Nastavení".',
+  homePageSection7Heading: 'Aktuální projekt',
+  homePageSection7Description: 'Aktuální projekt, na kterém pracujeme se jmenuje Notify. Jde o mobilní aplikaci, které nám má usnadnit společné bytí, kdy se nemusíme starat o různé prapodivné upozornění či pravidelné připomínky. Notify funguje i na principu spojení více lidí.',
+  homePageSection8Heading: 'Připoj se do naší party',
+  homePageSection8Description: 'Jaký by byl život bez přátel. Oceňuji chvíle strávené se svými blízkými. Díky přátelské atmosféře se cítím dobře. Téměř každý pátek se scházíme s přáteli u karetní hry Bang. Často také hraji basketbal nebo sleduji utkání mého oblíbeného týmu v NBA. Boston Celtics! Jsem také velmi vděčný za skvělou přítelkyni a fantastického malého mopsíka.',
+  homePageSection9Heading: 'Otázky a chyby',
+  homePageSection9Description: 'Nebývá to zvykem, ale někdy se mezi Vámi vyskytne někdo, kdo má otázku, kterou by chtěl ode mě zodpovědět. Občas se také stane, že někdo najde chybu na těchto stránkách. Nebývá to časté, ale můžete se to stát. V takovýchto případech stačí navštívit stránku: "O mně", kde najde sekci kontakt, kde si můžete vybrat, jakou cestou se se mnou spojit. Budu rád za případné dotazy, či upozornění na chybu.'
+}), _mainPageTranslation);
+var languageStrings = (_languageStrings = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageStrings, ENGLISH, _objectSpread((_objectSpread2 = {
   home: 'Home',
   // Main Navigation
   about: 'About',
@@ -708,7 +847,7 @@ var languageStrings = (_languageStrings = {}, Object(_babel_runtime_helpers_esm_
   homePageText: 'This is home page.',
   // Home page - button
   aboutPageText: 'This is about page.'
-}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_ENGLISH, "projects", 'Projects'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_ENGLISH, "projectsDescription", 'Here is a list of projects I have participated in.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_ENGLISH, "name", 'Name'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_ENGLISH, "type", 'Type'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_ENGLISH, "search", 'Search'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_ENGLISH, "about", 'About Me'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_ENGLISH, "aboutDescription", 'Description'), _ENGLISH)), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageStrings, CZECH, (_CZECH = {
+}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "projects", 'Projects'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "projectsDescription", 'Here is a list of projects I have participated in.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "name", 'Name'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "type", 'Type'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "search", 'Search'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "about", 'About Me'), _objectSpread2), mainPageTranslation.ENGLISH, {}, aboutPageTranslation.ENGLISH)), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageStrings, CZECH, _objectSpread((_objectSpread3 = {
   home: 'Domů',
   about: 'O mě',
   projects: 'Projekty',
@@ -724,7 +863,7 @@ var languageStrings = (_languageStrings = {}, Object(_babel_runtime_helpers_esm_
   toEnter: 'vstoupit',
   homePageText: 'Toto je domovská stránka.',
   aboutPageText: 'Tato stránka je o mně.'
-}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_CZECH, "projects", 'Projekty'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_CZECH, "projectsDescription", 'Zde je uveden seznam projektů, na kterých jsem se podílel.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_CZECH, "name", 'Název'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_CZECH, "type", 'Typ'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_CZECH, "search", 'Vyhledat'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_CZECH, "about", 'O mě'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_CZECH, "aboutDescription", 'Popis'), _CZECH)), _languageStrings);
+}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projects", 'Projekty'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projectsDescription", 'Zde je uveden seznam projektů, na kterých jsem se podílel.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "name", 'Název'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "type", 'Typ'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "search", 'Vyhledat'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "about", 'O mě'), _objectSpread3), mainPageTranslation.CZECH, {}, aboutPageTranslation.CZECH)), _languageStrings);
 var languageReducerType = (_languageReducerType = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageReducerType, languageStatus.CZECH, languageStatus.CZECH), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageReducerType, languageStatus.ENGLISH, languageStatus.ENGLISH), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageReducerType, "TOGGLE", 'TOGGLE'), _languageReducerType);
 var defaultLanguage = languageStatus.ENGLISH;
 
@@ -19760,10 +19899,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _config_projects__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../config/projects */ "./config/projects.js");
 /* harmony import */ var lodash_memoize__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lodash/memoize */ "./node_modules/lodash/memoize.js");
 /* harmony import */ var lodash_memoize__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(lodash_memoize__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _contexts_languageContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../contexts/languageContext */ "./contexts/languageContext.js");
 
 
 var _jsxFileName = "C:\\Users\\badeu\\hrdyjan1\\projects\\jan-hrdy-official\\pages\\projects.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
 
 
 
@@ -19814,6 +19955,8 @@ var getSuggestionsFromArray = function getSuggestionsFromArray(list) {
     });
     return subject.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["debounceTime"])(200), // wait until user stops typing
     Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["distinctUntilChanged"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (searchValue) {
+      console.log('searchValue', searchValue);
+
       if (!searchValue || searchValue === '') {
         // All ids
         return ids;
@@ -19826,14 +19969,18 @@ var getSuggestionsFromArray = function getSuggestionsFromArray(list) {
 };
 
 function Projects() {
-  var getSuggestions = getSuggestionsFromArray(_config_projects__WEBPACK_IMPORTED_MODULE_6__["projectList"]);
+  var _useLanguageState = Object(_contexts_languageContext__WEBPACK_IMPORTED_MODULE_8__["useLanguageState"])(),
+      isCzechLanguage = _useLanguageState.isCzechLanguage;
+
+  var currentLanguageList = isCzechLanguage ? _config_projects__WEBPACK_IMPORTED_MODULE_6__["czechProjectList"] : _config_projects__WEBPACK_IMPORTED_MODULE_6__["englishProjectList"];
+  var getSuggestions = getSuggestionsFromArray(currentLanguageList);
   var subject$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"]('');
   return __jsx("div", {
     id: "page-project-id",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 66,
       columnNumber: 5
     }
   }, __jsx(_components_pages_projects_Default__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -19842,7 +19989,7 @@ function Projects() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 67,
       columnNumber: 7
     }
   }));
@@ -19850,6 +19997,39 @@ function Projects() {
 
 /* harmony default export */ __webpack_exports__["default"] = (Projects);
 
+
+/***/ }),
+
+/***/ "./public/images/gigworker.jpg":
+/*!*************************************!*\
+  !*** ./public/images/gigworker.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/gigworker-9a4d177853975110b1c0e6024700f864.jpg";
+
+/***/ }),
+
+/***/ "./public/images/kanban.png":
+/*!**********************************!*\
+  !*** ./public/images/kanban.png ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/kanban-4ff59bfd5548e273d7169b4a0f2f955b.png";
+
+/***/ }),
+
+/***/ "./public/images/starwars.jpg":
+/*!************************************!*\
+  !*** ./public/images/starwars.jpg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/starwars-b2712462500a4bb7cbd0f8b40b3b80fd.jpg";
 
 /***/ }),
 
@@ -19898,7 +20078,7 @@ var enhanceLocalStorage = function enhanceLocalStorage(itemName, itemValue) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!*************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5Cbadeu%5Chrdyjan1%5Cprojects%5Cjan-hrdy-official%5Cpages%5Cprojects.js ***!
   \*************************************************************************************************************************************************************/
@@ -19921,5 +20101,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=projects.js.map
