@@ -5,15 +5,18 @@ const languageStatus = {
 
 const { ENGLISH, CZECH } = languageStatus;
 
-
 const aboutPageTranslation = {
   [ENGLISH]: {
     aboutDescription:
       "Here we are, self-description. Brilliant. I'll be brief. I feel like a regular human being, living a normal life. There only a few deviations from others. People find me to be an upbeat, self-motivated team player with excellent creative skills. For the past several years I have worked in tech. I consider myself as a frontend engineer. My primary goal is creating web or mobile apps. Most of the time I work with ReactJS, which means JavaScript obviously. My experience includes successfully creating app logic, connecting APIs, cooperate with Frontend libraries, be responsible for testing. I have an updated bunch of GitHub open-source issues.",
+    lifeWithTech: 'Life in Tech',
+    lifeWithoutTech: 'Normal bio life',
   },
   [CZECH]: {
     aboutDescription:
       'Je to tady, popsat sám sebe. Budu se snažit být stručný. Vnímám sám sebe jako úplné normální lidskou bytost, která žije normální život. Existuje však pár odlišností od průměrného člověka. Lidé mě často považují za pozitivního týmového hráče s vynikajícími tvůrčími schopnostmi. Posledních několik let jsem pracoval v oblasti IT. Považuji se za "fronendistu". Mým hlavním cílem je tvorba webových nebo mobilních aplikací. Většinu času jsem pracuji s ReactJS, což samozřejmě znamená JavaScript. Moje zkušenost zahrnují návrh i úspěšnou tvorbu logiky aplikací, propojení API, napojení optimálních knihoven či odpovědnost za testování. Jsem zapojený do open-source komunity vývojář na GitHubu. Mimo jiné občas přispívám na fórum pro programátory (StackOverflow), takže bacha, od koho kopírujete.',
+    lifeWithTech: 'Život spojený s IT',
+    lifeWithoutTech: 'Normální běžný život',
   },
 };
 

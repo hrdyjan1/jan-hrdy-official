@@ -2,12 +2,29 @@ import React from 'react';
 import { useComplexLanguageMethod } from '../contexts/languageContext';
 import Intro from '../components/pages/projects/Intro';
 
-function About() {
+const bonusSection = () => {
   const { t } = useComplexLanguageMethod();
+  return (
+    <section>
+      <p className='online'>
+        <span className='big'>Online</span>
+        <br />
+        <span className='small'>{t('lifeWithTech')}</span>
+      </p>
+      <p className='offline'>
+        <span className='big'>Offline</span>
+        <br />
+        <span className='small'>{t('lifeWithoutTech')}</span>
+      </p>
+    </section>
+  );
+};
+
+function About() {
   return (
     <div id='page-about-id'>
       <div id='about-container'>
-        <Intro header='about' subHeader='aboutDescription' />
+        <Intro header='about' subHeader='aboutDescription' render={bonusSection} />
         <ul className='timeline'>
           <li>
             <div className='direction-r'>
@@ -92,7 +109,7 @@ function About() {
         <div className='social-menu'>
           <ul>
             <li>
-              <a href='#'>
+              <a href='mailto:hrdyjan1@gmail.com"'>
                 <svg
                   aria-hidden='true'
                   focusable='false'
@@ -111,7 +128,7 @@ function About() {
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='https://www.instagram.com/jan.hrdy/'>
                 <svg
                   className='fab'
                   aria-hidden='true'
@@ -130,7 +147,7 @@ function About() {
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='https://github.com/hrdyjan1/'>
                 <svg
                   aria-hidden='true'
                   focusable='false'
@@ -149,7 +166,7 @@ function About() {
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='https://wa.me/420606347567'>
                 <svg
                   aria-hidden='true'
                   focusable='false'
