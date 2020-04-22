@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { useComplexLanguageMethod } from '../contexts/languageContext';
 import Intro from '../components/pages/projects/Intro';
 
@@ -21,24 +22,34 @@ const bonusSection = () => {
 };
 
 function About() {
+  const { t } = useComplexLanguageMethod();
   return (
     <div id='page-about-id'>
       <div id='about-container'>
-        <Intro header='about' subHeader='aboutDescription' render={bonusSection} />
+        <Intro header='about' subHeader='aboutDescription' renderBottom={bonusSection} />
         <ul className='timeline'>
           <li>
             <div className='direction-r'>
               <div className='flag-wrapper'>
                 <span className='hexa'></span>
-                <span className='flag'>Lorem ipsum.</span>
+                <span className='flag'>{t('timeline1Heading')}</span>
                 <span className='time-wrapper'>
-                  <span className='time'>Feb 2015</span>
+                  <span className='time'>{t('timeline1Date')}</span>
                 </span>
               </div>
-              <div className='desc'>
-                Lorem ipsum Nisi labore aute do aute culpa magna nulla voluptate exercitation
-                deserunt proident.
+              <div className='desc'>{t('timeline1Description')}</div>
+            </div>
+          </li>
+          <li>
+            <div className='direction-r'>
+              <div className='flag-wrapper'>
+                <span className='hexa'></span>
+                <span className='flag'>{t('timeline2Heading')}</span>
+                <span className='time-wrapper'>
+                  <span className='time'>{t('timeline2Date')}</span>
+                </span>
               </div>
+              <div className='desc'>{t('timeline2Description')}</div>
             </div>
           </li>
 
@@ -46,15 +57,38 @@ function About() {
             <div className='direction-l'>
               <div className='flag-wrapper'>
                 <span className='hexa'></span>
-                <span className='flag'>Lorem ipsum Anim.</span>
+                <span className='flag'>{t('timeline3Heading')}</span>
                 <span className='time-wrapper'>
-                  <span className='time'>Dec 2014</span>
+                  <span className='time'>{t('timeline3Date')}</span>
                 </span>
               </div>
-              <div className='desc'>
-                Lorem ipsum In ut sit in dolor nisi ex magna eu anim anim tempor dolore aliquip enim
-                cupidatat laborum dolore.
+              <div className='desc'>{t('timeline3Description')}</div>
+            </div>
+          </li>
+
+          <li>
+            <div className='direction-l'>
+              <div className='flag-wrapper'>
+                <span className='hexa'></span>
+                <span className='flag'>{t('timeline4Heading')}</span>
+                <span className='time-wrapper'>
+                  <span className='time'>{t('timeline4Date')}</span>
+                </span>
               </div>
+              <div className='desc'>{t('timeline4Description')}</div>
+            </div>
+          </li>
+
+          <li>
+            <div className='direction-l'>
+              <div className='flag-wrapper'>
+                <span className='hexa'></span>
+                <span className='flag'>{t('timeline5Heading')}</span>
+                <span className='time-wrapper'>
+                  <span className='time'>{t('timeline5Date')}</span>
+                </span>
+              </div>
+              <div className='desc'>{t('timeline5Description')}</div>
             </div>
           </li>
 
@@ -62,30 +96,24 @@ function About() {
             <div className='direction-r'>
               <div className='flag-wrapper'>
                 <span className='hexa'></span>
-                <span className='flag'>Lorem Occaecat.</span>
+                <span className='flag'>{t('timeline6Heading')}</span>
                 <span className='time-wrapper'>
-                  <span className='time'>July 2014</span>
+                  <span className='time'>{t('timeline6Date')}</span>
                 </span>
               </div>
-              <div className='desc'>
-                Lorem ipsum Minim labore Ut cupidatat quis qui deserunt proident fugiat pariatur
-                cillum cupidatat reprehenderit sit id dolor consectetur ut.
-              </div>
+              <div className='desc'>{t('timeline6Description')}</div>
             </div>
           </li>
           <li>
             <div className='direction-l'>
               <div className='flag-wrapper'>
                 <span className='hexa'></span>
-                <span className='flag'>Lorem ipsum.</span>
+                <span className='flag'>{t('timeline7Heading')}</span>
                 <span className='time-wrapper'>
-                  <span className='time'>Feb 2015</span>
+                  <span className='time'>{t('timeline7Date')}</span>
                 </span>
               </div>
-              <div className='desc'>
-                Lorem ipsum Nisi labore aute do aute culpa magna nulla voluptate exercitation
-                deserunt proident.
-              </div>
+              <div className='desc'>{t('timeline7Description')}</div>
             </div>
           </li>
 
@@ -93,15 +121,12 @@ function About() {
             <div className='direction-r'>
               <div className='flag-wrapper'>
                 <span className='hexa'></span>
-                <span className='flag'>Lorem ipsum Anim.</span>
+                <span className='flag'>{t('timeline8Heading')}</span>
                 <span className='time-wrapper'>
-                  <span className='time'>Dec 2014</span>
+                  <span className='time'>{t('timeline8Date')}</span>
                 </span>
               </div>
-              <div className='desc'>
-                Lorem ipsum In ut sit in dolor nisi ex magna eu anim anim tempor dolore aliquip enim
-                cupidatat laborum dolore.
-              </div>
+              <div className='desc'>{t('timeline8Description')}</div>
             </div>
           </li>
         </ul>
@@ -145,6 +170,49 @@ function About() {
                   ></path>
                 </svg>
               </a>
+            </li>
+            <li>
+              <Link href='/pdf/cv'>
+                <a>
+                  <svg
+                    version='1.0'
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='256.000000pt'
+                    viewBox='0 0 256.000000 256.000000'
+                    preserveAspectRatio='xMidYMid meet'
+                    className='fab'
+                  >
+                    <g
+                      transform='translate(0.000000,256.000000) scale(0.100000,-0.100000)'
+                      fill='currentColor'
+                      stroke='none'
+                    >
+                      <path
+                        d='M808 2385 c-43 -36 -78 -68 -78 -70 0 -2 45 -57 99 -122 l100 -118
+                      -195 -5 -196 -5 -34 -37 -34 -38 0 -890 c0 -971 -1 -953 56 -979 18 -8 178
+                      -11 544 -11 l518 0 251 236 251 236 0 707 c0 637 -2 709 -16 730 -35 49 -55
+                      51 -467 51 l-384 0 -158 188 c-87 103 -163 188 -169 190 -6 1 -46 -27 -88 -63z
+                      m313 -535 c37 -42 90 -84 178 -141 69 -44 138 -90 153 -101 39 -30 44 -17 14
+                      35 -14 24 -44 88 -67 143 -22 54 -43 105 -46 112 -4 9 57 12 286 12 l291 0 0
+                      -629 0 -630 -157 -3 c-172 -3 -199 -10 -237 -61 -19 -25 -21 -45 -24 -178 l-4
+-149 -434 0 -434 0 0 608 c0 334 -3 705 -7 825 l-6 217 221 0 221 0 52 -60z'
+                      />
+                      <path
+                        d='M1034 1341 c-122 -31 -185 -153 -150 -290 20 -77 46 -115 96 -141 53
+                      -27 147 -27 200 0 54 27 111 127 83 143 -5 3 -22 8 -39 11 -29 6 -32 4 -47
+                      -34 -21 -53 -72 -78 -128 -61 -48 14 -76 50 -85 106 -16 107 27 183 108 192
+                      42 5 50 3 78 -25 16 -17 30 -38 30 -47 0 -13 6 -15 33 -10 56 12 58 16 37 62
+                      -32 73 -131 115 -216 94z'
+                      />
+                      <path
+                        d='M1279 1293 c10 -26 49 -128 87 -226 l68 -178 39 3 39 3 84 215 c46
+                      118 84 219 84 223 0 5 -19 7 -42 5 l-43 -3 -62 -165 c-44 -116 -64 -159 -68
+                      -145 -4 11 -30 85 -58 165 l-52 145 -48 3 -47 3 19 -48z'
+                      />
+                    </g>
+                  </svg>
+                </a>
+              </Link>
             </li>
             <li>
               <a href='https://github.com/hrdyjan1/'>
