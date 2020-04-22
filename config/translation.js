@@ -175,7 +175,7 @@ const languageStrings = {
     welcome: 'Welcome', // Welcome page
     textIntroPart1: 'This app is a personal website of myself, ', // Welcome page
     textIntroPart2:
-      ' Feel free to move here as you like. If you are interested in projects, that I am part of, than click', // Welcome page
+      ' Feel free to move here as you like. If you are interested in projects, that I am part of, then click', // Welcome page
     here: 'here', // Welcome page - introText
     feelFree: 'Feel free', // Welcome page - button
     toEnter: 'to enter', // Welcome page - button
