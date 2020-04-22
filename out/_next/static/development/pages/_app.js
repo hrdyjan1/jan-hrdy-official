@@ -247,7 +247,7 @@ var languageStrings = (_languageStrings = {}, Object(_babel_runtime_helpers_esm_
   // Welcome page
   textIntroPart1: 'This app is a personal website of myself, ',
   // Welcome page
-  textIntroPart2: ' Feel free to move here as you like. If you are interested in projects, that I am part of, than click',
+  textIntroPart2: ' Feel free to move here as you like. If you are interested in projects, that I am part of, then click',
   // Welcome page
   here: 'here',
   // Welcome page - introText
