@@ -278,7 +278,7 @@
   color: var(--bg-ternary);
   font-weight: bold;
   margin: 0;
-  padding: 0 0 20px;
+  padding: 0 0 1rem;
   border: 0;
   font-size: 1rem;
   vertical-align: baseline;

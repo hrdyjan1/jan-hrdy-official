@@ -132,11 +132,60 @@ var ENGLISH = languageStatus.ENGLISH,
 var aboutPageTranslation = (_aboutPageTranslation = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_aboutPageTranslation, ENGLISH, {
   aboutDescription: "Here we are, self-description. Brilliant. I'll be brief. I feel like a regular human being, living a normal life. There only a few deviations from others. People find me to be an upbeat, self-motivated team player with excellent creative skills. For the past several years I have worked in tech. I consider myself as a frontend engineer. My primary goal is creating web or mobile apps. Most of the time I work with ReactJS, which means JavaScript obviously. My experience includes successfully creating app logic, connecting APIs, cooperate with Frontend libraries, be responsible for testing. I have an updated bunch of GitHub open-source issues.",
   lifeWithTech: 'Life in Tech',
-  lifeWithoutTech: 'Normal bio life'
+  lifeWithoutTech: 'Normal bio life',
+  // Timeline sections
+  timeline1Date: '15 July 1996',
+  timeline1Heading: 'Birth',
+  timeline1Description: 'I was born in the south of the Czech Republic as a first child in family of teachers.',
+  timeline2Date: '1996-2011',
+  timeline2Heading: 'Childhood',
+  timeline2Description: 'As I grow up, I was constantly in touch with two activities, music and sport. Most of my family are musicians, so playing the guitar and listening to The Beatles is part of my life. Regarding sports activities , ever since I am able to walk I do some sports pieces of stuff.',
+  timeline3Date: '2015',
+  timeline3Heading: 'University',
+  timeline3Description: 'At the beginning of summer 2015, I successfully completed grammar school and found a perfect girlfriend. Then I started university life. I had chosen to attend CTU in Prague. This was a complex introduction to IT, including basics of programming, databases, system commands and so on.',
+  timeline4Date: '2016',
+  timeline4Heading: 'First web attempts',
+  timeline4Description: 'The moment the outside world learned that I had something to do with programming, they started bombarding me with orders for websites.',
+  timeline5Date: '2017',
+  timeline5Heading: 'Mobile Developer',
+  timeline5Description: 'Before I got a good look, I got a job offer at Definity Systems as a mobile developer. It was quite challenging at first. I did not have enough experience, but I learned quickly and soon began to work fully with the development team. We wrote applications in Xamarin for various Czech companies.',
+  timeline6Date: '2019',
+  timeline6Heading: 'Graduated in university',
+  timeline6Description: "After exhaustive writing of my bachelor's thesis, which was represented by a mobile application to React Native, I completed college. I received mark B from the final state examination.",
+  timeline7Date: '2019',
+  timeline7Heading: 'Web developer',
+  timeline7Description: 'In summer 2019 I have changed my employer. I was lucky. When I fell more in love with React a new opportunity has come to Prague. I got an offer to work in the company name Netvor. We develop a web app using React and PHP.',
+  timeline8Date: '2019',
+  timeline8Heading: 'Sweet little pug',
+  timeline8Description: "During the last couple, I had a great idea to enrich our young couple with another member. So our little pack has grown and now we're three. For me, it means more dog joys and worries in life."
 }), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_aboutPageTranslation, CZECH, {
   aboutDescription: 'Je to tady, popsat sám sebe. Budu se snažit být stručný. Vnímám sám sebe jako úplné normální lidskou bytost, která žije normální život. Existuje však pár odlišností od průměrného člověka. Lidé mě často považují za pozitivního týmového hráče s vynikajícími tvůrčími schopnostmi. Posledních několik let jsem pracoval v oblasti IT. Považuji se za "fronendistu". Mým hlavním cílem je tvorba webových nebo mobilních aplikací. Většinu času jsem pracuji s ReactJS, což samozřejmě znamená JavaScript. Moje zkušenost zahrnují návrh i úspěšnou tvorbu logiky aplikací, propojení API, napojení optimálních knihoven či odpovědnost za testování. Jsem zapojený do open-source komunity vývojář na GitHubu. Mimo jiné občas přispívám na fórum pro programátory (StackOverflow), takže bacha, od koho kopírujete.',
   lifeWithTech: 'Život spojený s IT',
-  lifeWithoutTech: 'Normální běžný život'
+  lifeWithoutTech: 'Normální běžný život',
+  timeline1Date: '15 Červenec 1996',
+  timeline1Heading: 'Narození',
+  timeline1Description: 'Narodil jsem se v jižních čechách do učitelské rodiny, tudíž mi školní výchova začala dříve než ostatním. A jsem za to rád.',
+  timeline2Date: '1996-2011',
+  timeline2Heading: 'Dětství',
+  timeline2Description: 'Už v útlém věku jsem se propojil s hudbou a sportem. Bez těch dvou si nedokážu představit život. Většina rodiny jsou sportovní/hudební nadšenci, takže není divu, že jsme na jedné trase. Už od dětství hraji na kytaru. Hlavní součástí hudby je skupina The Beatles. Co se sportu týká, začínal jsem u fotbalu, skončil jsem u basketbalu.',
+  timeline3Date: '2015',
+  timeline3Heading: 'Vysokoškolský život',
+  timeline3Description: 'Začátkem léta 2015 jsem úspěšně dokončil gymnázium a našel perfektní přítelkyni. Poté jsem začal studovat na vysoké škole. Vybral jsem si ČVUT v Praze. Jednalo se o komplexní úvod do světa IT, včetně základů programování, databází, systémových příkazů atd.',
+  timeline4Date: '2016',
+  timeline4Heading: 'První IT zakázky',
+  timeline4Description: 'Ve chvíli, kdy se okolní svět dozvěděl, že mám něco do činění s programováním, tak mě začali bombardovat zakázkami na webový stránky.',
+  timeline5Date: '2017',
+  timeline5Heading: 'Mobilní vývojář',
+  timeline5Description: 'Než jsem se pořádně rozkoukal, tak jsem dostal nabídku práce ve firmě Definity Systems jako mobilní vývojář. Z počátku to bylo dosti náročné. Neměl jsem dostatek zkušeností, ale učil jsem se rychle a brzy jsem začal na plno spolupracovat s vývojářským týmem. Psali jsme aplikace v Xamarinu pro různé české firmy.',
+  timeline6Date: '2019',
+  timeline6Heading: 'Bakalář',
+  timeline6Description: 'Po vyčerpávajícím sepsání bakalářské práce, kterou reprezentovala mobilní aplikace v React Native, jsem úspěšně dostudoval vysokou školu. Od státní závěrečné zkoušky jsem si odnesl známku B.',
+  timeline7Date: '2019',
+  timeline7Heading: 'Webový vývojář',
+  timeline7Description: 'V létě 2019 jsem změnil svého zaměstnavatele. Měl jsem štěstí. Když jsem propadl kouzlu React JS přišla z Prahy nová příležitost. Dostal jsem nabídku pracovat ve společnosti Netvor. Vyvíjíme zde webovou aplikaci pomocí Reactu a PHP.',
+  timeline8Date: '2019',
+  timeline8Heading: 'Malý mopsík',
+  timeline8Description: 'Během posledních pár mi přišel výborný nápad obohatit naší mladý pár o dalšího člena. Tudíž se naše malá smečka rozrostla a nyní jsme na to tři. Pro mě to znamená více psích radostí a starostí v životě.'
 }), _aboutPageTranslation);
 var mainPageTranslation = (_mainPageTranslation = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_mainPageTranslation, ENGLISH, {
   homePageDescription: 'Once again, welcome to my personal website. You are now on the home page. Here are a few different categories that characterize the main part of my life.',
@@ -209,7 +258,7 @@ var languageStrings = (_languageStrings = {}, Object(_babel_runtime_helpers_esm_
   homePageText: 'This is home page.',
   // Home page - button
   aboutPageText: 'This is about page.'
-}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "projects", 'Projects'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "projectsDescription", 'Here is a list of projects I have participated in.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "name", 'Name'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "type", 'Type'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "search", 'Search'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "about", 'About Me'), _objectSpread2), mainPageTranslation.ENGLISH, {}, aboutPageTranslation.ENGLISH)), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageStrings, CZECH, _objectSpread((_objectSpread3 = {
+}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "projects", 'Projects'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "projectsDescription", 'Here is a list of projects I have participated in 2020.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "name", 'Name'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "type", 'Type'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "search", 'Search'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "about", 'About Me'), _objectSpread2), mainPageTranslation.ENGLISH, {}, aboutPageTranslation.ENGLISH)), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageStrings, CZECH, _objectSpread((_objectSpread3 = {
   home: 'Domů',
   about: 'O mě',
   projects: 'Projekty',
@@ -225,7 +274,7 @@ var languageStrings = (_languageStrings = {}, Object(_babel_runtime_helpers_esm_
   toEnter: 'vstoupit',
   homePageText: 'Toto je domovská stránka.',
   aboutPageText: 'Tato stránka je o mně.'
-}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projects", 'Projekty'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projectsDescription", 'Zde je uveden seznam projektů, na kterých jsem se podílel.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "name", 'Název'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "type", 'Typ'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "search", 'Vyhledat'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "about", 'O mě'), _objectSpread3), mainPageTranslation.CZECH, {}, aboutPageTranslation.CZECH)), _languageStrings);
+}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projects", 'Projekty'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projectsDescription", 'Zde je uveden seznam projektů, na kterých jsem se podílel v roce 2020.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "name", 'Název'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "type", 'Typ'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "search", 'Vyhledat'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "about", 'O mě'), _objectSpread3), mainPageTranslation.CZECH, {}, aboutPageTranslation.CZECH)), _languageStrings);
 var languageReducerType = (_languageReducerType = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageReducerType, languageStatus.CZECH, languageStatus.CZECH), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageReducerType, languageStatus.ENGLISH, languageStatus.ENGLISH), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageReducerType, "TOGGLE", 'TOGGLE'), _languageReducerType);
 var defaultLanguage = languageStatus.ENGLISH;
 

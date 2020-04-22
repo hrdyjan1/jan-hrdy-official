@@ -307,35 +307,37 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var Intro = function Intro(_ref) {
   var header = _ref.header,
       subHeader = _ref.subHeader,
-      render = _ref.render;
+      renderBottom = _ref.renderBottom,
+      renderMiddle = _ref.renderMiddle;
 
   var _useComplexLanguageMe = Object(_contexts_languageContext__WEBPACK_IMPORTED_MODULE_1__["useComplexLanguageMethod"])(),
       t = _useComplexLanguageMe.t;
 
-  var renderElement = typeof render === 'function' ? render : function () {};
+  var renderBottomElement = typeof renderBottom === 'function' ? renderBottom : function () {};
+  var renderMiddleElement = typeof renderMiddle === 'function' ? renderMiddle : function () {};
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("h1", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 7
-    }
-  }, t(header)), __jsx("div", {
-    className: "intro-section",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10,
       columnNumber: 7
     }
+  }, t(header)), renderMiddleElement(), __jsx("div", {
+    className: "intro-section",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 7
+    }
   }, __jsx("h2", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 13,
       columnNumber: 9
     }
-  }, t(subHeader)), renderElement()));
+  }, t(subHeader)), renderBottomElement()));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Intro);
@@ -649,12 +651,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "czechProjectList", function() { return czechProjectList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "czechEntities", function() { return czechEntities; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "czechResults", function() { return czechResults; });
-/* harmony import */ var _public_images_kanban_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../public/images/kanban.png */ "./public/images/kanban.png");
-/* harmony import */ var _public_images_kanban_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_public_images_kanban_png__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/images/starwars.jpg */ "./public/images/starwars.jpg");
-/* harmony import */ var _public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/images/gigworker.jpg */ "./public/images/gigworker.jpg");
-/* harmony import */ var _public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _public_images_kanban_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/images/kanban.png */ "./public/images/kanban.png");
+/* harmony import */ var _public_images_kanban_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_images_kanban_png__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/images/starwars.jpg */ "./public/images/starwars.jpg");
+/* harmony import */ var _public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/images/gigworker.jpg */ "./public/images/gigworker.jpg");
+/* harmony import */ var _public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_images_shopping_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/images/shopping.jpg */ "./public/images/shopping.jpg");
+/* harmony import */ var _public_images_shopping_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_images_shopping_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_images_rohlik_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/images/rohlik.jpg */ "./public/images/rohlik.jpg");
+/* harmony import */ var _public_images_rohlik_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_images_rohlik_jpg__WEBPACK_IMPORTED_MODULE_5__);
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
+
 
 
 
@@ -663,21 +678,21 @@ var normalizedProjectListEnglish = {
     type: 'Web App',
     title: 'Kanban',
     subTitle: 'Helper for agile development',
-    description: 'This project is for training purposes only, using the technologies used with React. Specifically, it is Redux',
+    description: 'This project is for training purposes only, using the technologies used with React. Specifically, it is Redux.',
     year: '2020',
     technologies: ['React, Redux, Normalizer, Lodash, Reselect'],
     href: '/projects/kanban',
-    src: _public_images_kanban_png__WEBPACK_IMPORTED_MODULE_0___default.a
+    src: _public_images_kanban_png__WEBPACK_IMPORTED_MODULE_1___default.a
   },
   '1587045213421': {
     type: 'Web App',
     title: 'Starwars List',
     subTitle: 'Star Wars character finder',
-    description: 'A simple application only to test the combination of two technologies: Redux and Redux Observable',
+    description: 'A simple application only to test the combination of two technologies: Redux and Redux Observable.',
     year: '2020',
     technologies: ['React, Redux, Redux Observable, RxJS'],
     href: '/projects/starwars',
-    src: _public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_1___default.a
+    src: _public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_2___default.a
   },
   '1587414508969': {
     type: 'Web App',
@@ -685,42 +700,62 @@ var normalizedProjectListEnglish = {
     subTitle: 'Find you Gig.',
     description: 'All your favorite companies, all in one place. Online gig opportunity in US.',
     year: '2020',
-    technologies: ['React, Redux, Redux Observable, RxJS'],
-    href: '/projects/starwars',
-    src: _public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_2___default.a
+    technologies: ['React, Redux, Lodash, Formik, Webpack, Yup'],
+    href: 'https://gigworker-stage.herokuapp.com/',
+    src: _public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_3___default.a
+  },
+  '1587542417768': {
+    type: 'Web App',
+    title: 'Shopping Cart',
+    subTitle: 'Lite Eshop version',
+    description: 'Tried to set up some DevOps stuffs (CI, CD).',
+    year: '2020',
+    technologies: ['CircleCI, Docker, Firebase'],
+    href: 'https://gigworker-stage.herokuapp.com/',
+    src: _public_images_shopping_jpg__WEBPACK_IMPORTED_MODULE_4___default.a
+  },
+  '1587557459482': {
+    type: 'Web App',
+    title: 'Rohlík bistro',
+    subTitle: 'Food courier',
+    description: 'Participated in basic React to kinds of stuff.',
+    year: '2020',
+    technologies: ['Next JS, React'],
+    href: 'https://rohlikbistro.cz/',
+    src: _public_images_rohlik_jpg__WEBPACK_IMPORTED_MODULE_5___default.a
   }
 };
 var normalizedProjectListCzech = {
-  '1587045210872': {
+  '1587045210872': _objectSpread({}, normalizedProjectListEnglish['1587045210872'], {
     type: 'Webová aplikace',
     title: 'Kanban',
     subTitle: 'Pomůcka na agilní vývoj',
-    description: 'Tento projekt slouží pouze pro účely zaučení k použití technologií používaných společně s Reactem. Konkrétně se jedná o Redux.',
-    year: '2020',
-    technologies: ['React, Redux, Normalizer, Lodash, Reselect'],
-    href: '/projects/kanban',
-    src: _public_images_kanban_png__WEBPACK_IMPORTED_MODULE_0___default.a
-  },
-  '1587045213421': {
+    description: 'Tento projekt slouží pouze pro účely zaučení k použití technologií používaných společně s Reactem. Konkrétně se jedná o Redux.'
+  }),
+  '1587045213421': _objectSpread({}, normalizedProjectListEnglish['1587045213421'], {
     type: 'Webová aplikace',
     title: 'Star Wars seznam',
     subTitle: 'Vyhledávač jmen postav ze starwars',
-    description: 'Jednoduchá aplikace pouze pro zkoušku spojenení dvou technologií: Redux a Redux Observable',
-    year: '2020',
-    technologies: ['React, Redux, Redux Observable, RxJS'],
-    href: '/projects/starwars',
-    src: _public_images_starwars_jpg__WEBPACK_IMPORTED_MODULE_1___default.a
-  },
-  '1587414508969': {
+    description: 'Jednoduchá aplikace pouze pro zkoušku spojenení dvou technologií: Redux a Redux Observable.'
+  }),
+  '1587414508969': _objectSpread({}, normalizedProjectListEnglish['1587414508969'], {
     type: 'Webová aplikace',
     title: 'Gigworker',
     subTitle: 'Najdi si vlastní melouch.',
-    description: 'Posláním Gigworkeru je sdílet cenné informace o chvilkových volnočasových pracích nabízených na internetu. Melouchy jsem pro všechny, od začátečníků, kteří chtějí začít s drobným přivýdělkem, až po veterány z gigantických firem, kteří se snaží rozšířit svou říši.',
-    year: '2020',
-    technologies: ['React, Redux, Redux Observable, RxJS'],
-    href: '/projects/starwars',
-    src: _public_images_gigworker_jpg__WEBPACK_IMPORTED_MODULE_2___default.a
-  }
+    description: 'Posláním Gigworkeru je sdílet cenné informace o chvilkových volnočasových pracích nabízených na internetu. Melouchy jsem pro všechny, od začátečníků, kteří chtějí začít s drobným přivýdělkem, až po veterány z gigantických firem, kteří se snaží rozšířit svou říši.'
+  }),
+  '1587542417768': _objectSpread({}, normalizedProjectListEnglish['1587542417768'], {
+    type: 'Webová aplikace',
+    title: 'Nákupní košík',
+    subTitle: 'Jednoduchá varianta eshopu',
+    description: 'Pokus o propojení DevOps nástrojů (CI, CD).'
+  }),
+  '1587557459482': _objectSpread({}, normalizedProjectListEnglish['1587557459482'], {
+    type: 'Webová aplikace',
+    title: 'Rohlík bistro',
+    subTitle: 'Kurýr jídel',
+    description: 'Účastnil jsem se pokládání základů při tvorbě registrace a přihlašování.'
+  })
 };
 var englishProjectList = {
   entities: normalizedProjectListEnglish,
@@ -770,11 +805,60 @@ var ENGLISH = languageStatus.ENGLISH,
 var aboutPageTranslation = (_aboutPageTranslation = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_aboutPageTranslation, ENGLISH, {
   aboutDescription: "Here we are, self-description. Brilliant. I'll be brief. I feel like a regular human being, living a normal life. There only a few deviations from others. People find me to be an upbeat, self-motivated team player with excellent creative skills. For the past several years I have worked in tech. I consider myself as a frontend engineer. My primary goal is creating web or mobile apps. Most of the time I work with ReactJS, which means JavaScript obviously. My experience includes successfully creating app logic, connecting APIs, cooperate with Frontend libraries, be responsible for testing. I have an updated bunch of GitHub open-source issues.",
   lifeWithTech: 'Life in Tech',
-  lifeWithoutTech: 'Normal bio life'
+  lifeWithoutTech: 'Normal bio life',
+  // Timeline sections
+  timeline1Date: '15 July 1996',
+  timeline1Heading: 'Birth',
+  timeline1Description: 'I was born in the south of the Czech Republic as a first child in family of teachers.',
+  timeline2Date: '1996-2011',
+  timeline2Heading: 'Childhood',
+  timeline2Description: 'As I grow up, I was constantly in touch with two activities, music and sport. Most of my family are musicians, so playing the guitar and listening to The Beatles is part of my life. Regarding sports activities , ever since I am able to walk I do some sports pieces of stuff.',
+  timeline3Date: '2015',
+  timeline3Heading: 'University',
+  timeline3Description: 'At the beginning of summer 2015, I successfully completed grammar school and found a perfect girlfriend. Then I started university life. I had chosen to attend CTU in Prague. This was a complex introduction to IT, including basics of programming, databases, system commands and so on.',
+  timeline4Date: '2016',
+  timeline4Heading: 'First web attempts',
+  timeline4Description: 'The moment the outside world learned that I had something to do with programming, they started bombarding me with orders for websites.',
+  timeline5Date: '2017',
+  timeline5Heading: 'Mobile Developer',
+  timeline5Description: 'Before I got a good look, I got a job offer at Definity Systems as a mobile developer. It was quite challenging at first. I did not have enough experience, but I learned quickly and soon began to work fully with the development team. We wrote applications in Xamarin for various Czech companies.',
+  timeline6Date: '2019',
+  timeline6Heading: 'Graduated in university',
+  timeline6Description: "After exhaustive writing of my bachelor's thesis, which was represented by a mobile application to React Native, I completed college. I received mark B from the final state examination.",
+  timeline7Date: '2019',
+  timeline7Heading: 'Web developer',
+  timeline7Description: 'In summer 2019 I have changed my employer. I was lucky. When I fell more in love with React a new opportunity has come to Prague. I got an offer to work in the company name Netvor. We develop a web app using React and PHP.',
+  timeline8Date: '2019',
+  timeline8Heading: 'Sweet little pug',
+  timeline8Description: "During the last couple, I had a great idea to enrich our young couple with another member. So our little pack has grown and now we're three. For me, it means more dog joys and worries in life."
 }), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_aboutPageTranslation, CZECH, {
   aboutDescription: 'Je to tady, popsat sám sebe. Budu se snažit být stručný. Vnímám sám sebe jako úplné normální lidskou bytost, která žije normální život. Existuje však pár odlišností od průměrného člověka. Lidé mě často považují za pozitivního týmového hráče s vynikajícími tvůrčími schopnostmi. Posledních několik let jsem pracoval v oblasti IT. Považuji se za "fronendistu". Mým hlavním cílem je tvorba webových nebo mobilních aplikací. Většinu času jsem pracuji s ReactJS, což samozřejmě znamená JavaScript. Moje zkušenost zahrnují návrh i úspěšnou tvorbu logiky aplikací, propojení API, napojení optimálních knihoven či odpovědnost za testování. Jsem zapojený do open-source komunity vývojář na GitHubu. Mimo jiné občas přispívám na fórum pro programátory (StackOverflow), takže bacha, od koho kopírujete.',
   lifeWithTech: 'Život spojený s IT',
-  lifeWithoutTech: 'Normální běžný život'
+  lifeWithoutTech: 'Normální běžný život',
+  timeline1Date: '15 Červenec 1996',
+  timeline1Heading: 'Narození',
+  timeline1Description: 'Narodil jsem se v jižních čechách do učitelské rodiny, tudíž mi školní výchova začala dříve než ostatním. A jsem za to rád.',
+  timeline2Date: '1996-2011',
+  timeline2Heading: 'Dětství',
+  timeline2Description: 'Už v útlém věku jsem se propojil s hudbou a sportem. Bez těch dvou si nedokážu představit život. Většina rodiny jsou sportovní/hudební nadšenci, takže není divu, že jsme na jedné trase. Už od dětství hraji na kytaru. Hlavní součástí hudby je skupina The Beatles. Co se sportu týká, začínal jsem u fotbalu, skončil jsem u basketbalu.',
+  timeline3Date: '2015',
+  timeline3Heading: 'Vysokoškolský život',
+  timeline3Description: 'Začátkem léta 2015 jsem úspěšně dokončil gymnázium a našel perfektní přítelkyni. Poté jsem začal studovat na vysoké škole. Vybral jsem si ČVUT v Praze. Jednalo se o komplexní úvod do světa IT, včetně základů programování, databází, systémových příkazů atd.',
+  timeline4Date: '2016',
+  timeline4Heading: 'První IT zakázky',
+  timeline4Description: 'Ve chvíli, kdy se okolní svět dozvěděl, že mám něco do činění s programováním, tak mě začali bombardovat zakázkami na webový stránky.',
+  timeline5Date: '2017',
+  timeline5Heading: 'Mobilní vývojář',
+  timeline5Description: 'Než jsem se pořádně rozkoukal, tak jsem dostal nabídku práce ve firmě Definity Systems jako mobilní vývojář. Z počátku to bylo dosti náročné. Neměl jsem dostatek zkušeností, ale učil jsem se rychle a brzy jsem začal na plno spolupracovat s vývojářským týmem. Psali jsme aplikace v Xamarinu pro různé české firmy.',
+  timeline6Date: '2019',
+  timeline6Heading: 'Bakalář',
+  timeline6Description: 'Po vyčerpávajícím sepsání bakalářské práce, kterou reprezentovala mobilní aplikace v React Native, jsem úspěšně dostudoval vysokou školu. Od státní závěrečné zkoušky jsem si odnesl známku B.',
+  timeline7Date: '2019',
+  timeline7Heading: 'Webový vývojář',
+  timeline7Description: 'V létě 2019 jsem změnil svého zaměstnavatele. Měl jsem štěstí. Když jsem propadl kouzlu React JS přišla z Prahy nová příležitost. Dostal jsem nabídku pracovat ve společnosti Netvor. Vyvíjíme zde webovou aplikaci pomocí Reactu a PHP.',
+  timeline8Date: '2019',
+  timeline8Heading: 'Malý mopsík',
+  timeline8Description: 'Během posledních pár mi přišel výborný nápad obohatit naší mladý pár o dalšího člena. Tudíž se naše malá smečka rozrostla a nyní jsme na to tři. Pro mě to znamená více psích radostí a starostí v životě.'
 }), _aboutPageTranslation);
 var mainPageTranslation = (_mainPageTranslation = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_mainPageTranslation, ENGLISH, {
   homePageDescription: 'Once again, welcome to my personal website. You are now on the home page. Here are a few different categories that characterize the main part of my life.',
@@ -847,7 +931,7 @@ var languageStrings = (_languageStrings = {}, Object(_babel_runtime_helpers_esm_
   homePageText: 'This is home page.',
   // Home page - button
   aboutPageText: 'This is about page.'
-}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "projects", 'Projects'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "projectsDescription", 'Here is a list of projects I have participated in.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "name", 'Name'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "type", 'Type'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "search", 'Search'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "about", 'About Me'), _objectSpread2), mainPageTranslation.ENGLISH, {}, aboutPageTranslation.ENGLISH)), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageStrings, CZECH, _objectSpread((_objectSpread3 = {
+}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "projects", 'Projects'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "projectsDescription", 'Here is a list of projects I have participated in 2020.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "name", 'Name'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "type", 'Type'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "search", 'Search'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "about", 'About Me'), _objectSpread2), mainPageTranslation.ENGLISH, {}, aboutPageTranslation.ENGLISH)), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageStrings, CZECH, _objectSpread((_objectSpread3 = {
   home: 'Domů',
   about: 'O mě',
   projects: 'Projekty',
@@ -863,7 +947,7 @@ var languageStrings = (_languageStrings = {}, Object(_babel_runtime_helpers_esm_
   toEnter: 'vstoupit',
   homePageText: 'Toto je domovská stránka.',
   aboutPageText: 'Tato stránka je o mně.'
-}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projects", 'Projekty'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projectsDescription", 'Zde je uveden seznam projektů, na kterých jsem se podílel.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "name", 'Název'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "type", 'Typ'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "search", 'Vyhledat'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "about", 'O mě'), _objectSpread3), mainPageTranslation.CZECH, {}, aboutPageTranslation.CZECH)), _languageStrings);
+}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projects", 'Projekty'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projectsDescription", 'Zde je uveden seznam projektů, na kterých jsem se podílel v roce 2020.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "name", 'Název'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "type", 'Typ'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "search", 'Vyhledat'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "about", 'O mě'), _objectSpread3), mainPageTranslation.CZECH, {}, aboutPageTranslation.CZECH)), _languageStrings);
 var languageReducerType = (_languageReducerType = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageReducerType, languageStatus.CZECH, languageStatus.CZECH), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageReducerType, languageStatus.ENGLISH, languageStatus.ENGLISH), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageReducerType, "TOGGLE", 'TOGGLE'), _languageReducerType);
 var defaultLanguage = languageStatus.ENGLISH;
 
@@ -20022,6 +20106,28 @@ module.exports = "/_next/static/images/kanban-4ff59bfd5548e273d7169b4a0f2f955b.p
 
 /***/ }),
 
+/***/ "./public/images/rohlik.jpg":
+/*!**********************************!*\
+  !*** ./public/images/rohlik.jpg ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/rohlik-314a5d59756c8abd69b33f2758304652.jpg";
+
+/***/ }),
+
+/***/ "./public/images/shopping.jpg":
+/*!************************************!*\
+  !*** ./public/images/shopping.jpg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/shopping-77c16e62182d28c9d2e6bf1a2baa82ba.jpg";
+
+/***/ }),
+
 /***/ "./public/images/starwars.jpg":
 /*!************************************!*\
   !*** ./public/images/starwars.jpg ***!
@@ -20078,7 +20184,7 @@ var enhanceLocalStorage = function enhanceLocalStorage(itemName, itemValue) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 7:
 /*!*************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5Cbadeu%5Chrdyjan1%5Cprojects%5Cjan-hrdy-official%5Cpages%5Cprojects.js ***!
   \*************************************************************************************************************************************************************/
@@ -20101,5 +20207,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[7,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=projects.js.map
