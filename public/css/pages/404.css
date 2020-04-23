@@ -1,0 +1,112 @@
+#page-404-id {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+}
+
+#page-404-id h1 {
+  margin: 3rem 0 0;
+  font-size: 5rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+#page-404-id h2 {
+  text-align: center;
+}
+
+#page-404-id .clock {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/images/clock.png');
+  background-size: cover;
+  border: 4px solid var(--bg-primary);
+  border-radius: 50%;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.1), inset 0 -15px 15px rgba(255, 255, 255, 0.1),
+    0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+#page-404-id .clock::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: var(--text-primary);
+  border-radius: 50%;
+  z-index: 5;
+}
+
+#page-404-id .clock .hour,
+#page-404-id .clock .min,
+#page-404-id .clock .sec {
+  position: absolute;
+}
+
+#page-404-id .clock .hour,
+#page-404-id .hr {
+  width: 160px;
+  height: 160px;
+}
+
+#page-404-id .clock .min,
+#page-404-id .mn {
+  width: 190px;
+  height: 190px;
+}
+
+#page-404-id .clock .sec,
+#page-404-id .sc {
+  width: 230px;
+  height: 230px;
+}
+
+#page-404-id .hr,
+#page-404-id .mn,
+#page-404-id .sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+#page-404-id .hr::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background: var(--bg-secondary);
+  z-index: 2;
+  border-radius: 6px 6px 0 0;
+}
+
+#page-404-id .mn::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background: var(--bg-ternary);
+  z-index: 3;
+  border-radius: 6px 6px 0 0;
+}
+
+#page-404-id .sc::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 120px;
+  background: var(--text-primary);
+  z-index: 4;
+  border-radius: 6px 6px 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+  #page-404-id .clock {
+    width: 300px;
+    height: 300px;
+  }
+}

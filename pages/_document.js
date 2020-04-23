@@ -22,7 +22,6 @@ class MyDocument extends Document {
             name='description'
             content='This app is a personal website of myself, Jan Hrdý. Feel free to move here as you like. If you are interested in projects, that I am part of, then visit "projects page".'
           />
-          
           <link rel='stylesheet' type='text/css' href='/css/welcome/toggle.css' />{' '}
           {/* Independent*/}
           <link rel='stylesheet' type='text/css' href='/css/welcome/form.css' />{' '}
@@ -35,9 +34,10 @@ class MyDocument extends Document {
           <link rel='stylesheet' type='text/css' href='/css/root/modal.css' /> {/* Independent*/}
           <link rel='stylesheet' type='text/css' href='/css/pages/about.css' /> {/* Independent*/}
           <link rel='stylesheet' type='text/css' href='/css/pages/home.css' />
-          <link rel='stylesheet' type='text/css' href='/css/pages/projects.css' />{' '}
+          <link rel='stylesheet' type='text/css' href='/css/pages/404.css' />
+          <link rel='stylesheet' type='text/css' href='/css/pages/projects.css' />
           {/* Independent*/}
-          <link rel='stylesheet' type='text/css' href='/css/projects/kanban/index.css' />{' '}
+          <link rel='stylesheet' type='text/css' href='/css/projects/kanban/index.css' />
           {/* Independent*/}
           <link
             href='https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300;400;500;600;700;800;900&display=swap'

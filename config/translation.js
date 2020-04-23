@@ -75,7 +75,7 @@ const aboutPageTranslation = {
     timeline4Date: '2016',
     timeline4Heading: 'První IT zakázky',
     timeline4Description:
-      'Ve chvíli, kdy se okolní svět dozvěděl, že mám něco do činění s programováním, tak mě začal bombardovat zakázkami na webové stránky.',
+      'Ve chvíli, kdy se okolní svět dozvěděl, že mám něco do činění s programováním, také mě začal bombardovat zakázkami na webové stránky.',
 
     timeline5Date: '2017',
     timeline5Heading: 'Mobilní vývojář',
@@ -187,10 +187,11 @@ const languageStrings = {
     type: 'Type', // Projects page = search type value
     search: 'Search', // Projects page = default search input value
     about: 'About Me', // About page = h1
+    description404: 'Oops, there is nothing in there.',
     ...mainPageTranslation.ENGLISH,
     ...aboutPageTranslation.ENGLISH,
-  },
-  [CZECH]: {
+},
+[CZECH]: {
     home: 'Domů',
     about: 'O mně',
     projects: 'Projekty',
@@ -201,7 +202,7 @@ const languageStrings = {
     welcome: 'Vítejte',
     textIntroPart1: 'Tato aplikace reprezentuje mé osobní stránky. Zdraví Vás ',
     textIntroPart2:
-      ' Je mi ctí, že jste zavítali přímo sem. Pokud Vás zajímá nějáký projekt, na kterém jsem se podílel, tak prosím kliknětě',
+    ' Je mi ctí, že jste zavítali přímo sem. Pokud Vás zajímá nějáký projekt, na kterém jsem se podílel, tak prosím kliknětě',
     here: 'zde',
     feelFree: 'Neváhejte',
     toEnter: 'vstoupit',
@@ -213,6 +214,7 @@ const languageStrings = {
     type: 'Typ',
     search: 'Vyhledat',
     about: 'O mně', // About page = h1
+    description404: 'Ups,tady nic není.',
     ...mainPageTranslation.CZECH,
     ...aboutPageTranslation.CZECH,
   },
