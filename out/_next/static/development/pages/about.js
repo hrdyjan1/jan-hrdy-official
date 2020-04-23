@@ -1,9 +1,9 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\about.js"],{
 
-/***/ "./components/common/toggle/ToggleLanguage.js":
-/*!****************************************************!*\
-  !*** ./components/common/toggle/ToggleLanguage.js ***!
-  \****************************************************/
+/***/ "./components/pages/projects/Intro.js":
+/*!********************************************!*\
+  !*** ./components/pages/projects/Intro.js ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11,239 +11,51 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _ToggleWrapper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ToggleWrapper */ "./components/common/toggle/ToggleWrapper.js");
-/* harmony import */ var _contexts_languageContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../contexts/languageContext */ "./contexts/languageContext.js");
+/* harmony import */ var _contexts_languageContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../contexts/languageContext */ "./contexts/languageContext.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\badeu\\hrdyjan1\\projects\\jan-hrdy-official\\components\\common\\toggle\\ToggleLanguage.js";
+    _jsxFileName = "C:\\Users\\badeu\\hrdyjan1\\projects\\jan-hrdy-official\\components\\pages\\projects\\Intro.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+var Intro = function Intro(_ref) {
+  var header = _ref.header,
+      subHeader = _ref.subHeader,
+      renderBottom = _ref.renderBottom,
+      renderMiddle = _ref.renderMiddle;
 
-var ToggleLanguage = function ToggleLanguage() {
-  var _useLanguageState = Object(_contexts_languageContext__WEBPACK_IMPORTED_MODULE_2__["useLanguageState"])(),
-      isEnglishLanguage = _useLanguageState.isEnglishLanguage;
+  var _useComplexLanguageMe = Object(_contexts_languageContext__WEBPACK_IMPORTED_MODULE_1__["useComplexLanguageMethod"])(),
+      t = _useComplexLanguageMe.t;
 
-  var _useLanguageMethod = Object(_contexts_languageContext__WEBPACK_IMPORTED_MODULE_2__["useLanguageMethod"])(),
-      toggleLanguage = _useLanguageMethod.toggle;
-
-  return __jsx(_ToggleWrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    toggleName: "Language",
-    onChange: toggleLanguage,
-    checked: isEnglishLanguage,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 5
-    }
-  }, __jsx("span", {
-    className: "toggleLanguageHandler",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 7
-    }
-  }, " "));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (ToggleLanguage);
-
-/***/ }),
-
-/***/ "./components/common/toggle/ToggleTheme.js":
-/*!*************************************************!*\
-  !*** ./components/common/toggle/ToggleTheme.js ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _ToggleWrapper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ToggleWrapper */ "./components/common/toggle/ToggleWrapper.js");
-/* harmony import */ var _contexts_themeContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../contexts/themeContext */ "./contexts/themeContext.js");
-var _this = undefined,
-    _jsxFileName = "C:\\Users\\badeu\\hrdyjan1\\projects\\jan-hrdy-official\\components\\common\\toggle\\ToggleTheme.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-var ToggleTheme = function ToggleTheme() {
-  var _useThemeState = Object(_contexts_themeContext__WEBPACK_IMPORTED_MODULE_2__["useThemeState"])(),
-      isDarkTheme = _useThemeState.isDarkTheme;
-
-  var _useThemeMethod = Object(_contexts_themeContext__WEBPACK_IMPORTED_MODULE_2__["useThemeMethod"])(),
-      toggleTheme = _useThemeMethod.toggle;
-
-  return __jsx(_ToggleWrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    toggleName: "Theme",
-    onChange: toggleTheme,
-    checked: isDarkTheme,
+  var renderBottomElement = typeof renderBottom === 'function' ? renderBottom : function () {};
+  var renderMiddleElement = typeof renderMiddle === 'function' ? renderMiddle : function () {};
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10,
       columnNumber: 7
     }
-  }, __jsx("span", {
-    className: "toggleThemeHandler",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 9
-    }
-  }, __jsx("span", {
-    className: "crater crater--1",
+  }, t(header)), renderMiddleElement(), __jsx("div", {
+    className: "intro-section",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12,
-      columnNumber: 11
+      columnNumber: 7
     }
-  }), __jsx("span", {
-    className: "crater crater--2",
+  }, __jsx("h2", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13,
-      columnNumber: 11
-    }
-  }), __jsx("span", {
-    className: "crater crater--3",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14,
-      columnNumber: 11
-    }
-  })), __jsx("span", {
-    className: "star star--1",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16,
       columnNumber: 9
     }
-  }), __jsx("span", {
-    className: "star star--2",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 9
-    }
-  }), __jsx("span", {
-    className: "star star--3",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 9
-    }
-  }), __jsx("span", {
-    className: "star star--4",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 9
-    }
-  }), __jsx("span", {
-    className: "star star--5",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20,
-      columnNumber: 9
-    }
-  }), __jsx("span", {
-    className: "star star--6",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 9
-    }
-  }));
+  }, t(subHeader)), renderBottomElement()));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (ToggleTheme);
-
-/***/ }),
-
-/***/ "./components/common/toggle/ToggleWrapper.js":
-/*!***************************************************!*\
-  !*** ./components/common/toggle/ToggleWrapper.js ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _this = undefined,
-    _jsxFileName = "C:\\Users\\badeu\\hrdyjan1\\projects\\jan-hrdy-official\\components\\common\\toggle\\ToggleWrapper.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-var ToggleWrapper = function ToggleWrapper(_ref) {
-  var toggleName = _ref.toggleName,
-      onChange = _ref.onChange,
-      checked = _ref.checked,
-      children = _ref.children;
-  var toggleId = "toggle".concat(toggleName, "Id");
-  var toggleLabelClassName = "toggle".concat(toggleName, "Label");
-  var toggleInputClassName = "toggle".concat(toggleName, "Input");
-  var toggleWrapperClassName = "toggle".concat(toggleName, "Wrapper");
-  return __jsx("div", {
-    className: toggleWrapperClassName,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 5
-    }
-  }, __jsx("input", {
-    type: "checkbox",
-    id: toggleId,
-    className: toggleInputClassName,
-    onChange: onChange,
-    checked: checked,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 7
-    }
-  }), __jsx("label", {
-    className: toggleLabelClassName,
-    htmlFor: toggleId,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 7
-    }
-  }, __jsx("div", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 9
-    }
-  }, children)));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (ToggleWrapper);
+/* harmony default export */ __webpack_exports__["default"] = (Intro);
 
 /***/ }),
 
@@ -306,24 +118,24 @@ var aboutPageTranslation = (_aboutPageTranslation = {}, Object(_babel_runtime_he
   timeline8Heading: 'Sweet little pug',
   timeline8Description: "During the last couple, I had a great idea to enrich our young couple with another member. So our little pack has grown and now we're three. For me, it means more dog joys and worries in life."
 }), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_aboutPageTranslation, CZECH, {
-  aboutDescription: 'Je to tady, popsat sám sebe. Budu se snažit být stručný. Vnímám sám sebe jako úplné normální lidskou bytost, která žije normální život. Existuje však pár odlišností od průměrného člověka. Lidé mě často považují za pozitivního týmového hráče s vynikajícími tvůrčími schopnostmi. Posledních několik let jsem pracoval v oblasti IT. Považuji se za "fronendistu". Mým hlavním cílem je tvorba webových nebo mobilních aplikací. Většinu času jsem pracuji s ReactJS, což samozřejmě znamená JavaScript. Moje zkušenost zahrnují návrh i úspěšnou tvorbu logiky aplikací, propojení API, napojení optimálních knihoven či odpovědnost za testování. Jsem zapojený do open-source komunity vývojář na GitHubu. Mimo jiné občas přispívám na fórum pro programátory (StackOverflow), takže bacha, od koho kopírujete.',
+  aboutDescription: 'Je to tady, popsat sám sebe. Budu se snažit být stručný. Vnímám sám sebe jako úplně normální lidskou bytost, která žije normální život. Existuje však pár odlišností od průměrného člověka. Lidé mě často považují za pozitivního týmového hráče s vynikajícími tvůrčími schopnostmi. Posledních několik let jsem pracoval v oblasti IT. Považuji se za "fronendistu". Mým hlavním cílem je tvorba webových nebo mobilních aplikací. Většinu času pracuji s ReactJS, což samozřejmě znamená JavaScript. Mezi mé zkušenosti patří návrh softwarové architektury, tvorba vnitřní logiky, propojení s API, využívání optimálních knihoven či zodpovídat za testování aplikace. Jsem zapojený do open-source komunity vývojářů na GitHubu. Mimo jiné občas přispívám na fórum pro programátory (StackOverflow), takže bacha, od koho kopírujete.',
   lifeWithTech: 'Život spojený s IT',
   lifeWithoutTech: 'Normální běžný život',
   timeline1Date: '15 Červenec 1996',
   timeline1Heading: 'Narození',
-  timeline1Description: 'Narodil jsem se v jižních čechách do učitelské rodiny, tudíž mi školní výchova začala dříve než ostatním. A jsem za to rád.',
+  timeline1Description: 'Narodil jsem se v Jižních Čechách do učitelské rodiny, tudíž mi školní výchova začala dříve než ostatním. A jsem za to rád.',
   timeline2Date: '1996-2011',
   timeline2Heading: 'Dětství',
-  timeline2Description: 'Už v útlém věku jsem se propojil s hudbou a sportem. Bez těch dvou si nedokážu představit život. Většina rodiny jsou sportovní/hudební nadšenci, takže není divu, že jsme na jedné trase. Už od dětství hraji na kytaru. Hlavní součástí hudby je skupina The Beatles. Co se sportu týká, začínal jsem u fotbalu, skončil jsem u basketbalu.',
+  timeline2Description: 'Už v útlém věku jsem se propojil s hudbou a sportem. Bez nich si nedokážu představit život. Většina rodiny jsou sportovní/hudební nadšenci, takže není divu, že jsme na jedné trase. Už od dětství hraji na kytaru. Mojí hudební mantrou je britská kapela The Beatles. Co se sportu týká, začínal jsem u fotbalu, skončil jsem u basketbalu.',
   timeline3Date: '2015',
   timeline3Heading: 'Vysokoškolský život',
   timeline3Description: 'Začátkem léta 2015 jsem úspěšně dokončil gymnázium a našel perfektní přítelkyni. Poté jsem začal studovat na vysoké škole. Vybral jsem si ČVUT v Praze. Jednalo se o komplexní úvod do světa IT, včetně základů programování, databází, systémových příkazů atd.',
   timeline4Date: '2016',
   timeline4Heading: 'První IT zakázky',
-  timeline4Description: 'Ve chvíli, kdy se okolní svět dozvěděl, že mám něco do činění s programováním, tak mě začali bombardovat zakázkami na webový stránky.',
+  timeline4Description: 'Ve chvíli, kdy se okolní svět dozvěděl, že mám něco do činění s programováním, tak mě začal bombardovat zakázkami na webové stránky.',
   timeline5Date: '2017',
   timeline5Heading: 'Mobilní vývojář',
-  timeline5Description: 'Než jsem se pořádně rozkoukal, tak jsem dostal nabídku práce ve firmě Definity Systems jako mobilní vývojář. Z počátku to bylo dosti náročné. Neměl jsem dostatek zkušeností, ale učil jsem se rychle a brzy jsem začal na plno spolupracovat s vývojářským týmem. Psali jsme aplikace v Xamarinu pro různé české firmy.',
+  timeline5Description: 'Než jsem se pořádně rozkoukal, tak jsem dostal nabídku práce ve firmě Definity Systems jako mobilní vývojář. Z počátku to bylo dosti náročné. Neměl jsem dostatek zkušeností, ale učil jsem se rychle a brzy jsem začal naplno spolupracovat s vývojářským týmem. Psali jsme aplikace v Xamarinu pro různé české firmy.',
   timeline6Date: '2019',
   timeline6Heading: 'Bakalář',
   timeline6Description: 'Po vyčerpávajícím sepsání bakalářské práce, kterou reprezentovala mobilní aplikace v React Native, jsem úspěšně dostudoval vysokou školu. Od státní závěrečné zkoušky jsem si odnesl známku B.',
@@ -365,7 +177,7 @@ var mainPageTranslation = (_mainPageTranslation = {}, Object(_babel_runtime_help
   homePageSection4Heading: 'Projekty',
   homePageSection4Description: 'Pracoval jsem v životě už na několika různorodých projektech. Do většiny projektů jsem se zapojil, hlavně proto, že mě lidé často považují za pozitivního, týmového hráče s vynikajícími tvůrčími schopnostmi. Většina z mých konexí je spojena se světem IT. Mezi mé zkušenosti patří také video produkce nebo organizace sportovních akcí. Pokud se chcete dozvědět více, navštivte stránku "Projekty"',
   homePageSection5Heading: 'Co jsem zač?',
-  homePageSection5Description: 'Cítím se jako normální člověk, žijící normální život. Také se mimo jiné považuji za frontendistu žijícím v hlavním městě České republiky. Baví mě proměnit složité problémy v jednoduché, tvořit krásné a intuitivní webové nebo mobilní aplikace. Pokud zrovna nepřidávám na server pár řádků kódu nebo netvořím logiku aplikace, tak mě nejspíš najdete někde, kde buď jím, hraji na kytaru nebo dělám něco sportovního. Pokud se chcete dozvědět o mě více, stačí navštívit stránku "O mě"',
+  homePageSection5Description: 'Cítím se jako normální člověk, žijící normální život. Také se mimo jiné považuji za frontendistu žijícím v hlavním městě České republiky. Baví mě proměnit složité problémy v jednoduché, tvořit krásné a intuitivní webové nebo mobilní aplikace. Pokud zrovna nepřidávám na server pár řádků kódu nebo netvořím logiku aplikace, tak mě nejspíš najdete někde, kde buď jím, hraji na kytaru nebo dělám něco sportovního. Pokud se chcete dozvědět o mně více, stačí navštívit stránku "O mně"',
   homePageSection6Heading: 'Úpravy podle vás',
   homePageSection6Description: 'Tato webová stránka obsahuje několik různých variant. Neváhejte a využijte toho. Lze například přepnout jazyk, změňte aktuální vzhled. Wau můžete zvolit buď tmavý či světlý režim. Pokud dáváte přednost procházení stránek bez možných zvuků, tak lze na webu vypnout hudbu. Pokud se chcete dozvědět více, stačí navštívit sekci "Nastavení".',
   homePageSection7Heading: 'Aktuální projekt',
@@ -407,7 +219,7 @@ var languageStrings = (_languageStrings = {}, Object(_babel_runtime_helpers_esm_
   aboutPageText: 'This is about page.'
 }, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "projects", 'Projects'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "projectsDescription", 'Here is a list of projects I have participated in 2020.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "name", 'Name'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "type", 'Type'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "search", 'Search'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "about", 'About Me'), _objectSpread2), mainPageTranslation.ENGLISH, {}, aboutPageTranslation.ENGLISH)), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageStrings, CZECH, _objectSpread((_objectSpread3 = {
   home: 'Domů',
-  about: 'O mě',
+  about: 'O mně',
   projects: 'Projekty',
   settings: 'Nastavení',
   close: 'Zavřít',
@@ -421,7 +233,7 @@ var languageStrings = (_languageStrings = {}, Object(_babel_runtime_helpers_esm_
   toEnter: 'vstoupit',
   homePageText: 'Toto je domovská stránka.',
   aboutPageText: 'Tato stránka je o mně.'
-}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projects", 'Projekty'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projectsDescription", 'Zde je uveden seznam projektů, na kterých jsem se podílel v roce 2020.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "name", 'Název'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "type", 'Typ'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "search", 'Vyhledat'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "about", 'O mě'), _objectSpread3), mainPageTranslation.CZECH, {}, aboutPageTranslation.CZECH)), _languageStrings);
+}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projects", 'Projekty'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "projectsDescription", 'Zde je uveden seznam projektů, na kterých jsem se podílel v roce 2020.'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "name", 'Název'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "type", 'Typ'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "search", 'Vyhledat'), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread3, "about", 'O mně'), _objectSpread3), mainPageTranslation.CZECH, {}, aboutPageTranslation.CZECH)), _languageStrings);
 var languageReducerType = (_languageReducerType = {}, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageReducerType, languageStatus.CZECH, languageStatus.CZECH), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageReducerType, languageStatus.ENGLISH, languageStatus.ENGLISH), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_languageReducerType, "TOGGLE", 'TOGGLE'), _languageReducerType);
 var defaultLanguage = languageStatus.ENGLISH;
 
@@ -584,170 +396,6 @@ function useComplexLanguageMethod() {
   }, [status]);
   return {
     t: t
-  };
-}
-
-
-
-/***/ }),
-
-/***/ "./contexts/themeContext.js":
-/*!**********************************!*\
-  !*** ./contexts/themeContext.js ***!
-  \**********************************/
-/*! exports provided: ThemeProvider, useThemeState, useThemeDispatch, useThemeMethod */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThemeProvider", function() { return ThemeProvider; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useThemeState", function() { return useThemeState; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useThemeDispatch", function() { return useThemeDispatch; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useThemeMethod", function() { return useThemeMethod; });
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _utils_localStorage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/localStorage */ "./utils/localStorage.js");
-
-
-var _jsxFileName = "C:\\Users\\badeu\\hrdyjan1\\projects\\jan-hrdy-official\\contexts\\themeContext.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-// src/count-context.js
-
-
-var ThemeStateContext = react__WEBPACK_IMPORTED_MODULE_2___default.a.createContext();
-var ThemeDispatchContext = react__WEBPACK_IMPORTED_MODULE_2___default.a.createContext();
-var themeType = {
-  LIGHT: 'LIGHT',
-  DARK: 'DARK',
-  TOGGLE: 'TOGGLE'
-};
-var themeStatus = {
-  LIGHT: 'LIGHT',
-  DARK: 'DARK'
-};
-
-var initialTheme = function initialTheme(status) {
-  return {
-    status: themeStatus[status] || themeStatus.LIGHT
-  };
-};
-
-function ThemeReducer(state, action) {
-  switch (action.type) {
-    case themeType.TOGGLE:
-      return {
-        status: state.status === themeStatus.LIGHT ? themeStatus.DARK : themeStatus.LIGHT
-      };
-
-    case themeType.LIGHT:
-      return {
-        status: themeStatus.LIGHT
-      };
-
-    case themeType.DARK:
-      return {
-        status: themeStatus.DARK
-      };
-
-    default:
-      {
-        throw new Error("Unhandled action type ThemeReducer: ".concat(action.type));
-      }
-  }
-}
-
-function ThemeProvider(_ref) {
-  var children = _ref.children,
-      theme = _ref.theme;
-  var initialThemeState = initialTheme(theme);
-
-  var _React$useReducer = react__WEBPACK_IMPORTED_MODULE_2___default.a.useReducer(ThemeReducer, initialThemeState),
-      _React$useReducer2 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useReducer, 2),
-      state = _React$useReducer2[0],
-      dispatch = _React$useReducer2[1];
-
-  var isLightTheme = state.status === themeStatus.LIGHT;
-  var isDarkTheme = state.status === themeStatus.DARK;
-  var nextStatus = isLightTheme ? themeStatus.DARK : themeStatus.LIGHT; // Handle CSS body property of THEME, but lower
-
-  react__WEBPACK_IMPORTED_MODULE_2___default.a.useEffect(function () {
-    var bodyClassList = document.body.classList;
-    var nextStatusLower = nextStatus.toLowerCase();
-    var statusLower = state.status.toLowerCase();
-
-    if (bodyClassList.contains(nextStatusLower)) {
-      bodyClassList.replace(nextStatusLower, statusLower);
-    } else if (!bodyClassList.contains(statusLower)) {
-      bodyClassList.add(statusLower);
-    }
-  }, [state.status]);
-  react__WEBPACK_IMPORTED_MODULE_2___default.a.useEffect(function () {
-    Object(_utils_localStorage__WEBPACK_IMPORTED_MODULE_3__["enhanceLocalStorage"])(_utils_localStorage__WEBPACK_IMPORTED_MODULE_3__["localStorageType"].THEME, state.status);
-  }, [state.status]);
-  return __jsx(ThemeStateContext.Provider, {
-    value: _objectSpread({}, state, {
-      isLightTheme: isLightTheme,
-      isDarkTheme: isDarkTheme,
-      nextStatus: nextStatus
-    }),
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63,
-      columnNumber: 5
-    }
-  }, __jsx(ThemeDispatchContext.Provider, {
-    value: dispatch,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71,
-      columnNumber: 7
-    }
-  }, children));
-}
-
-function useThemeState() {
-  var context = react__WEBPACK_IMPORTED_MODULE_2___default.a.useContext(ThemeStateContext);
-
-  if (context === undefined) {
-    throw new Error('useThemeState must be used within a ThemeProvider');
-  }
-
-  return context;
-}
-
-function useThemeDispatch() {
-  var context = react__WEBPACK_IMPORTED_MODULE_2___default.a.useContext(ThemeDispatchContext);
-
-  if (context === undefined) {
-    throw new Error('useThemeDispatch must be used within a ThemeProvider');
-  }
-
-  return context;
-}
-
-function useThemeMethod() {
-  var dispatch = react__WEBPACK_IMPORTED_MODULE_2___default.a.useContext(ThemeDispatchContext);
-  var toggle = react__WEBPACK_IMPORTED_MODULE_2___default.a.useCallback(function () {
-    return dispatch({
-      type: themeType.TOGGLE
-    });
-  }, [dispatch]);
-
-  if (dispatch === undefined) {
-    throw new Error('useThemeDispatch must be used within a ThemeProvider');
-  }
-
-  return {
-    toggle: toggle
   };
 }
 
@@ -1056,21 +704,21 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cbadeu%5Chrdyjan1%5Cprojects%5Cjan-hrdy-official%5Cpages%5Cindex.js!./":
-/*!**********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cbadeu%5Chrdyjan1%5Cprojects%5Cjan-hrdy-official%5Cpages%5Cindex.js ***!
-  \**********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=C%3A%5CUsers%5Cbadeu%5Chrdyjan1%5Cprojects%5Cjan-hrdy-official%5Cpages%5Cabout.js!./":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=C%3A%5CUsers%5Cbadeu%5Chrdyjan1%5Cprojects%5Cjan-hrdy-official%5Cpages%5Cabout.js ***!
+  \***************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var mod = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/about", function() {
+      var mod = __webpack_require__(/*! ./pages/about.js */ "./pages/about.js")
       if(true) {
-        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
-          if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
-          next.router.update("/", updatedPage)
+        module.hot.accept(/*! ./pages/about.js */ "./pages/about.js", function() {
+          if(!next.router.components["/about"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/about.js */ "./pages/about.js")
+          next.router.update("/about", updatedPage)
         })
       }
       return mod
@@ -5411,9 +5059,9 @@ try {
 
 /***/ }),
 
-/***/ "./pages/index.js":
+/***/ "./pages/about.js":
 /*!************************!*\
-  !*** ./pages/index.js ***!
+  !*** ./pages/about.js ***!
   \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -5422,19 +5070,12 @@ try {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _public_images_avatar_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/images/avatar.svg */ "./public/images/avatar.svg");
-/* harmony import */ var _public_images_avatar_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_images_avatar_svg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _public_images_vectorpaint_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/images/vectorpaint.svg */ "./public/images/vectorpaint.svg");
-/* harmony import */ var _public_images_vectorpaint_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_images_vectorpaint_svg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _public_images_waiting_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/images/waiting.svg */ "./public/images/waiting.svg");
-/* harmony import */ var _public_images_waiting_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_images_waiting_svg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_common_toggle_ToggleTheme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/common/toggle/ToggleTheme */ "./components/common/toggle/ToggleTheme.js");
-/* harmony import */ var _components_common_toggle_ToggleLanguage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/common/toggle/ToggleLanguage */ "./components/common/toggle/ToggleLanguage.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _contexts_languageContext__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../contexts/languageContext */ "./contexts/languageContext.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _contexts_languageContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/languageContext */ "./contexts/languageContext.js");
+/* harmony import */ var _components_pages_projects_Intro__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/pages/projects/Intro */ "./components/pages/projects/Intro.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\badeu\\hrdyjan1\\projects\\jan-hrdy-official\\pages\\index.js";
+    _jsxFileName = "C:\\Users\\badeu\\hrdyjan1\\projects\\jan-hrdy-official\\pages\\about.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -5442,313 +5083,875 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+var bonusSection = function bonusSection() {
+  var _useComplexLanguageMe = Object(_contexts_languageContext__WEBPACK_IMPORTED_MODULE_2__["useComplexLanguageMethod"])(),
+      t = _useComplexLanguageMe.t;
 
-
-
-
-var IndexPage = function IndexPage() {
-  var _useComplexLanguageMe = Object(_contexts_languageContext__WEBPACK_IMPORTED_MODULE_7__["useComplexLanguageMethod"])(),
-      t = _useComplexLanguageMe.t; // elements
-
-
-  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(function () {
-    var page = document.getElementsByClassName('page')[0];
-    var welcomeMenuToggle = document.getElementsByClassName('welcome-menu-toggle')[0];
-    var content = document.getElementsByClassName('content')[0];
-    welcomeMenuToggle.addEventListener('click', function () {
-      page.classList.toggle('shazam');
-    });
-    content.addEventListener('click', function () {
-      page.classList.remove('shazam');
-    });
-    return function () {
-      welcomeMenuToggle.removeEventListener('click', function () {});
-      content.removeEventListener('click', function () {});
-    };
-  }, []);
-  return __jsx("div", {
-    className: "page",
+  return __jsx("section", {
     __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 5
+    }
+  }, __jsx("p", {
+    className: "online",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 7
+    }
+  }, __jsx("span", {
+    className: "big",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 9
+    }
+  }, "Online"), __jsx("br", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 9
+    }
+  }), __jsx("span", {
+    className: "small",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 9
+    }
+  }, t('lifeWithTech'))), __jsx("p", {
+    className: "offline",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 7
+    }
+  }, __jsx("span", {
+    className: "big",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 9
+    }
+  }, "Offline"), __jsx("br", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  }), __jsx("span", {
+    className: "small",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 9
+    }
+  }, t('lifeWithoutTech'))));
+};
+
+function About() {
+  var _useComplexLanguageMe2 = Object(_contexts_languageContext__WEBPACK_IMPORTED_MODULE_2__["useComplexLanguageMethod"])(),
+      t = _useComplexLanguageMe2.t;
+
+  return __jsx("div", {
+    id: "page-about-id",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 5
+    }
+  }, __jsx("div", {
+    id: "about-container",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 7
+    }
+  }, __jsx(_components_pages_projects_Intro__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    header: "about",
+    subHeader: "aboutDescription",
+    renderBottom: bonusSection,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 9
+    }
+  }), __jsx("ul", {
+    className: "timeline",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 9
+    }
+  }, __jsx("li", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 11
+    }
+  }, __jsx("div", {
+    className: "direction-r",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "flag-wrapper",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33,
-      columnNumber: 5
+      columnNumber: 15
     }
   }, __jsx("span", {
-    className: "welcome-menu-toggle",
-    __self: _this,
+    className: "hexa",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34,
-      columnNumber: 7
+      columnNumber: 17
     }
-  }, __jsx("svg", {
-    "aria-hidden": "true",
-    focusable: "false",
-    "data-prefix": "fas",
-    "data-icon": "bars",
-    className: "menu_open svg-inline--fa fa-bars fa-w-14",
-    role: "img",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 448 512",
-    __self: _this,
+  }), __jsx("span", {
+    className: "flag",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35,
-      columnNumber: 9
+      columnNumber: 17
     }
-  }, __jsx("path", {
-    fill: "currentColor",
-    d: "M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z",
-    __self: _this,
+  }, t('timeline1Heading')), __jsx("span", {
+    className: "time-wrapper",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 17
+    }
+  }, __jsx("span", {
+    className: "time",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 19
+    }
+  }, t('timeline1Date')))), __jsx("div", {
+    className: "desc",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 15
+    }
+  }, t('timeline1Description')))), __jsx("li", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 11
+    }
+  }, __jsx("div", {
+    className: "direction-r",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "flag-wrapper",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45,
-      columnNumber: 11
+      columnNumber: 15
     }
-  })), __jsx("svg", {
-    "aria-hidden": "true",
-    focusable: "false",
-    "data-prefix": "fas",
-    "data-icon": "times",
-    className: "menu_close svg-inline--fa fa-times fa-w-11",
-    role: "img",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 352 512",
-    __self: _this,
+  }, __jsx("span", {
+    className: "hexa",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
-      columnNumber: 9
+      lineNumber: 46,
+      columnNumber: 17
     }
-  }, __jsx("path", {
-    fill: "currentColor",
-    d: "M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z",
-    __self: _this,
+  }), __jsx("span", {
+    className: "flag",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 17
+    }
+  }, t('timeline2Heading')), __jsx("span", {
+    className: "time-wrapper",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 17
+    }
+  }, __jsx("span", {
+    className: "time",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 19
+    }
+  }, t('timeline2Date')))), __jsx("div", {
+    className: "desc",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52,
+      columnNumber: 15
+    }
+  }, t('timeline2Description')))), __jsx("li", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56,
+      columnNumber: 11
+    }
+  }, __jsx("div", {
+    className: "direction-l",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "flag-wrapper",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 15
+    }
+  }, __jsx("span", {
+    className: "hexa",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 17
+    }
+  }), __jsx("span", {
+    className: "flag",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 60,
+      columnNumber: 17
+    }
+  }, t('timeline3Heading')), __jsx("span", {
+    className: "time-wrapper",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 17
+    }
+  }, __jsx("span", {
+    className: "time",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 19
+    }
+  }, t('timeline3Date')))), __jsx("div", {
+    className: "desc",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 15
+    }
+  }, t('timeline3Description')))), __jsx("li", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69,
       columnNumber: 11
     }
-  }))), __jsx("ul", {
-    className: "welcome-menu-items",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66,
-      columnNumber: 7
-    }
-  }, __jsx("li", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67,
-      columnNumber: 9
-    }
-  }, __jsx(_components_common_toggle_ToggleLanguage__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68,
-      columnNumber: 11
-    }
-  })), __jsx("li", {
-    __self: _this,
+  }, __jsx("div", {
+    className: "direction-l",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 70,
-      columnNumber: 9
+      columnNumber: 13
     }
-  }, __jsx(_components_common_toggle_ToggleTheme__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    __self: _this,
+  }, __jsx("div", {
+    className: "flag-wrapper",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 71,
-      columnNumber: 11
+      columnNumber: 15
     }
-  }))), __jsx("main", {
-    className: "content",
-    __self: _this,
+  }, __jsx("span", {
+    className: "hexa",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72,
+      columnNumber: 17
+    }
+  }), __jsx("span", {
+    className: "flag",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73,
+      columnNumber: 17
+    }
+  }, t('timeline4Heading')), __jsx("span", {
+    className: "time-wrapper",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 74,
-      columnNumber: 7
+      columnNumber: 17
     }
-  }, __jsx("div", {
-    className: "container-wrapper",
-    __self: _this,
+  }, __jsx("span", {
+    className: "time",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 75,
-      columnNumber: 9
+      columnNumber: 19
     }
-  }, __jsx("div", {
-    className: "background-wrapper",
-    __self: _this,
+  }, t('timeline4Date')))), __jsx("div", {
+    className: "desc",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
-      columnNumber: 11
-    }
-  }, __jsx("img", {
-    className: "background",
-    src: _public_images_vectorpaint_svg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77,
-      columnNumber: 13
-    }
-  })), __jsx("div", {
-    className: "container",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 79,
-      columnNumber: 11
-    }
-  }, __jsx("div", {
-    className: "login-content",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 80,
-      columnNumber: 13
-    }
-  }, __jsx("form", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 81,
+      lineNumber: 78,
       columnNumber: 15
     }
-  }, __jsx("img", {
-    src: _public_images_avatar_svg__WEBPACK_IMPORTED_MODULE_1___default.a,
-    __self: _this,
+  }, t('timeline4Description')))), __jsx("li", {
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 82,
-      columnNumber: 17
+      columnNumber: 11
     }
-  }), __jsx("h2", {
-    className: "title",
-    __self: _this,
+  }, __jsx("div", {
+    className: "direction-l",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 83,
-      columnNumber: 17
+      columnNumber: 13
     }
-  }, t('welcome')), __jsx("p", {
-    className: "intro",
-    __self: _this,
+  }, __jsx("div", {
+    className: "flag-wrapper",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 84,
+      columnNumber: 15
+    }
+  }, __jsx("span", {
+    className: "hexa",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85,
       columnNumber: 17
     }
-  }, t('textIntroPart1'), __jsx("nobr", {
-    __self: _this,
+  }), __jsx("span", {
+    className: "flag",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 86,
-      columnNumber: 19
+      columnNumber: 17
     }
-  }, "Jan Hrd\xFD."), t('textIntroPart2'), __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    href: "/projects",
-    prefetch: true,
-    __self: _this,
+  }, t('timeline5Heading')), __jsx("span", {
+    className: "time-wrapper",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87,
+      columnNumber: 17
+    }
+  }, __jsx("span", {
+    className: "time",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 88,
       columnNumber: 19
     }
-  }, __jsx("a", {
-    className: "site-link",
-    href: "/projects",
-    __self: _this,
+  }, t('timeline5Date')))), __jsx("div", {
+    className: "desc",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89,
-      columnNumber: 21
+      lineNumber: 91,
+      columnNumber: 15
     }
-  }, t('here'))), "."), __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    href: "/home",
-    prefetch: true,
-    __self: _this,
+  }, t('timeline5Description')))), __jsx("li", {
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 95,
-      columnNumber: 17
+      columnNumber: 11
     }
-  }, __jsx("a", {
-    role: "button",
-    className: "anchor-button",
-    __self: _this,
+  }, __jsx("div", {
+    className: "direction-r",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 96,
-      columnNumber: 19
+      columnNumber: 13
     }
-  }, t('feelFree'), __jsx("br", {
-    __self: _this,
+  }, __jsx("div", {
+    className: "flag-wrapper",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97,
+      columnNumber: 15
+    }
+  }, __jsx("span", {
+    className: "hexa",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 98,
-      columnNumber: 21
+      columnNumber: 17
     }
-  }), t('toEnter'))))), __jsx("div", {
-    className: "img",
-    __self: _this,
+  }), __jsx("span", {
+    className: "flag",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99,
+      columnNumber: 17
+    }
+  }, t('timeline6Heading')), __jsx("span", {
+    className: "time-wrapper",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100,
+      columnNumber: 17
+    }
+  }, __jsx("span", {
+    className: "time",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101,
+      columnNumber: 19
+    }
+  }, t('timeline6Date')))), __jsx("div", {
+    className: "desc",
+    __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 104,
-      columnNumber: 13
-    }
-  }, __jsx("img", {
-    src: _public_images_waiting_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 105,
       columnNumber: 15
     }
-  }))))));
-};
+  }, t('timeline6Description')))), __jsx("li", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107,
+      columnNumber: 11
+    }
+  }, __jsx("div", {
+    className: "direction-l",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "flag-wrapper",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109,
+      columnNumber: 15
+    }
+  }, __jsx("span", {
+    className: "hexa",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 110,
+      columnNumber: 17
+    }
+  }), __jsx("span", {
+    className: "flag",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111,
+      columnNumber: 17
+    }
+  }, t('timeline7Heading')), __jsx("span", {
+    className: "time-wrapper",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 112,
+      columnNumber: 17
+    }
+  }, __jsx("span", {
+    className: "time",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 113,
+      columnNumber: 19
+    }
+  }, t('timeline7Date')))), __jsx("div", {
+    className: "desc",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 116,
+      columnNumber: 15
+    }
+  }, t('timeline7Description')))), __jsx("li", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 120,
+      columnNumber: 11
+    }
+  }, __jsx("div", {
+    className: "direction-r",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 121,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "flag-wrapper",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 122,
+      columnNumber: 15
+    }
+  }, __jsx("span", {
+    className: "hexa",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 123,
+      columnNumber: 17
+    }
+  }), __jsx("span", {
+    className: "flag",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 124,
+      columnNumber: 17
+    }
+  }, t('timeline8Heading')), __jsx("span", {
+    className: "time-wrapper",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125,
+      columnNumber: 17
+    }
+  }, __jsx("span", {
+    className: "time",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 126,
+      columnNumber: 19
+    }
+  }, t('timeline8Date')))), __jsx("div", {
+    className: "desc",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129,
+      columnNumber: 15
+    }
+  }, t('timeline8Description'))))), __jsx("h3", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 133,
+      columnNumber: 9
+    }
+  }, "Contact"), __jsx("div", {
+    className: "social-menu",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 134,
+      columnNumber: 9
+    }
+  }, __jsx("ul", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 135,
+      columnNumber: 11
+    }
+  }, __jsx("li", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 136,
+      columnNumber: 13
+    }
+  }, __jsx("a", {
+    href: "mailto:hrdyjan1@gmail.com\"",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 137,
+      columnNumber: 15
+    }
+  }, __jsx("svg", {
+    "aria-hidden": "true",
+    focusable: "false",
+    "data-prefix": "fas",
+    "data-icon": "envelope",
+    className: "fab",
+    role: "img",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512 512",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 138,
+      columnNumber: 17
+    }
+  }, __jsx("path", {
+    fill: "currentColor",
+    d: "M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 148,
+      columnNumber: 19
+    }
+  })))), __jsx("li", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 155,
+      columnNumber: 13
+    }
+  }, __jsx("a", {
+    href: "https://www.instagram.com/jan.hrdy/",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 156,
+      columnNumber: 15
+    }
+  }, __jsx("svg", {
+    className: "fab",
+    "aria-hidden": "true",
+    focusable: "false",
+    "data-prefix": "fab",
+    "data-icon": "instagram",
+    role: "img",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 448 512",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 157,
+      columnNumber: 17
+    }
+  }, __jsx("path", {
+    fill: "currentColor",
+    d: "M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 167,
+      columnNumber: 19
+    }
+  })))), __jsx("li", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 174,
+      columnNumber: 13
+    }
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/pdf/cv",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 175,
+      columnNumber: 15
+    }
+  }, __jsx("a", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 176,
+      columnNumber: 17
+    }
+  }, __jsx("svg", {
+    version: "1.0",
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "256.000000pt",
+    viewBox: "0 0 256.000000 256.000000",
+    preserveAspectRatio: "xMidYMid meet",
+    className: "fab",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 177,
+      columnNumber: 19
+    }
+  }, __jsx("g", {
+    transform: "translate(0.000000,256.000000) scale(0.100000,-0.100000)",
+    fill: "currentColor",
+    stroke: "none",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 185,
+      columnNumber: 21
+    }
+  }, __jsx("path", {
+    d: "M808 2385 c-43 -36 -78 -68 -78 -70 0 -2 45 -57 99 -122 l100 -118\r -195 -5 -196 -5 -34 -37 -34 -38 0 -890 c0 -971 -1 -953 56 -979 18 -8 178\r -11 544 -11 l518 0 251 236 251 236 0 707 c0 637 -2 709 -16 730 -35 49 -55\r 51 -467 51 l-384 0 -158 188 c-87 103 -163 188 -169 190 -6 1 -46 -27 -88 -63z\r m313 -535 c37 -42 90 -84 178 -141 69 -44 138 -90 153 -101 39 -30 44 -17 14\r 35 -14 24 -44 88 -67 143 -22 54 -43 105 -46 112 -4 9 57 12 286 12 l291 0 0\r -629 0 -630 -157 -3 c-172 -3 -199 -10 -237 -61 -19 -25 -21 -45 -24 -178 l-4\r\n-149 -434 0 -434 0 0 608 c0 334 -3 705 -7 825 l-6 217 221 0 221 0 52 -60z",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 190,
+      columnNumber: 23
+    }
+  }), __jsx("path", {
+    d: "M1034 1341 c-122 -31 -185 -153 -150 -290 20 -77 46 -115 96 -141 53\r -27 147 -27 200 0 54 27 111 127 83 143 -5 3 -22 8 -39 11 -29 6 -32 4 -47\r -34 -21 -53 -72 -78 -128 -61 -48 14 -76 50 -85 106 -16 107 27 183 108 192\r 42 5 50 3 78 -25 16 -17 30 -38 30 -47 0 -13 6 -15 33 -10 56 12 58 16 37 62\r -32 73 -131 115 -216 94z",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 200,
+      columnNumber: 23
+    }
+  }), __jsx("path", {
+    d: "M1279 1293 c10 -26 49 -128 87 -226 l68 -178 39 3 39 3 84 215 c46\r 118 84 219 84 223 0 5 -19 7 -42 5 l-43 -3 -62 -165 c-44 -116 -64 -159 -68\r -145 -4 11 -30 85 -58 165 l-52 145 -48 3 -47 3 19 -48z",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 207,
+      columnNumber: 23
+    }
+  })))))), __jsx("li", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 217,
+      columnNumber: 13
+    }
+  }, __jsx("a", {
+    href: "https://github.com/hrdyjan1/",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 218,
+      columnNumber: 15
+    }
+  }, __jsx("svg", {
+    "aria-hidden": "true",
+    focusable: "false",
+    "data-prefix": "fab",
+    "data-icon": "github",
+    className: "fab",
+    role: "img",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 496 512",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 219,
+      columnNumber: 17
+    }
+  }, __jsx("path", {
+    fill: "currentColor",
+    d: "M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 229,
+      columnNumber: 19
+    }
+  })))), __jsx("li", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 236,
+      columnNumber: 13
+    }
+  }, __jsx("a", {
+    href: "https://wa.me/420606347567",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 237,
+      columnNumber: 15
+    }
+  }, __jsx("svg", {
+    "aria-hidden": "true",
+    focusable: "false",
+    "data-prefix": "fab",
+    "data-icon": "whatsapp",
+    className: "fab",
+    role: "img",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 448 512",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 238,
+      columnNumber: 17
+    }
+  }, __jsx("path", {
+    fill: "currentColor",
+    d: "M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 248,
+      columnNumber: 19
+    }
+  }))))))));
+}
 
-/* harmony default export */ __webpack_exports__["default"] = (IndexPage);
-
-/***/ }),
-
-/***/ "./public/images/avatar.svg":
-/*!**********************************!*\
-  !*** ./public/images/avatar.svg ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/svg+xml;base64,PHN2ZyBpZD0iNDU3YmYyNzMtMjRhMy00ZmQ4LWE4NTctZTliOTE4MjY3ZDZhIiBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI2OTgiIGhlaWdodD0iNjk4IiB2aWV3Qm94PSIwIDAgNjk4IDY5OCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiMjQ3OTQ2Yy1jNjJmLTRkMDgtOTk0YS00YzNkNjRlMWU5OGYiIHgxPSIzNDkiIHkxPSI2OTgiIHgyPSIzNDkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9ImdyYXkiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iMC41NCIgc3RvcC1jb2xvcj0iZ3JheSIgc3RvcC1vcGFjaXR5PSIwLjEyIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJncmF5IiBzdG9wLW9wYWNpdHk9IjAuMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjx0aXRsZT5wcm9maWxlIHBpYzwvdGl0bGU+PGcgb3BhY2l0eT0iMC41Ij48Y2lyY2xlIGN4PSIzNDkiIGN5PSIzNDkiIHI9IjM0OSIgZmlsbD0idXJsKCNiMjQ3OTQ2Yy1jNjJmLTRkMDgtOTk0YS00YzNkNjRlMWU5OGYpIi8+PC9nPjxjaXJjbGUgY3g9IjM0OS42OCIgY3k9IjM0Ni43NyIgcj0iMzQxLjY0IiBmaWxsPSIjZjVmNWY1Ii8+PHBhdGggZD0iTTYwMSw3OTAuNzZhMzQwLDM0MCwwLDAsMCwxODcuNzktNTYuMmMtMTIuNTktNjguOC02MC41LTcyLjcyLTYwLjUtNzIuNzJINDY0LjA5cy00NS4yMSwzLjcxLTU5LjMzLDY3QTM0MC4wNywzNDAuMDcsMCwwLDAsNjAxLDc5MC43NloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNTEgLTEwMSkiIGZpbGw9IiMzYWE4YzIiLz48Y2lyY2xlIGN4PSIzNDYuMzciIGN5PSIzMzkuNTciIHI9IjE2NC45IiBmaWxsPSIjMzMzIi8+PHBhdGggZD0iTTI5My4xNSw0NzYuOTJIMzk4LjgxYTAsMCwwLDAsMSwwLDB2ODQuNTNBNTIuODMsNTIuODMsMCwwLDEsMzQ2LDYxNC4yOGgwYTUyLjgzLDUyLjgzLDAsMCwxLTUyLjgzLTUyLjgzVjQ3Ni45MmEwLDAsMCwwLDEsMCwwWiIgb3BhY2l0eT0iMC4xIi8+PHBhdGggZD0iTTI5Ni41LDQ3M2g5OWEzLjM1LDMuMzUsMCwwLDEsMy4zNSwzLjM1djgxLjE4QTUyLjgzLDUyLjgzLDAsMCwxLDM0Niw2MTAuMzdoMGE1Mi44Myw1Mi44MywwLDAsMS01Mi44My01Mi44M1Y0NzYuMzVBMy4zNSwzLjM1LDAsMCwxLDI5Ni41LDQ3M1oiIGZpbGw9IiNmZGI3OTciLz48cGF0aCBkPSJNNTQ0LjM0LDYxNy44MmExNTIuMDcsMTUyLjA3LDAsMCwwLDEwNS42Ni4yOXYtMTNINTQ0LjM0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI1MSAtMTAxKSIgb3BhY2l0eT0iMC4xIi8+PGNpcmNsZSBjeD0iMzQ2LjM3IiBjeT0iMzcyLjQ0IiByPSIxNTEuNDUiIGZpbGw9IiNmZGI3OTciLz48cGF0aCBkPSJNNDg5LjQ5LDMzNS42OFM1NTMuMzIsNDY1LjI0LDczMy4zNywzOTBsLTQxLjkyLTY1LjczLTc0LjMxLTI2LjY3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI1MSAtMTAxKSIgb3BhY2l0eT0iMC4xIi8+PHBhdGggZD0iTTQ4OS40OSwzMzMuNzhzNjMuODMsMTI5LjU2LDI0My44OCw1NC4zbC00MS45Mi02NS43My03NC4zMS0yNi42N1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNTEgLTEwMSkiIGZpbGw9IiMzMzMiLz48cGF0aCBkPSJNNDg4LjkzLDMyNWE4Ny40OSw4Ny40OSwwLDAsMSwyMS42OS0zNS4yN2MyOS43OS0yOS40NSw3OC42My0zNS42NiwxMDMuNjgtNjkuMjQsNiw5LjMyLDEuMzYsMjMuNjUtOSwyNy42NSwyNC0uMTYsNTEuODEtMi4yNiw2NS4zOC0yMmE0NC44OSw0NC44OSwwLDAsMS03LjU3LDQ3LjRjMjEuMjcsMSw0NCwxNS40LDQ1LjM0LDM2LjY1LjkyLDE0LjE2LTgsMjcuNTYtMTkuNTksMzUuNjhzLTI1LjcxLDExLjg1LTM5LjU2LDE0LjlDNjA4Ljg2LDM2OS43LDQ2Mi41NCw0MDcuMDcsNDg4LjkzLDMyNVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNTEgLTEwMSkiIGZpbGw9IiMzMzMiLz48ZWxsaXBzZSBjeD0iMTk0Ljg2IiBjeT0iMzcyLjMiIHJ4PSIxNC4wOSIgcnk9IjI2LjQyIiBmaWxsPSIjZmRiNzk3Ii8+PGVsbGlwc2UgY3g9IjQ5Ny44IiBjeT0iMzcyLjMiIHJ4PSIxNC4wOSIgcnk9IjI2LjQyIiBmaWxsPSIjZmRiNzk3Ii8+PC9zdmc+"
-
-/***/ }),
-
-/***/ "./public/images/vectorpaint.svg":
-/*!***************************************!*\
-  !*** ./public/images/vectorpaint.svg ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDM5LjE4MTc2MjY5NTMxMjUiIGhlaWdodD0iOTQ3LjgxODE3NjI2OTUzMTIiIHN0eWxlPSIiPjxyZWN0IGlkPSJiYWNrZ3JvdW5kcmVjdCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgeD0iMCIgeT0iMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJub25lIi8+PGcgY2xhc3M9ImN1cnJlbnRMYXllciIgc3R5bGU9IiI+PHRpdGxlPkxheWVyIDE8L3RpdGxlPjxwYXRoIGZpbGw9IiMzQUE4QzIiIGZpbGwtb3BhY2l0eT0iMSIgZD0iTTQ3MC41MzQ3NjEyMTUwMzgzLDg3OC4wNjI4OTYyMjgwMjc0IEM1MzQuMTcxMTIxMjE1MDM4Myw4MzEuMzk5MjU2MjI4MDI3MyA2MzEuNDQzODQxMjE1MDM4Myw5MDMuMDM1NjI2MjI4MDI3NCA3MTEuNDQzODQxMjE1MDM4Myw4NzEuMzM1NjI2MjI4MDI3MyBDNzkxLjQ0Mzg0MTIxNTAzODMsODM5LjAzNTYyNjIyODAyNzQgODIzLjI2MjAzMTIxNTAzODMsNzgyLjk5OTI2NjIyODAyNzMgOTA5LjYyNTY3MTIxNTAzODMsODE5LjE1MzgwNjIyODAyNzMgQzk5NS45ODkzMTEyMTUwMzg0LDg1NS4zMDgzNTYyMjgwMjc0IDEwODAuNTM0NzYxMjE1MDM4Myw4MTIuMDM1NjM2MjI4MDI3MyAxMTI4LjcxNjU3MTIxNTAzODQsNzU4LjYwODM2NjIyODAyNzMgQzExNzYuODk4MzgxMjE1MDM4NCw3MDUuMTgxMDk2MjI4MDI3NCAxMTMzLjI2MjA0MTIxNTAzODQsNjIzLjM1Mzc4NjIyODAyNzQgMTIyOS42MjU2ODEyMTUwMzg0LDU0My40OTAxNjYyMjgwMjczIEMxMzI1Ljk4OTMyMTIxNTAzODIsNDYzLjYyNjU0NjIyODAyNzM0IDEyNzYuNjcxMTMxMjE1MDM4Myw0MzEuMTk0NzE2MjI4MDI3MzUgMTMyMC4zMDc0OTEyMTUwMzgyLDM2Ny42MjMxMjYyMjgwMjczMyBDMTM2My45NDM4NjEyMTUwMzg0LDMwNC4wNTE1NDYyMjgwMjczNSAxNDE1Ljk4OTMxMTIxNTAzODIsMzMzLjg4NTY1NjIyODAyNzM2IDE0NDQuMTcxMTMxMjE1MDM4MywyMzkuNDYyOTI2MjI4MDI3MzYgTDE0NDYuODk4NDAxMjE1MDM4Myw2NjIuMDM1NjM2MjI4MDI3MyBMMTQ0MC41MzQ3NjEyMTUwMzgzLDk1Mi43NjI5MDYyMjgwMjczIEwxNDAwLjUzNDc2MTIxNTAzODMsOTUyLjc2MjkwNjIyODAyNzMgQzEzNjAuNTM0NzYxMjE1MDM4Myw5NTIuNzYyOTA2MjI4MDI3MyAxMjgwLjUzNDc2MTIxNTAzODMsOTUyLjc2MjkwNjIyODAyNzMgMTIwMC41MzQ3NjEyMTUwMzgzLDk1Mi43NjI5MDYyMjgwMjczIEMxMTIwLjUzNDc2MTIxNTAzODMsOTUyLjc2MjkwNjIyODAyNzMgMTA0MC41MzQ3NjEyMTUwMzgzLDk1Mi43NjI5MDYyMjgwMjczIDk2MC41MzQ3NjEyMTUwMzgzLDk1Mi43NjI5MDYyMjgwMjczIEM4ODAuNTM0NzYxMjE1MDM4Myw5NTIuNzYyOTA2MjI4MDI3MyA4MDAuNTM0NzYxMjE1MDM4Myw5NTIuNzYyOTA2MjI4MDI3MyA3MjAuNTM0NzYxMjE1MDM4Myw5NTIuNzYyOTA2MjI4MDI3MyBDNjQwLjUzNDc2MTIxNTAzODMsOTUyLjc2MjkwNjIyODAyNzMgNTYwLjUzNDc2MTIxNTAzODMsOTUyLjc2MjkwNjIyODAyNzMgNDgwLjUzNDc2MTIxNTAzODMsOTUyLjc2MjkwNjIyODAyNzMgQzQwMC41MzQ3NjEyMTUwMzgzLDk1Mi43NjI5MDYyMjgwMjczIDMyMC41MzQ3NjEyMTUwMzgzLDk1Mi43NjI5MDYyMjgwMjczIDI0MC41MzQ3NjEyMTUwMzgzLDk1Mi43NjI5MDYyMjgwMjczIEMxNjAuNTM0NzYxMjE1MDM4Myw5NTIuNzYyOTA2MjI4MDI3MyAzMTAuNTM0NzUxMjE1MDM4Myw5NjUuNDkwMTc2MjI4MDI3NCAzOTcuODA3NDcxMjE1MDM4Myw5MTEuODUzODE2MjI4MDI3MyBMNDcwLjUzNDc2MTIxNTAzODMsODc4LjA2Mjg5NjIyODAyNzQgeiIgaWQ9InN2Z18xIiBjbGFzcz0iIi8+PC9nPjwvc3ZnPg=="
-
-/***/ }),
-
-/***/ "./public/images/waiting.svg":
-/*!***********************************!*\
-  !*** ./public/images/waiting.svg ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/waiting-1f6e1263fd1ac104eb3bc0e180341329.svg";
+/* harmony default export */ __webpack_exports__["default"] = (About);
 
 /***/ }),
 
@@ -5797,14 +6000,14 @@ var enhanceLocalStorage = function enhanceLocalStorage(itemName, itemValue) {
 
 /***/ }),
 
-/***/ 1:
-/*!**************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cbadeu%5Chrdyjan1%5Cprojects%5Cjan-hrdy-official%5Cpages%5Cindex.js ***!
-  \**************************************************************************************************************************************************/
+/***/ 4:
+/*!*******************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=C%3A%5CUsers%5Cbadeu%5Chrdyjan1%5Cprojects%5Cjan-hrdy-official%5Cpages%5Cabout.js ***!
+  \*******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cbadeu%5Chrdyjan1%5Cprojects%5Cjan-hrdy-official%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5Cbadeu%5Chrdyjan1%5Cprojects%5Cjan-hrdy-official%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fabout&absolutePagePath=C%3A%5CUsers%5Cbadeu%5Chrdyjan1%5Cprojects%5Cjan-hrdy-official%5Cpages%5Cabout.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=C%3A%5CUsers%5Cbadeu%5Chrdyjan1%5Cprojects%5Cjan-hrdy-official%5Cpages%5Cabout.js!./");
 
 
 /***/ }),
@@ -5820,5 +6023,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=index.js.map
+},[[4,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=about.js.map
