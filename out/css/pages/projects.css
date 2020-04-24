@@ -1,5 +1,5 @@
 #page-project-id {
-    margin: 3rem 1rem 5rem;
+  margin: 3rem 1rem 5rem;
 }
 
 .card-anchor {
@@ -105,9 +105,9 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .basic-grid {
-        grid-auto-rows: 425px;
-        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  .basic-grid {
+    grid-auto-rows: 425px;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   }
 }
 
@@ -154,12 +154,23 @@
   color: var(--text-primary);
 }
 
+#project-container .intro-section {
+  font-size: var(--s4);
+}
+
 #project-container h2 {
   color: var(--text-primary);
   opacity: 0.9;
   margin: 1rem 0 0;
-  font-size: 1rem;
+  font-size: 0.2em;
+  font-weight: 300;
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #project-container h2 {
+    font-size: 0.25em;
+  }
 }
 
 #project-container label,
@@ -214,7 +225,7 @@
   position: relative;
   z-index: 1;
   display: block;
-  background: linear-gradient(0deg, rgba(255,255,255,2) 90%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 2) 90%, rgba(255, 255, 255, 0) 100%);
   min-width: 270px;
   height: 470px;
   -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
