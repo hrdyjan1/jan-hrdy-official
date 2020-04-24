@@ -53,7 +53,7 @@ const aboutPageTranslation = {
   },
   [CZECH]: {
     aboutDescription:
-      'Je to tady, popsat sám sebe. Budu se snažit být stručný. Vnímám sám sebe jako úplně normální lidskou bytost, která žije normální život. Existuje však pár odlišností od průměrného člověka. Lidé mě často považují za pozitivního týmového hráče s vynikajícími tvůrčími schopnostmi. Posledních několik let jsem pracoval v oblasti IT. Považuji se za "fronendistu". Mým hlavním cílem je tvorba webových nebo mobilních aplikací. Většinu času pracuji s ReactJS, což samozřejmě znamená JavaScript. Mezi mé zkušenosti patří návrh softwarové architektury, tvorba vnitřní logiky, propojení s API, využívání optimálních knihoven či zodpovídat za testování aplikace. Jsem zapojený do open-source komunity vývojářů na GitHubu. Mimo jiné občas přispívám na fórum pro programátory (StackOverflow), takže bacha, od koho kopírujete.',
+      'Je to tady, popsat sám sebe. Budu se snažit být stručný. Vnímám sám sebe jako úplně normální lidskou bytost, která žije normální život. Existuje však pár odlišností od průměrného člověka. Lidé mě často považují za pozitivního týmového hráče s vynikajícími tvůrčími schopnostmi. Posledních několik let jsem pracoval v oblasti IT. Považuji se za "fronendistu". Mým hlavním cílem je tvorba webových nebo mobilních aplikací. Většinu času pracuji s ReactJS, což samozřejmě znamená JavaScript. Mezi mé zkušenosti patří návrh softwarové architektury, tvorba vnitřní logiky, propojení s API, využívání optimálních knihoven či zodpovídat za testování aplikace. Jsem zapojený do open-source komunity vývojářů na GitHubu. Mimo jiné občas přispívám na fórum pro programátory (StackOverflow), takže bacha od koho kopírujete.',
     lifeWithTech: 'Život spojený s IT',
     lifeWithoutTech: 'Normální běžný život',
 
@@ -65,7 +65,7 @@ const aboutPageTranslation = {
     timeline2Date: '1996-2011',
     timeline2Heading: 'Dětství',
     timeline2Description:
-      'Už v útlém věku jsem se propojil s hudbou a sportem. Bez nich si nedokážu představit život. Většina rodiny jsou sportovní/hudební nadšenci, takže není divu, že jsme na jedné trase. Už od dětství hraji na kytaru. Mojí hudební mantrou je britská kapela The Beatles. Co se sportu týká, začínal jsem u fotbalu, skončil jsem u basketbalu.',
+      'Už v útlém věku jsem se propojil s hudbou a sportem. Bez nich si nedokáži představit život. Většina rodiny jsou sportovní/hudební nadšenci, takže není divu, že jsme na jedné trase. Už od dětství hraji na kytaru. Mojí hudební mantrou je britská kapela The Beatles. Co se sportu týká, začínal jsem u fotbalu, skončil jsem u basketbalu.',
 
     timeline3Date: '2015',
     timeline3Heading: 'Vysokoškolský život',
@@ -89,12 +89,12 @@ const aboutPageTranslation = {
 
     timeline7Date: '2019',
     timeline7Heading: 'Webový vývojář',
-    timeline7Description: 'V létě 2019 jsem změnil svého zaměstnavatele. Měl jsem štěstí. Když jsem propadl kouzlu React JS přišla z Prahy nová příležitost. Dostal jsem nabídku pracovat ve společnosti Netvor. Vyvíjíme zde webovou aplikaci pomocí Reactu a PHP.',
+    timeline7Description: 'V létě 2019 jsem změnil svého zaměstnavatele. Měl jsem štěstí. Když jsem propadl kouzlu React JS, přišla z Prahy nová příležitost. Dostal jsem nabídku pracovat ve společnosti Netvor. Vyvíjíme zde webovou aplikaci pomocí Reactu a PHP.',
 
     timeline8Date: '2019',
     timeline8Heading: 'Malý mopsík',
     timeline8Description:
-      'Během posledních pár mi přišel výborný nápad obohatit naší mladý pár o dalšího člena. Tudíž se naše malá smečka rozrostla a nyní jsme na to tři. Pro mě to znamená více psích radostí a starostí v životě.',
+      'Během posledních pár let mi přišel výborný nápad obohatit naš mladý pár o dalšího člena. Tudíž se naše malá smečka rozrostla a nyní jsme na to tři. Pro mě to znamená více psích radostí a starostí v životě.',
   },
 };
 
@@ -102,7 +102,7 @@ const mainPageTranslation = {
   [ENGLISH]: {
     homePageDescription:
       'Once again, welcome to my personal website. You are now on the home page. Here are a few different categories that characterize the main part of my life.',
-    homePageSection1Heading: 'What can you find on this website?',
+    homePageSection1Heading: 'What is main purpose of this app?',
     homePageSection1Description:
       'Occasionally, there may be someone in the vast community of people browsing the Internet who has just found themselves on this web page. Well, this is a personal website about myself. You can find out some information about projects I am part of, my contact and a few other things.',
     homePageSection2Heading: 'My Current job',
@@ -126,7 +126,7 @@ const mainPageTranslation = {
     homePageSection8Heading: 'Join our group of friends',
     homePageSection8Description:
       "What a life without friends and a lot of fun. I appreciate the moments spent with my loved ones. The friendly atmosphere makes me feel good. We have been meeting with friends over the card Bang game almost every Friday. I also often play basketball or supporting my favorite team in the NBA. Boston Celtics! I'm also very grateful for a great girlfriend and a fantastic little pug.",
-    homePageSection9Heading: 'Contact',
+    homePageSection9Heading: 'Questions and errors',
     homePageSection9Description:
       'Probably the last part you have been searching for is a way to contact me. Only two steps. Switch to page: "About", then scroll down. Easy, right? I would recommend you use email clients.',
   },
@@ -135,31 +135,31 @@ const mainPageTranslation = {
       'Ještě jednou, vítejte na mém osobním webu. Nyní jste se ocitli na domovské stránce. Zde je několik různých kategorií, které se snaží charakterizovat hlavní části celého webu.',
     homePageSection1Heading: 'Co vás na těchto stránkách čeká a nemine?',
     homePageSection1Description:
-      'Občas se stane, že na tyto stránky zavítá někdo, kdo by se rád rychle dozvěděl, co lze najít na těchto stránkách, tak přátelé, tento web reprezentuje mé vlastní osobní portfolio. Můžete se zde dozvědět několik informací o projektech, kterých jsem součástí, zjistit, jak mě kontaktovat a mnohé další.',
+      'Občas se stane, že na tyto stránky zavítá někdo, kdo by se rád rychle dozvěděl, co lze najít na těchto stránkách. Tak přátelé, tento web reprezentuje mé vlastní osobní portfolio. Můžete se zde dozvědět několik informací o projektech, kterých jsem součástí, zjistit, jak mě kontaktovat a mnohé další.',
     homePageSection2Heading: 'Moje aktuální práce',
     homePageSection2Description:
-      'Je mi velkou ctí sdělit Vám, že aktuálně jsem zaměstnaný v úžasné firmě, která řeší tvorbu webových a mobilních aplikací. Funguji zde jako Frontendový specialista. Mojí hlavní náplní je čistě JavaScript. Konkrétně React JS. Sídlíme v Praze a říkáme si Netvor',
+      'Je mi velkou ctí sdělit Vám, že aktuálně jsem zaměstnaný v úžasné firmě, která řeší tvorbu webových a mobilních aplikací. Funguji zde jako Frontendový specialista. Mou hlavní náplní je čistě JavaScript. Konkrétně React JS. Sídlíme v Praze a říkáme si Netvor',
     homePageSection3Heading: 'Programování',
     homePageSection3Description:
-      'Na cestu počítačových technologií jsem se dostal až na vysoké škole. Začal jsem studium na ČVUT, kde jsem si postupem času osvojil základy. na počátku jsem tvořil webové aplikace. Později jsem se věnoval více serverové části. Začal jsem využívat několik základních programátorských nástrojů či knihoven. Dostal jsem se na čas i k mobilnímu vývoji. Ve chvíli, kdy jsem narazil na React Native jsem byl ohromen, s jakou ladností a lehkostí lze tvořit mobilní aplikace. Od té doby žiji převážně ve světě, kde dominuje jazyk JavaScript a technologie spojené s ReactJS. Největší radost mi dělá tvořit logiku aplikace, stylování posouvám většinou na poslední místo.',
+      'Na cestu počítačových technologií jsem se dostal až na vysoké škole. Začal jsem studium na ČVUT, kde jsem si postupem času osvojil základy. Na počátku jsem tvořil webové aplikace. Později jsem se věnoval více serverové části. Začal jsem využívat několik základních programátorských nástrojů či knihoven. Dostal jsem se na čas i k mobilnímu vývoji. Ve chvíli, kdy jsem narazil na React Native, jsem byl ohromen, s jakou ladností a lehkostí lze tvořit mobilní aplikace. Od té doby žiji převážně ve světě, kde dominuje jazyk JavaScript a technologie spojené s ReactJS. Největší radost mi dělá tvořit logiku aplikace, stylování posouvám většinou na poslední místo.',
     homePageSection4Heading: 'Projekty',
     homePageSection4Description:
-      'Pracoval jsem v životě už na několika různorodých projektech. Do většiny projektů jsem se zapojil, hlavně proto, že mě lidé často považují za pozitivního, týmového hráče s vynikajícími tvůrčími schopnostmi. Většina z mých konexí je spojena se světem IT. Mezi mé zkušenosti patří také video produkce nebo organizace sportovních akcí. Pokud se chcete dozvědět více, navštivte stránku "Projekty"',
+      'Pracoval jsem v životě už na několika různorodých projektech. Do většiny projektů jsem se zapojil hlavně proto, že mě lidé často považují za pozitivního, týmového hráče s vynikajícími tvůrčími schopnostmi. Většina z mých konexí je spojena se světem IT. Mezi mé zkušenosti patří také video produkce nebo organizace sportovních akcí. Pokud se chcete dozvědět více, navštivte stránku "Projekty".',
     homePageSection5Heading: 'Co jsem zač?',
     homePageSection5Description:
-      'Cítím se jako normální člověk, žijící normální život. Také se mimo jiné považuji za frontendistu žijícím v hlavním městě České republiky. Baví mě proměnit složité problémy v jednoduché, tvořit krásné a intuitivní webové nebo mobilní aplikace. Pokud zrovna nepřidávám na server pár řádků kódu nebo netvořím logiku aplikace, tak mě nejspíš najdete někde, kde buď jím, hraji na kytaru nebo dělám něco sportovního. Pokud se chcete dozvědět o mně více, stačí navštívit stránku "O mně"',
+      'Cítím se jako normální člověk, žijící normální život. Také se mimo jiné považuji za frontendistu žijícím v hlavním městě České republiky. Baví mě proměnit složité problémy v jednoduché, tvořit krásné a intuitivní webové nebo mobilní aplikace. Pokud zrovna nepřidávám na server pár řádků kódu nebo netvořím logiku aplikace, tak mě nejspíš najdete někde, kde buď jím, hraji na kytaru nebo dělám něco sportovního. Pokud se chcete dozvědět o mně více, stačí navštívit stránku "O mně".',
     homePageSection6Heading: 'Úpravy podle vás',
     homePageSection6Description:
-      'Tato webová stránka obsahuje několik různých variant. Neváhejte a využijte toho. Lze například přepnout jazyk, změňte aktuální vzhled. Wau můžete zvolit buď tmavý či světlý režim. Pokud dáváte přednost procházení stránek bez možných zvuků, tak lze na webu vypnout hudbu. Pokud se chcete dozvědět více, stačí navštívit sekci "Nastavení".',
+      'Tato webová stránka obsahuje několik různých variant. Neváhejte a využijte toho. Lze například přepnout jazyk, změnit aktuální vzhled. Wau, můžete zvolit buď tmavý či světlý režim. Pokud dáváte přednost procházení stránek bez možných zvuků, tak lze na webu vypnout hudbu. Pokud se chcete dozvědět více, stačí navštívit sekci "Nastavení".',
     homePageSection7Heading: 'Aktuální projekt',
     homePageSection7Description:
-      'Aktuální projekt, na kterém pracujeme se jmenuje Notify. Jde o mobilní aplikaci, které nám má usnadnit společné bytí, kdy se nemusíme starat o různé prapodivné upozornění či pravidelné připomínky. Notify funguje i na principu spojení více lidí.',
+      'Aktuální projekt, na kterém pracujeme, se jmenuje Notify. Jde o mobilní aplikaci, které nám má usnadnit společné bytí, kdy se nemusíme starat o různé prapodivné upozornění či pravidelné připomínky. Notify funguje i na principu spojení více lidí.',
     homePageSection8Heading: 'Připoj se do naší party',
     homePageSection8Description:
       'Jaký by byl život bez přátel. Oceňuji chvíle strávené se svými blízkými. Díky přátelské atmosféře se cítím dobře. Téměř každý pátek se scházíme s přáteli u karetní hry Bang. Často také hraji basketbal nebo sleduji utkání mého oblíbeného týmu v NBA. Boston Celtics! Jsem také velmi vděčný za skvělou přítelkyni a fantastického malého mopsíka.',
     homePageSection9Heading: 'Otázky a chyby',
     homePageSection9Description:
-      'Nebývá to zvykem, ale někdy se mezi Vámi vyskytne někdo, kdo má otázku, kterou by chtěl ode mě zodpovědět. Občas se také stane, že někdo najde chybu na těchto stránkách. Nebývá to časté, ale můžete se to stát. V takovýchto případech stačí navštívit stránku: "O mně", kde najde sekci kontakt, kde si můžete vybrat, jakou cestou se se mnou spojit. Budu rád za případné dotazy, či upozornění na chybu.',
+      'Nebývá to zvykem, ale někdy se mezi Vámi vyskytne někdo, kdo má otázku, kterou by chtěl ode mě zodpovědět. Občas se také stane, že někdo najde chybu na těchto stránkách. Nebývá to časté, ale můžete se to stát. V takovýchto případech stačí navštívit stránku: "O mně", kde najde sekci kontakt Zde si můžete vybrat, jakou cestou se se mnou spojit. Budu rád za případné dotazy či upozornění na chybu.',
   },
 };
 
@@ -187,7 +187,8 @@ const languageStrings = {
     type: 'Type', // Projects page = search type value
     search: 'Search', // Projects page = default search input value
     about: 'About Me', // About page = h1
-    description404: 'Oops, there is nothing in there.',
+    contact: 'Contact', // About page = Contact
+    description404: 'Oops, there is nothing in there.', // 404 page
     ...mainPageTranslation.ENGLISH,
     ...aboutPageTranslation.ENGLISH,
 },
@@ -213,7 +214,8 @@ const languageStrings = {
     name: 'Název',
     type: 'Typ',
     search: 'Vyhledat',
-    about: 'O mně', // About page = h1
+    about: 'O mně', 
+    contact: 'Kontakt', 
     description404: 'Ups,tady nic není.',
     ...mainPageTranslation.CZECH,
     ...aboutPageTranslation.CZECH,

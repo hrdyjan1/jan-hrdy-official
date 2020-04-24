@@ -25,8 +25,6 @@ const Clock = ({ staticDate, shouldStartOnClickClock }) => {
     const sc = document.getElementById('sc');
     const rotation = rotate(hr, mn, sc);
     const shouldRunClock = isClickedOnClock && shouldStartOnClickClock;
-    console.log('isClickedOnClock', isClickedOnClock)
-    console.log('shouldStartOnClickClock', shouldStartOnClickClock)
 
     if (staticDate && !shouldRunClock) {
       rotation(staticDate?.hr, staticDate?.mn, staticDate?.sc);

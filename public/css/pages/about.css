@@ -10,7 +10,8 @@
 }
 
 #about-container h2 {
-  font-size: 1.2rem;
+  font-size: 1em;
+  margin: 2rem;
   color: var(--text-primary);
 }
 
@@ -346,12 +347,15 @@
 .social-menu ul {
   margin: 20px 0;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   padding: 0;
 }
 
 .social-menu ul li {
   list-style: none;
-  margin: 0 15px;
+  margin: 10px 15px;
 }
 
 .social-menu ul li .fab {
@@ -409,15 +413,15 @@
   }
 }
 
-#about-container .bonus-info  {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#about-container .bonus-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#about-container .bonus-info a  {
-    padding: 1rem;
-    color: var(--text-secondary);
-    background-color: var(--bg-secondary);
+#about-container .bonus-info a {
+  padding: 1rem;
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
 }
 
 #about-container .intro-section section {

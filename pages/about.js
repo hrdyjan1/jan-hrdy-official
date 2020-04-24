@@ -130,7 +130,7 @@ function About() {
             </div>
           </li>
         </ul>
-        <h3>Contact</h3>
+        <h3>{t('contact')}</h3>
         <div className='social-menu'>
           <ul>
             <li>
