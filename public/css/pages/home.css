@@ -87,7 +87,6 @@
   margin-right: auto;
   transform: translateY(3rem);
   z-index: 1;
-
 }
 @media (min-width: 40.625em) {
   .c-section__title .main-home-image {
@@ -127,6 +126,12 @@
   margin: 1.33em 0;
   padding: 0;
   color: rgba(255, 255, 255, 0.85);
+}
+
+@media only screen and (max-width: 600px) {
+  .c-section span h2 {
+    font-size: 0.25em;
+  }
 }
 
 .c-services {

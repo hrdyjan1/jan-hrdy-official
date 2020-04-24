@@ -10,17 +10,26 @@
 }
 
 #about-container h2 {
-  font-size: 1em;
+  font-size: 0.2em;
+  font-weight: 300;
   margin: 2rem;
   color: var(--text-primary);
+}
+
+@media only screen and (max-width: 600px) {
+  #about-container h2 {
+    font-size: 0.25em;
+  }
 }
 
 #about-container .intro-section {
   opacity: 0.9;
   margin: 2rem auto;
   text-align: center;
+  font-size: 1rem;
   width: 100%;
   padding: 0;
+  font-size: var(--s4);
 }
 
 #about-container h3 {
@@ -223,6 +232,7 @@
     width: 500px;
     margin: 2rem auto;
   }
+  font-size: 1rem;
 
   .timeline li {
     padding: 2.5rem 0;
@@ -323,6 +333,7 @@
     width: 600px;
     margin: 2rem auto;
   }
+  font-size: 1rem;
 
   .direction-l {
     position: relative;
@@ -428,6 +439,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  font-size: 1rem;
 }
 
 #about-container .intro-section section p {
