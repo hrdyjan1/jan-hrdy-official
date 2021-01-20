@@ -9,7 +9,7 @@
     "prod": "next export"
   },
   "dependencies": {
-    "gsap": "^3.2.6",
+    "gsap": "^3.6.0",
     "lodash": "^4.17.15",
     "next": "latest",
     "next-images": "^1.4.0",
