@@ -5,6 +5,7 @@ import Default from '../components/pages/projects/Default';
 import { englishProjectList, czechProjectList } from '../config/projects';
 import memoize from 'lodash/memoize';
 import { useLanguageState } from '../contexts/languageContext';
+import Head from 'next/head';
 
 const searchTypes = {
   title: 'title',
@@ -32,29 +33,31 @@ const filterByProperty = (searchValue) => (results, originalKeyValue) => {
  * @property    {string}            <searchType: title, subSubtitle, year>
  */
 
-const getSuggestionsFromArray = (list) => (subject, property = searchTypes.title) => {
-  const ids = list.results;
-  const entities = list.entities;
+const getSuggestionsFromArray =
+  (list) =>
+  (subject, property = searchTypes.title) => {
+    const ids = list.results;
+    const entities = list.entities;
 
-  const getKeyPropertyValueArray = memoize((currentProperty) =>
-    Object.entries(entities).map((o) => ({ [o[0]]: o[1][currentProperty] }))
-  );
+    const getKeyPropertyValueArray = memoize((currentProperty) =>
+      Object.entries(entities).map((o) => ({ [o[0]]: o[1][currentProperty] }))
+    );
 
-  return subject.pipe(
-    debounceTime(200), // wait until user stops typing
-    distinctUntilChanged(),
-    map((searchValue) => {
-      console.log('searchValue', searchValue);
-      if (!searchValue || searchValue === '') {
-        // All ids
-        return ids;
-      } else {
-        // Ids filtered by property  ; ex. [123123, 456456]
-        return getKeyPropertyValueArray(property).reduce(filterByProperty(searchValue), []);
-      }
-    })
-  );
-};
+    return subject.pipe(
+      debounceTime(200), // wait until user stops typing
+      distinctUntilChanged(),
+      map((searchValue) => {
+        console.log('searchValue', searchValue);
+        if (!searchValue || searchValue === '') {
+          // All ids
+          return ids;
+        } else {
+          // Ids filtered by property  ; ex. [123123, 456456]
+          return getKeyPropertyValueArray(property).reduce(filterByProperty(searchValue), []);
+        }
+      })
+    );
+  };
 
 function Projects() {
   const { isCzechLanguage } = useLanguageState();
@@ -63,9 +66,14 @@ function Projects() {
   const subject$ = new BehaviorSubject('');
 
   return (
-    <div id='page-project-id'>
-      <Default getSuggestions={getSuggestions} subject$={subject$} />
-    </div>
+    <>
+      <Head>
+        <title>Jan Hrdý - Projekty</title>
+      </Head>
+      <div id='page-project-id'>
+        <Default getSuggestions={getSuggestions} subject$={subject$} />
+      </div>
+    </>
   );
 }
 

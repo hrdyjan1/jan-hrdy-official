@@ -1,7 +1,9 @@
+import React from 'react';
 import dynamic from 'next/dynamic';
 import { CustomPreloader } from 'react-preloaders';
 import { Router } from 'next/router';
 import nProgress from 'nprogress';
+import Head from 'next/head';
 import Loader from '../components/Loader';
 import { ModalProvider } from '../contexts/modalContext';
 import { ThemeProvider } from '../contexts/themeContext';
@@ -29,18 +31,23 @@ function _app(props) {
 
   if (typeof window !== 'undefined' && itemsFromLocalStorage) {
     return (
-      <LanguageProvider language={itemsFromLocalStorage.LANGUAGE}>
-        <CustomPreloader>
-          <Loader />
-        </CustomPreloader>
-        <ModalProvider>
-          <ThemeProvider theme={itemsFromLocalStorage.THEME}>
-            <SoundProvider sound={itemsFromLocalStorage.SOUND}>
-              <DynamicComponentWithCustomLoading {...props} />
-            </SoundProvider>
-          </ThemeProvider>
-        </ModalProvider>
-      </LanguageProvider>
+      <>
+        <Head>
+          <title>Jan Hrdý</title>
+        </Head>
+        <LanguageProvider language={itemsFromLocalStorage.LANGUAGE}>
+          <CustomPreloader>
+            <Loader />
+          </CustomPreloader>
+          <ModalProvider>
+            <ThemeProvider theme={itemsFromLocalStorage.THEME}>
+              <SoundProvider sound={itemsFromLocalStorage.SOUND}>
+                <DynamicComponentWithCustomLoading {...props} />
+              </SoundProvider>
+            </ThemeProvider>
+          </ModalProvider>
+        </LanguageProvider>
+      </>
     );
   }
   return null;
