@@ -4,14 +4,9 @@
 import { useWindowWidth } from '@/hooks/useWindowWidth';
 import React from 'react';
 
-import { pdfjs, Document, Page } from 'react-pdf';
+import { Document, Page } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url
-).toString();
 
 const file: React.ComponentProps<typeof Document>['file'] = { url: './cv.pdf' };
 

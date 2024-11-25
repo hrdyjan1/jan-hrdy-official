@@ -1,4 +1,3 @@
-import kanban from '../../../../public/images/kanban.png';
 import yourpass from '../../../../public/images/yourpass.png';
 import gigworker from '../../../../public/images/gigworker.jpg';
 import shopping from '../../../../public/images/shopping.jpg';

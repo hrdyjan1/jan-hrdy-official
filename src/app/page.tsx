@@ -12,6 +12,10 @@ import waitingSvg from '../../public/images/waiting.svg';
 import { ToggleLanguage } from '@/components/toggle/ToggleLanguage';
 import { ToggleTheme } from '@/components/toggle/ToggleTheme';
 
+import { pdfjs } from 'react-pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
+
 export default function Home() {
   const { t } = useLanguageTranslation();
   // elements

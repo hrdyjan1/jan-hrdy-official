@@ -1,2 +1,1 @@
-const emptyObject = {};
-export default emptyObject;
+export default {};
