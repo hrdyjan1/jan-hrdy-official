@@ -1,3 +1,7 @@
+/* styles/globals.css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css');
+
+
 :root {
   font-size: 15px;
   font-family: 'Crimson Pro', serif;
