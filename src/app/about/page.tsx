@@ -186,7 +186,7 @@ function About() {
                   </svg>
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <Link href='/cv'>
                   <svg
                     version='1.0'
@@ -226,7 +226,7 @@ function About() {
                     </g>
                   </svg>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <a href='https://github.com/hrdyjan1/'>
                   <svg
