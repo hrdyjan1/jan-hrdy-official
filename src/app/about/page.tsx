@@ -4,6 +4,7 @@
 import Intro from '@/components/intro/Intro';
 import { useLanguageTranslation } from '@/features/language/useLanguageTranslation';
 import Head from 'next/head';
+import Link from 'next/link';
 import React from 'react';
 
 function BonusSection() {
@@ -185,7 +186,7 @@ function About() {
                   </svg>
                 </a>
               </li>
-              {/* <li>
+              <li>
                 <Link href='/cv'>
                   <svg
                     version='1.0'
@@ -225,7 +226,7 @@ function About() {
                     </g>
                   </svg>
                 </Link>
-              </li> */}
+              </li>
               <li>
                 <a href='https://github.com/hrdyjan1/'>
                   <svg

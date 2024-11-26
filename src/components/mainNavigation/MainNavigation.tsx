@@ -135,7 +135,7 @@ const MainNavigation = () => {
           </Link>
         </li>
 
-        {/* <li className='nav-item'>
+        <li className='nav-item'>
           <Link href='/cv' className={`nav-link${pathname === '/cv' ? ' active' : ''}`}>
             <svg
               aria-hidden='true'
@@ -168,7 +168,7 @@ const MainNavigation = () => {
 
             <span className='link-text'>CV</span>
           </Link>
-        </li> */}
+        </li>
 
         <li className='nav-item' id='themeButton'>
           <button type='button' className='nav-link' onClick={showSettings}>

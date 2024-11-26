@@ -38,7 +38,6 @@ function ThemeProvider({ children, status }: Props) {
   React.useEffect(() => {
     Storage.setItem(Storage.key.THEME, state.status);
   }, [state.status]);
-  console.log('🚀 ~ React.useEffect ~ state.status:', state.status);
 
   const toggle = () =>
     setState((prev) => ({
