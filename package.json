@@ -10,9 +10,10 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "next": "15.0.3",
+    "pdfjs-dist": "^4.8.69",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "react-pdf": "^9.1.1",
+    "react-pdf": "^8.0.0",
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
