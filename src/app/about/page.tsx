@@ -4,7 +4,6 @@
 import Intro from '@/components/intro/Intro';
 import { useLanguageTranslation } from '@/features/language/useLanguageTranslation';
 import Head from 'next/head';
-import Link from 'next/link';
 import React from 'react';
 
 function BonusSection() {
